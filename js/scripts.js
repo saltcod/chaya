@@ -9,28 +9,31 @@ function expectDelays(){
 
 setTimeout(expectDelays, 1700);
 
- 
-	console.log('starting');
 
-	var kitchenSink = $('.site-title, nav, #primary, #colophon, img.featured'),
-		title = $('.title'),
-		nav = $('.site-navigation'),
-		content = $('#primary'),
-		img = $('img.featured');
+(function(){
+console.log('starting');
 
-	kitchenSink.hide();
+var kitchenSink = $('.site-title, .site-navigation, #primary, #colophon, img.featured'),
+	title = $('.site-title'),
+	nav = $('.site-navigation'),
+	content = $('#primary'),
+	img = $('img.featured');
 
-	$(".loader").fadeIn(100).fadeOut(100).fadeIn(200).fadeOut(100).fadeIn(200).fadeOut(200).fadeIn(1100).fadeOut(1200);
+kitchenSink.hide();
 
+$(".loader").fadeIn(100).fadeOut(100).fadeIn(200).fadeOut(100).fadeIn(200).fadeOut(200).fadeIn(1100).fadeOut(1200);
 
-	title.delay(1400).fadeIn(1000,function(){
-		nav.fadeIn(1000, function(){
-			content.fadeIn(500);
-			img.delay(500).fadeIn(1000);
-		});
-	})
- 
- 
+console.log('not here?');
+
+title.delay(4400).fadeIn(1000,function(){
+	nav.delay(2000).fadeIn(1000, function(){
+		content.fadeIn(500);
+		img.delay(1500).fadeIn(1000);
+	});
+})
+
+})();
+
 
       
 }); //Last
