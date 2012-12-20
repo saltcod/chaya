@@ -41,7 +41,7 @@ input,
 select,
 textarea {
   color: #404040;
-  font-family: 'freight-sans-pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Gotham htf', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 1.6em;
   line-height: 1.5;
 }
@@ -67,10 +67,15 @@ p {
 }
 ul,
 ol {
-  margin: 0 0 1.5em 3em;
+  margin: 0;
+  padding: 0;
+}
+.entry-content ul,
+.entry-content ol {
+  margin-left: 2em;
 }
 ul {
-  list-style: disc;
+  list-style: none;
 }
 ol {
   list-style: decimal;
@@ -167,30 +172,13 @@ a:active {
 }
 /* =Menu
 ----------------------------------------------- */
-.main-navigation {
-  width: 100%;
-  font-weight: 600;
-  padding: 25px;
-  background: white;
-}
-.main-navigation ul {
-  list-style: none;
-  margin: 0;
-  padding-left: 0;
-}
 .main-navigation li {
-  border-bottom: 1px solid #eee;
-  padding-bottom: 5px;
-  margin-bottom: 5px;
+  float: left;
+  margin-right: 35px;
+  font-size: 1.4em;
 }
 .main-navigation a {
-  color: #444;
-  display: block;
-  text-decoration: none;
-}
-.main-navigation a:hover {
-  border: none;
-  color: #558e28;
+  color: white;
 }
 /* Small menu */
 .menu-toggle {
@@ -316,6 +304,24 @@ object {
   float: right;
   text-align: right;
   width: 50%;
+}
+/* =Front page
+----------------------------------------------- */
+body.home {
+  background: #efefef;
+}
+body.home #primary {
+  background: none;
+  margin-top: 75px;
+}
+body.home h3 {
+  font-size: 3em;
+  font-weight: 400;
+  color: white;
+}
+body.home h3 span {
+  font-size: .5em;
+  display: block;
 }
 /* =Comments
 ----------------------------------------------- */
@@ -543,6 +549,15 @@ footer#colophon {
   background: #444;
   color: white;
   padding: 10px 25px;
+  position: fixed;
+  bottom: -65px;
+  width: 100%;
+}
+footer#colophon a.tab {
+  position: absolute;
+  padding: 5px 20px;
+  top: -34px;
+  background: #000;
 }
 footer#colophon a {
   color: white;

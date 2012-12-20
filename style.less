@@ -11,7 +11,7 @@ Tags:
 */
 
 
-@sans: 'freight-sans-pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+@sans: 'Gotham htf', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 @green: #558E28;
  
@@ -54,10 +54,13 @@ p {
 	margin-bottom: 1.5em;
 }
 ul, ol {
-	margin: 0 0 1.5em 3em;
+	margin: 0;
+	padding: 0;
 }
+.entry-content { ul, ol { margin-left: 2em; }}
+
 ul {
-	list-style: disc;
+	list-style: none;
 }
 ol {
 	list-style: decimal;
@@ -182,33 +185,12 @@ footer#colophon {}
 ----------------------------------------------- */
 
 .main-navigation {
-	width: 100%;
-	font-weight: 600;
-	padding: 25px;
-	background: white;
-
-
-		ul {
-			list-style: none;
-			margin: 0;
-			padding-left: 0;
-		}
-		li {
-			border-bottom: 1px solid #eee;
-			padding-bottom: 5px;
-			margin-bottom: 5px;
-		}
-		 
-		a {
-			color: #444;
-			display: block;
-			text-decoration: none;
-				&:hover { border: none; color: @green;}
-		}
-		 
-		.current_page_item a,
-		.current-menu-item a {
-		}
+	 li { 
+	 	float: left;
+		margin-right: 35px;
+		font-size: 1.4em;
+	 }
+	 a { color: white; }
 }
 
 /* Small menu */
@@ -349,6 +331,28 @@ object {
 	text-align: right;
 	width: 50%;
 }
+
+/* =Front page
+----------------------------------------------- */
+body.home {
+	background: #efefef;
+    #primary { 
+    	background: none;
+    	margin-top: 75px;
+     }
+
+    h3{ 
+    	font-size: 3em;
+    	font-weight: 400;
+    	color: white; 
+    		span {
+    		    font-size: .5em;
+    		    display: block;
+    		}
+    }
+}
+
+
 
 /* =Comments
 ----------------------------------------------- */
@@ -547,6 +551,16 @@ footer#colophon {
 	background: #444;
 	color: white;
 	padding: 10px 25px;
+	position: fixed;
+	bottom: -65px;
+	width: 100%;
+
+		a.tab {
+		    position: absolute;
+		    padding: 5px 20px;
+		    top: -34px;
+		    background: #000;
+		}
 		a { color: white; }
 }
 
