@@ -7,45 +7,60 @@ jQuery(function($) {
 //   		 { fade: 50 });	
  
 
+// Delay backstretch fadein on the frontpage only
+
+function backstretch(){
+	if( $('body').hasClass('home') ){
+		$.backstretch(
+			"http://localhost:8888/chaya/wp-content/themes/chaya/images/window.jpg",
+			 { fade: 2250 });	
+	}
+}	
 
 
-
-
-
-function expectDelays(){
-	$.backstretch(
-		"http://localhost:8888/chaya/wp-content/themes/chaya/images/window.jpg",
-		 { fade: 2250 });	
+if( $('body').hasClass('home') ){
+	setTimeout(backstretch, 1700);
+} else {
+	setTimeout(backstretch, 0);
 }
 
-setTimeout(expectDelays, 1700);
+
 
 
 (function(){
-	console.log('starting');
+	
+	var hidey = {
+		
+		kitchenSink: $('.site-title, .site-navigation, #primary, #colophon, img.featured'),
+		title: $('.site-title'),
+		nav: $('.site-navigation'),
+		content: $('#primary'),
+		img: $('img.featured'), 
+		footer: $('#colophon'),
 
-	var kitchenSink = $('.site-title, .site-navigation, #primary, #colophon, img.featured'),
-	title = $('.site-title'),
-	nav = $('.site-navigation'),
-	content = $('#primary'),
-	img = $('img.featured'), 
-	footer = $('#colophon');
+		hideIt: function(){
+			this.kitchenSink.hide();
+			$(".loader").css('opacity', 1).fadeIn(100).fadeOut(100).fadeIn(200).fadeOut(100).fadeIn(200).fadeOut(200).fadeIn(1100).fadeOut(1200);
+			console.log('not here?');
+		},
 
-	kitchenSink.hide();
+		showIt: function(){
+			this.title.delay(4400).fadeIn(1000,function(){
+				hidey.nav.delay(2000).fadeIn(1000, function(){
+					hidey.content.fadeIn(800).animate({'margin-top': 100}, { queue: false, duration: 800 });
+					hidey.footer.fadeIn(500);
+				});
+			});
+		}
+	};
 
-	$(".loader").fadeIn(100).fadeOut(100).fadeIn(200).fadeOut(100).fadeIn(200).fadeOut(200).fadeIn(1100).fadeOut(1200);
-
-	console.log('not here?');
-
-	title.delay(4400).fadeIn(1000,function(){
-		nav.delay(2000).fadeIn(1000, function(){
-			content.fadeIn(1000);
-			footer.fadeIn(500);
-
-		});
-	})
+	if( $('body').hasClass('home') ){
+		  hidey.hideIt();
+ 	 	hidey.showIt();
+	}
 
 })();
+ 
 
 
 

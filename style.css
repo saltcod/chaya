@@ -54,6 +54,7 @@ h5,
 h6 {
   margin-top: 0;
   clear: both;
+  font-weight: 400;
 }
 hr {
   background-color: #ccc;
@@ -90,6 +91,7 @@ ol ul {
 /* Links */
 a {
   text-decoration: none;
+  color: #444;
 }
 a:hover,
 a:focus,
@@ -106,18 +108,25 @@ a:active {
 }
 /* =Structure
 ----------------------------------------------- */
+#main {
+  background: none;
+  padding-top: 50px;
+}
+body.home #main {
+  background: none;
+}
 #masthead {
   padding: 0 25px;
-}
-#main {
-  margin-top: 50px;
 }
 #primary {
   float: left;
   width: 60%;
   padding: 0 25px;
-  margin-top: 70px;
+  margin-top: 150px;
   background: white;
+}
+body.home #primary {
+  background: none;
 }
 #secondary {
   float: left;
@@ -125,7 +134,7 @@ a:active {
 }
 .loader {
   width: 35px;
-  opacity: .4;
+  opacity: 0;
   position: absolute;
   left: 50%;
   top: 40%;
@@ -138,7 +147,7 @@ a:active {
   text-transform: uppercase;
   font-weight: 200;
 }
-.site-title a {
+body.home .site-title a {
   color: white;
 }
 .site-description {
@@ -169,16 +178,6 @@ a:active {
 
   clip: rect(1px, 1px, 1px, 1px);
   position: absolute !important;
-}
-/* =Menu
------------------------------------------------ */
-.main-navigation li {
-  float: left;
-  margin-right: 35px;
-  font-size: 1.4em;
-}
-.main-navigation a {
-  color: white;
 }
 /* Small menu */
 .menu-toggle {
@@ -292,6 +291,24 @@ object {
 }
 /* =Navigation
 ----------------------------------------------- */
+.main-navigation li {
+  float: left;
+  margin-right: 35px;
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  padding-bottom: 5px;
+}
+.main-navigation li.current-menu-item a {
+  border-bottom: 3px solid;
+  padding-bottom: 5px;
+}
+.main-navigation li a:hover {
+  border-bottom: 3px solid;
+  padding-bottom: 5px;
+}
+.main-navigation a {
+  border: none;
+}
 .site-content .site-navigation {
   margin: 0 0 1.5em;
   overflow: hidden;
@@ -312,7 +329,6 @@ body.home {
 }
 body.home #primary {
   background: none;
-  margin-top: 75px;
 }
 body.home h3 {
   font-size: 3em;
