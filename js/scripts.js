@@ -1,7 +1,7 @@
 jQuery(function($) {
 
 
-$.backstretch("http://localhost:8888/chaya/wp-content/themes/chaya/images/window.jpg");
+$.backstretch("http://localhost:8888/chaya/wp-content/themes/chaya/images/window-color.jpg");
 
  // $.backstretch([
  //      "http://localhost:8888/chaya/wp-content/themes/chaya/images/window.jpg"

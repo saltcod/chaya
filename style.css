@@ -218,6 +218,17 @@ a:active {
   clear: both;
   margin: 0 0 1.5em;
 }
+/* =Frontpage
+----------------------------------------------- */
+.sub {
+  width: 100%;
+  margin-top: 540px;
+  background: #ddd;
+  color: 444;
+  font-size: 32px;
+  padding: 0 25px;
+  z-index: 6;
+}
 /* =Asides
 ----------------------------------------------- */
 .blog .format-aside .entry-title,
