@@ -122,6 +122,14 @@ a:active {
 
 footer#colophon {}
 
+.loader {
+	width: 35px;
+	opacity: .4;
+	position: absolute;
+	left: 50%;
+	top: 40%;
+	font-size: 28px;
+}
 
 /* =Header
 ----------------------------------------------- */
@@ -239,24 +247,6 @@ footer#colophon {}
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
-}
-
-
-/* =Frontpage
------------------------------------------------ */
-
- 
-
-
-.sub{
-	width: 100%;
-	margin-top: 540px;
-	background: #ddd;
-	color: 444;
-	font-size: 32px;
-	padding: 0 25px;
-
-	z-index: 6;
 }
 
 
@@ -590,7 +580,7 @@ This is for devices like the Galaxy Note or something that's
 larger than an iPhone but smaller than a tablet. 
 */
 @media only screen and (min-width: 481px) {
-	body { background: #eee; }
+	body {   }
 
 } // end of media query
 
@@ -602,7 +592,7 @@ This is the average viewing window. So Desktops, Laptops, and
 in general anyone not viewing on a mobile device. 
 */
 @media only screen and (min-width: 768px) {
- body { background: #ddd; }
+ body {  }
 } // end of media query
 
    
@@ -617,10 +607,9 @@ query for retina AND a certain size if you want. Go Nuts.
        only screen and (min--moz-device-pixel-ratio: 1.5),
        only screen and (min-device-pixel-ratio: 1.5) {
 
-	body { background: #ccc; }
+	body {  }
 	 
 
 } // end of media query
 
   
-
