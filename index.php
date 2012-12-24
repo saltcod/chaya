@@ -18,6 +18,13 @@ get_header(); ?>
 		<div id="primary" class="content-area">
 			<div id="content" class="site-content" role="main">
 
+		<?php if ( is_front_page() ): ?>
+			<h3>Walter Bigelow Rosen Professor of Music
+			<span>Harvard University</span></h3>
+		<?php endif; ?>
+		
+		
+			<?php if ( ! is_front_page() ): ?>
 			<?php if ( have_posts() ) : ?>
 
 				<?php waterstreet_content_nav( 'nav-above' ); ?>
@@ -41,6 +48,7 @@ get_header(); ?>
 
 				<?php get_template_part( 'no-results', 'index' ); ?>
 
+			<?php endif; ?>
 			<?php endif; ?>
 
 			</div><!-- #content .site-content -->
