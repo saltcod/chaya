@@ -58,7 +58,13 @@ ul, ol {
 	margin: 0;
 	padding: 0;
 }
-.entry-content { ul, ol { margin-left: 2em; }}
+.entry-content { 
+	-webkit-column-count: 2;
+	text-align: justify;	
+
+	ul, ol { margin-left: 2em; }
+}
+
 
 ul {
 	list-style: none;
@@ -141,12 +147,17 @@ footer#colophon {}
 /* =Header
 ----------------------------------------------- */
  
-.site-title{
+.site-title {
 	font-size: 1.9em;
-	text-transform: uppercase;
 	font-weight: 200;
+	font-family: kepler std;
+	background: rgba(81, 215, 233, 0.29);
+	display: inline-block;
+	padding: 21px 5px 15px 6px;
+	line-height: 5px;
 		a { body.home &{ color: white; } }
-}
+	}
+
 .site-description{
 	font-size: 18px;
 }
@@ -330,7 +341,11 @@ object {
 			}
 
 	 }
-	 a { border: none; }
+	 a { 
+	 	color: #444; 
+	 	border: none; 
+	 		body.home & { color: #fff; }
+	 }
 	  
 
 }

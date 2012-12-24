@@ -47,7 +47,7 @@ if( $('body').hasClass('home') ){
 		showIt: function(){
 			this.title.delay(4400).fadeIn(1000,function(){
 				hidey.nav.delay(2000).fadeIn(1000, function(){
-					hidey.content.fadeIn(800).animate({'margin-top': 100}, { queue: false, duration: 800 });
+					hidey.content.delay(1000).fadeIn(800).animate({'margin-top': 100}, { queue: false, duration: 800 });
 					hidey.footer.fadeIn(500);
 				});
 			});

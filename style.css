@@ -71,6 +71,10 @@ ol {
   margin: 0;
   padding: 0;
 }
+.entry-content {
+  -webkit-column-count: 2;
+  text-align: justify;
+}
 .entry-content ul,
 .entry-content ol {
   margin-left: 2em;
@@ -144,8 +148,12 @@ body.home #primary {
 ----------------------------------------------- */
 .site-title {
   font-size: 1.9em;
-  text-transform: uppercase;
   font-weight: 200;
+  font-family: kepler std;
+  background: rgba(81, 215, 233, 0.29);
+  display: inline-block;
+  padding: 21px 5px 15px 6px;
+  line-height: 5px;
 }
 body.home .site-title a {
   color: white;
@@ -307,7 +315,11 @@ object {
   padding-bottom: 5px;
 }
 .main-navigation a {
+  color: #444;
   border: none;
+}
+body.home .main-navigation a {
+  color: #fff;
 }
 .site-content .site-navigation {
   margin: 0 0 1.5em;
