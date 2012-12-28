@@ -5,27 +5,53 @@ jQuery(function($) {
 // $.backstretch(
 //   		"zzzzzzzzzzzzhttp://localhost:8888/chaya/wp-content/themes/chaya/images/window.jpg",
 //   		 { fade: 50 });	
- 
+
 
 // Delay backstretch fadein on the frontpage only
 
 function backstretch(){
-	if( $('body').hasClass('home') ){
+	if( $('body').hasClass('home') || $('body').hasClass('page-biography') ){
 		$.backstretch(
 			"http://localhost:8888/chaya/wp-content/themes/chaya/images/window.jpg",
-			 { fade: 2250 });	
+			{ fade: 2250 });	
 	}
 }	
 
-
-if( $('body').hasClass('home') ){
-	setTimeout(backstretch, 1700);
-} else {
-	setTimeout(backstretch, 0);
-}
-
+	if( $('body').hasClass('home') ){
+		setTimeout(backstretch, 1700);
+		} else {
+			setTimeout(backstretch, 0);
+	}
 
 
+
+
+// Scrollspy
+$('body').scrollspy();
+
+// Fixed-floating scrollspy menu 
+$(document).ready(function () {  
+	var top = $('.nav').offset().top - parseFloat($('.nav').css('marginTop').replace(/auto/, 0));
+	$(window).scroll(function (event) {
+    // what the y position of the scroll is
+    var y = $(this).scrollTop();
+
+    // whether that's below the form
+    if (y >= top) {
+      // if so, ad the fixed class
+      $('.nav').addClass('fixed');
+  } else {
+      // otherwise remove it
+      $('.nav').removeClass('fixed');
+  }
+	});
+});
+
+
+
+// Fade in images slowly when a page loads
+$('.fade-in').animate({ 'opacity': 1 }, 1500);
+$('.entry-title').animate({ 'opacity': 1 }, 800);
 
 (function(){
 	
@@ -55,12 +81,12 @@ if( $('body').hasClass('home') ){
 	};
 
 	if( $('body').hasClass('home') ){
-		  hidey.hideIt();
- 	 	hidey.showIt();
+		hidey.hideIt();
+		hidey.showIt();
 	}
 
 })();
- 
+
 
 
 
@@ -73,5 +99,5 @@ $('footer a.tab').on('click', function( e ){
 
 
 
-      
+
 }); //Last

@@ -41,7 +41,7 @@ input,
 select,
 textarea {
   color: #404040;
-  font-family: 'Gotham htf', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Kepler Std', Georgia;
   font-size: 1.6em;
   line-height: 1.5;
 }
@@ -54,7 +54,11 @@ h5,
 h6 {
   margin-top: 0;
   clear: both;
-  font-weight: 400;
+  font-weight: 100;
+  font-family: 'Kepler Std', Georgia;
+}
+h1 {
+  font-size: 4em;
 }
 hr {
   background-color: #ccc;
@@ -65,6 +69,7 @@ hr {
 /* Text elements */
 p {
   margin-bottom: 1.5em;
+  margin-top: 0;
 }
 ul,
 ol {
@@ -72,7 +77,9 @@ ol {
   padding: 0;
 }
 .entry-content {
-  -webkit-column-count: 2;
+  /* -webkit-column-count: 2;
+	-webkit-column-gap: 40px; */
+
   text-align: justify;
 }
 .entry-content ul,
@@ -97,11 +104,6 @@ a {
   text-decoration: none;
   color: #444;
 }
-a:hover,
-a:focus,
-a:active {
-  border-bottom: 1px solid;
-}
 /* Font awesome */
 @font-face {
   font-family: 'FontAwesome';
@@ -124,12 +126,13 @@ body.home #main {
 }
 #primary {
   float: left;
-  width: 60%;
+  width: 100%;
   padding: 0 25px;
   margin-top: 150px;
   background: white;
 }
 body.home #primary {
+  width: 60%;
   background: none;
 }
 #secondary {
@@ -196,10 +199,6 @@ body.home .site-title a {
 }
 /* =Content
 ----------------------------------------------- */
-.entry-title a,
-.post-title a {
-  color: #558e28;
-}
 .hentry {
   margin: 0 0 1.5em;
 }
@@ -215,11 +214,82 @@ body.home .site-title a {
 }
 .entry-content,
 .entry-summary {
-  margin: 1.5em 0 0;
+  margin: 0;
 }
 .page-links {
   clear: both;
   margin: 0 0 1.5em;
+}
+/* =Two thirds template
+----------------------------------------------- */
+body.page-template-two-thirds-php sidebar {
+  float: left;
+  width: 30%;
+  font-family: 'Gotham htf', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+body.page-template-two-thirds-php .featured-image {
+  margin-right: 50px;
+}
+body.page-template-two-thirds-php .featured-image img {
+  max-width: 100%;
+}
+body.page-template-two-thirds-php .entry-content {
+  float: left;
+  width: 50%;
+}
+body.page-template-two-thirds-php h2 {
+  font-size: 3em;
+  text-align: center;
+  border-top: 1px solid;
+  padding-top: 25px;
+  margin-top: 50px;
+}
+body.page-template-two-thirds-php blockquote {
+  font-style: italic;
+  font-size: 1.5em;
+  border-top: 1px solid;
+  padding-top: 40px;
+  margin: 0;
+}
+body.page-template-two-thirds-php .nav {
+  margin-top: 65px;
+  width: 225px;
+  font-size: .75em;
+}
+body.page-template-two-thirds-php .nav.fixed {
+  position: fixed;
+  top: 0;
+}
+body.page-template-two-thirds-php .nav li {
+  display: inline-block;
+}
+body.page-template-two-thirds-php .nav .active {
+  background: rgba(81, 215, 233, 0.29);
+}
+/* =Interactions and Fade-ins
+----------------------------------------------- */
+.fade-in,
+.entry-title {
+  -moz-opacity: 0;
+  -khtml-opacity: 0;
+  -webkit-opacity: 0;
+  opacity: 0;
+}
+/* =Lists
+----------------------------------------------- */
+dl.dates {
+  clear: both;
+  display: block;
+}
+dl.dates dt {
+  float: left;
+  width: 100px;
+  font-family: 'Gotham htf', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: .75em;
+}
+dl.dates dd {
+  float: left;
+  width: 80%;
 }
 /* =Asides
 ----------------------------------------------- */
