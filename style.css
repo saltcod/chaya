@@ -1,5 +1,7 @@
 @import url('inc/css/normalize.css');
 
+@import url('inc/css/1140.css');
+
 @import "inc/css/font-awesome.css";
 /*
 Theme Name: Waterstreet
@@ -132,7 +134,7 @@ body.home #main {
   background: white;
 }
 body.home #primary {
-  width: 60%;
+  width: 500px;
   background: none;
 }
 #secondary {
@@ -150,13 +152,17 @@ body.home #primary {
 /* =Header
 ----------------------------------------------- */
 .site-title {
-  font-size: 1.9em;
+  font-size: 2.5em;
   font-weight: 200;
   font-family: kepler std;
   background: rgba(81, 215, 233, 0.29);
   display: inline-block;
   padding: 21px 5px 15px 6px;
   line-height: 5px;
+}
+body.home .site-title {
+  background: none;
+  padding-left: 0;
 }
 body.home .site-title a {
   color: white;
@@ -199,6 +205,10 @@ body.home .site-title a {
 }
 /* =Content
 ----------------------------------------------- */
+.entry-title,
+.post-title {
+  margin-bottom: 25px;
+}
 .hentry {
   margin: 0 0 1.5em;
 }
@@ -283,13 +293,13 @@ dl.dates {
 }
 dl.dates dt {
   float: left;
-  width: 100px;
+  width: 40px;
   font-family: 'Gotham htf', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: .75em;
 }
 dl.dates dd {
   float: left;
-  width: 80%;
+  width: 85%;
 }
 /* =Asides
 ----------------------------------------------- */
@@ -369,11 +379,13 @@ object {
 }
 /* =Navigation
 ----------------------------------------------- */
+.main-navigation {
+  margin-top: 25px;
+}
 .main-navigation li {
   float: left;
   margin-right: 35px;
   font-size: 1.2em;
-  letter-spacing: -1px;
   padding-bottom: 5px;
 }
 .main-navigation li.current-menu-item a {
@@ -674,6 +686,11 @@ footer#colophon a {
   zoom: 1;
   /* For IE 6/7 (trigger hasLayout) */
 
+}
+.clear {
+  display: block;
+  width: 100%;
+  clear: both;
 }
 /* =Media Queries 
 ----------------------------------------------- */
