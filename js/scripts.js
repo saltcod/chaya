@@ -1,6 +1,6 @@
 jQuery(function($) {
 
-$('backstretch').css('opacity', .4);
+	$('backstretch').css('opacity', .4);
 
 // // // Delete this instance after
 // // $.backstretch(
@@ -11,21 +11,38 @@ $('backstretch').css('opacity', .4);
 // Delay backstretch fadein on the frontpage only
 
 function backstretch(){
-	if( $('body').hasClass('home') || $('body').hasClass('page-biography') ){
+	if( $('body').hasClass('home') ){
 		$.backstretch(
 			"http://localhost:8888/chaya/wp-content/themes/chaya/images/window-colour.jpg",
 			{ fade: 2250 });	
-	}  
+	
+	}  else if ( $('body').hasClass('page-biography') ) {
+		$.backstretch(
+			"http://localhost:8888/chaya/wp-content/themes/chaya/images/field-landscape.jpg",
+			{ fade: 1250 });	
+
+	}  else if ( $('body').hasClass('page-music') ){
+		console.log('bio');
+		$.backstretch(
+			"http://localhost:8888/chaya/wp-content/themes/chaya/images/scores.jpg",
+			{ fade: 1250 });	
+	
+	} else {
+		$.backstretch(
+			"http://localhost:8888/chaya/wp-content/themes/chaya/images/window-colour.jpg",
+			{ fade: 1250 });	
+		}
 }	
 
 if( $('body').hasClass('home') ){
 	setTimeout(backstretch, 1700);
-	} else {
-		setTimeout(backstretch, 0);
+} else {
+	setTimeout(backstretch, 0);
 }
 
 
- 
+ // Add class last to the last menu item in <nav>
+ $('.site-navigation li:last').addClass('last');
  
  
 

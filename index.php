@@ -13,45 +13,46 @@
  */
 
 get_header(); ?>
-<?php get_sidebar(); ?>
+ 
+<div id="primary" class="content-area">
+	<div class="wrap">
+		<div id="content" class="site-content" role="main">
 
-		<div id="primary" class="content-area">
-			<div id="content" class="site-content" role="main">
-
-		<?php if ( is_front_page() ): ?>
+			<?php if ( is_front_page() ): ?>
 			<h3>Walter Bigelow Rosen Professor of Music
-			<span>Harvard University</span></h3>
-		<?php endif; ?>
-		
-		
+				<span>Harvard University</span></h3>
+			<?php endif; ?>
+
+
 			<?php if ( ! is_front_page() ): ?>
 			<?php if ( have_posts() ) : ?>
 
-				<?php waterstreet_content_nav( 'nav-above' ); ?>
+			<?php waterstreet_content_nav( 'nav-above' ); ?>
 
-				<?php /* Start the Loop */ ?>
-				<?php while ( have_posts() ) : the_post(); ?>
+			<?php /* Start the Loop */ ?>
+			<?php while ( have_posts() ) : the_post(); ?>
 
-					<?php
+			<?php
 						/* Include the Post-Format-specific template for the content.
 						 * If you want to overload this in a child theme then include a file
 						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 						 */
 						get_template_part( 'content', get_post_format() );
-					?>
+						?>
 
-				<?php endwhile; ?>
+					<?php endwhile; ?>
 
-				<?php waterstreet_content_nav( 'nav-below' ); ?>
+					<?php waterstreet_content_nav( 'nav-below' ); ?>
 
-			<?php else : ?>
+				<?php else : ?>
 
 				<?php get_template_part( 'no-results', 'index' ); ?>
 
 			<?php endif; ?>
-			<?php endif; ?>
+		<?php endif; ?>
 
-			</div><!-- #content .site-content -->
-		</div><!-- #primary .content-area -->
+	</div><!-- #content .site-content -->
+</div><!-- .wrap -->
+</div><!-- #primary .content-area -->
 
 <?php get_footer(); ?>

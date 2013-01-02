@@ -15,10 +15,10 @@ Tags:
 @kepler: 'Kepler Std', Georgia;
 
 @light-blue: rgba(81, 215, 233, 0.29);
- 
- @import url('inc/css/normalize.css');
- @import url('inc/css/elements.less');
- @import url('inc/css/1140.css');
+
+@import url('inc/css/normalize.css');
+@import url('inc/css/elements.less');
+@import url('inc/css/1140.css');
 
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
@@ -36,7 +36,7 @@ textarea {
 	color: #404040;
 	font-family: @kepler;
 	font-size: 1.6em;
- 	line-height: 1.5;
+	line-height: 1.5;
 }
 
 /* Headings */
@@ -60,6 +60,12 @@ hr {
 p {
 	margin-bottom: 1.5em;
 	margin-top: 0;
+	&.two-col{
+		.columns(50%, 2, 25px, #fff, solid, 1px);
+		-webkit-hyphens: auto;
+		-moz-hyphens: auto;
+		hyphens: auto;
+	}
 }
 ul, ol {
 	margin: 0;
@@ -68,7 +74,8 @@ ul, ol {
 .entry-content { 
 	/* -webkit-column-count: 2;
 	-webkit-column-gap: 40px; */
-	text-align: justify;	
+	text-align: justify;
+	width: 650px;		
 
 	ul, ol { margin-left: 2em; }
 }
@@ -88,28 +95,28 @@ ul ul, ol ol, ul ol, ol ul {
 
 /* Links */
 a {
- 	text-decoration: none;
- 	color: #444;
+	text-decoration: none;
+	color: #444;
 }
 
 a:hover,
 a:focus,
 a:active {
-	 
+
 
 }
 
 
 /* Font awesome */
 @font-face {
-  font-family: 'FontAwesome';
-  src: url('../ing/fonts/fontawesome-webfont.eot');
-  src: url('../ing/fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
-     url('../ing/fonts/fontawesome-webfont.woff') format('woff'),
-     url('../ing/fonts/fontawesome-webfont.ttf') format('truetype'),
-     url('../ing/fonts/fontawesome-webfont.svg#FontAwesome') format('svg');
-  font-weight: normal;
-  font-style: normal;
+	font-family: 'FontAwesome';
+	src: url('../ing/fonts/fontawesome-webfont.eot');
+	src: url('../ing/fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+	url('../ing/fonts/fontawesome-webfont.woff') format('woff'),
+	url('../ing/fonts/fontawesome-webfont.ttf') format('truetype'),
+	url('../ing/fonts/fontawesome-webfont.svg#FontAwesome') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
 
 /* =Structure
@@ -117,28 +124,38 @@ a:active {
 #page { }
 
 #main {
- 	background: none;
- 	padding-top: 50px;
-		body.home & { background: none; }
+	background: none;
+	padding-top: 50px;
+	body.home & { background: none; }
 }
 
+.wrap {
+	max-width: 960px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+
 #masthead {
-	padding: 0 25px;
-  }
+}
 
 #primary {
 	float: left;
 	width: 100%;
-	padding: 0 25px;
+	padding: 25px;
 	margin-top: 150px;
- 	background: white;
+	background: white;
 
-		body.home & { width: 500px; background: none; }
+	body.home & { background: none; }
 }
 
 #secondary {
 	float: left;
 	width: 300px;
+}
+
+#content {
+	body.home & { width: 500px;  }
 }
 
 footer#colophon {}
@@ -154,18 +171,21 @@ footer#colophon {}
 
 /* =Header
 ----------------------------------------------- */
- 
+
+hgroup{
+	float: left;
+	margin-right: 50px;
+}
+
 .site-title {
-	font-size: 2.5em;
+	font-size: 2em;
 	font-weight: 200;
-	font-family: kepler std;
-	background: @light-blue;
+	font-family: @kepler;
 	display: inline-block;
-	padding: 21px 5px 15px 6px;
-	line-height: 5px;
-		body.home & { background: none; padding-left: 0;}
-		a { body.home &{ color: white; } }
-	}
+	padding: 15px 5px 15px 0;
+
+		a {  color: white; }
+}
 
 .site-description{
 	font-size: 18px;
@@ -220,8 +240,22 @@ footer#colophon {}
 ----------------------------------------------- */
 .entry-title, .post-title {
 	margin-bottom: 25px;
+	margin-top: 75px;
+	color: white;
+	font-family: @sans;
+	font-weight: 400;
+	text-transform: uppercase;
+	font-size: 6em;
+	text-align: center;
+}
 
-	}
+
+.page-break {
+	position: relative; 
+	margin: 0 auto; 
+	width: 800px;
+}
+
 .sticky {
 }
 .hentry {
@@ -247,9 +281,13 @@ footer#colophon {}
 }
 
 
-/* =Two thirds template
+
+
+
+/* =Template: Two thirds 
 ----------------------------------------------- */
-body.page-template-two-thirds-php {
+body.page-biography {
+	
 	sidebar{
 		float: left;
 		width: 30%;	
@@ -262,7 +300,6 @@ body.page-template-two-thirds-php {
 
 	.entry-content {
 		float: left;
-		width: 50%;
 	}
 
 	h2 {
@@ -403,29 +440,35 @@ object {
 ----------------------------------------------- */
 
 .main-navigation {
-	margin-top: 25px;
-	 li { 
-	 	float: left;
+	float: left;
+	width: 100%;
+	margin-top: 10px;
+	font-family: @sans;
+	font-size: 1em;
+	
+	li { 
+		float: left;
 		margin-right: 35px;
-		font-size: 1.2em;
- 		padding-bottom: 5px;
- 			&.current-menu-item a{
-			    border-bottom: 3px solid;
-			    padding-bottom: 5px;
-			    
-			}
-			a:hover {
-			    border-bottom: 3px solid;
-			    padding-bottom: 5px;
-			}
+		padding-bottom: 5px;
+		&.current-menu-item a{
+			border-bottom: 3px solid;
+			padding-bottom: 5px;
+		}
 
-	 }
-	 a { 
-	 	color: #444; 
-	 	border: none; 
-	 		body.home & { color: #fff; }
-	 }
-	  
+		&.last {margin-right: 0;}
+
+		a:hover {
+			border-bottom: 3px solid;
+			padding-bottom: 5px;
+		}
+
+	}
+	a { 
+		color: #fff; 
+		border: none; 
+		body.home & { color: #fff; }
+	}
+
 
 }
 
@@ -448,21 +491,21 @@ object {
 ----------------------------------------------- */
 body.home {
 	background: #efefef;
-    
-    #primary { 
-    	background: none;
-  
-     }
 
-    h3{ 
-    	font-size: 3em;
-    	font-weight: 400;
-    	color: white; 
-    		span {
-    		    font-size: .5em;
-    		    display: block;
-    		}
-    }
+	#primary { 
+		background: none;
+
+	}
+
+	h3{ 
+		font-size: 3em;
+		font-weight: 400;
+		color: white; 
+		span {
+			font-size: .5em;
+			display: block;
+		}
+	}
 }
 
 
@@ -668,28 +711,34 @@ footer#colophon {
 	bottom: -65px;
 	width: 100%;
 
-		a.tab {
-		    position: absolute;
-		    padding: 5px 20px;
-		    top: -34px;
-		    background: #000;
-		}
-		a { color: white; }
+	a.tab {
+		position: absolute;
+		padding: 5px 20px;
+		top: -34px;
+		background: #000;
+	}
+	a { color: white; }
 }
+
+
+/* =Helpers
+-------------------------------------------------------------- */
+.last{ margin-right: 0; }
 
 
 /* =Group/Clearfix
 -------------------------------------------------------------- */
+
 .group:before,
 .group:after {
-    content:"";
-    display:table;
+	content:"";
+	display:table;
 }
 .group:after {
-    clear:both;
+	clear:both;
 }
 .group {
-    zoom:1; /* For IE 6/7 (trigger hasLayout) */
+	zoom:1; /* For IE 6/7 (trigger hasLayout) */
 }
 
 .clear {
@@ -704,7 +753,7 @@ footer#colophon {
 Graciously borrowed from Eddie Machado's Bones
 http://themble.com/bones/
 ******************************************************************/
- 
+
 
 /*
 LARGER MOBILE DEVICES
@@ -724,10 +773,10 @@ This is the average viewing window. So Desktops, Laptops, and
 in general anyone not viewing on a mobile device. 
 */
 @media only screen and (min-width: 768px) {
- body {  }
+	body {  }
 } // end of media query
 
-   
+
 
 /*
 RETINA (2x RESOLUTION DEVICES)
@@ -736,12 +785,12 @@ other displays with a 2x resolution. You can also create a media
 query for retina AND a certain size if you want. Go Nuts.
 */
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-       only screen and (min--moz-device-pixel-ratio: 1.5),
-       only screen and (min-device-pixel-ratio: 1.5) {
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
 
 	body {  }
-	 
+
 
 } // end of media query
 
-  
+

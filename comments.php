@@ -55,7 +55,7 @@
 		</ol><!-- .commentlist -->
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
-		<nav role="navigation" id="comment-nav-below" class="site-navigation comment-navigation">
+		<nav role="navigation" id="comment-nav-below" class="site-navigation comment-navigation group">
 			<h1 class="assistive-text"><?php _e( 'Comment navigation', 'waterstreet' ); ?></h1>
 			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'waterstreet' ) ); ?></div>
 			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'waterstreet' ) ); ?></div>

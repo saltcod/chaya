@@ -5,16 +5,9 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'waterstreet' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 
-		<?php if ( 'post' == get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php waterstreet_posted_on(); ?>
-		</div><!-- .entry-meta -->
-	<?php endif; ?>
-</header><!-- .entry-header -->
+
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 <sidebar>
 	<div class="featured-image">
@@ -30,7 +23,7 @@
 	</div>
 </sidebar>
 <div class="entry-content">
-	<p>Proin id felis ut dui posuere adipiscing sit amet et arcu. Nulla malesuada auctor nisi, a gravida felis blandit in. In convallis, dui vel ultrices ultricies, erat magna sollicitudin sem, at cursus ligula nibh et erat. Integer orci augue, sollicitudin non vestibulum sed, auctor a ligula. Morbi congue porta leo, eget posuere mauris vulputate vel. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam semper augue vel risus accumsan et congue neque sodales. Ut rutrum eros lorem. Praesent a lacus purus. Mauris posuere consequat dictum. Pellentesque imperdiet, lacus sit amet eleifend imperdiet, ipsum libero molestie sem, nec mollis leo nisi ut elit. Donec ipsum eros, hendrerit eget faucibus et, interdum ac eros. Integer feugiat auctor euismod.
+	<p class="two-col">Proin id felis ut dui posuere adipiscing sit amet et arcu. Nulla malesuada auctor nisi, a gravida felis blandit in. In convallis, dui vel ultrices ultricies, erat magna sollicitudin sem, at cursus ligula nibh et erat. Integer orci augue, sollicitudin non vestibulum sed, auctor a ligula. Morbi congue porta leo, eget posuere mauris vulputate vel. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam semper augue vel risus accumsan et congue neque sodales. Ut rutrum eros lorem. Praesent a lacus purus. Mauris posuere consequat dictum. Pellentesque imperdiet, lacus sit amet eleifend imperdiet, ipsum libero molestie sem, nec mollis leo nisi ut elit. Donec ipsum eros, hendrerit eget faucibus et, interdum ac eros. Integer feugiat auctor euismod.
 	</p>
 	<blockquote>Morbi congue porta leo, eget posuere mau­ris vulpu­tate vel. Pel­len­tesque habi­tant morbi tris­tique senec­tus et netus et male­suada fames ac turpis eges­tas. Etiam sem­per augue vel risus accum­san et congue neque sodales. </blockquote>
 
