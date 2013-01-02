@@ -32,18 +32,21 @@ get_header(); ?>
 					</ul>
 					
 					</dd>
-
+				<div class="clear"></div>
+				
 				<dt>2011</dt>
 				<dd>Nunc diam ligula, vulpu­tate at sodales non, pel­len­tesque vitae lec­tus</dd>
 
+				<div class="clear"></div>
+
 				<dt>2010</dt>
 				<dd>Nunc diam ligula, vulpu­tate at sodales non, pel­len­tesque vitae lec­tus</dd>
+				<div class="clear"></div>
 
-			
-						
 			</dl>
 		</div>
 
+		<h2>Recent Projects</h2>
 		<p>Nunc diam ligula, vulpu­tate at sodales non, pel­len­tesque vitae lec­tus. Mae­ce­nas inter­dum con­se­quat urna nec port­ti­tor. Inte­ger metus mau­ris, porta sed phare­tra sit amet, inter­dum sed tel­lus. Fusce adip­isc­ing, massa nec viverra con­va­l­lis, lorem ante adip­isc­ing magna, ac pel­len­tesque nibh quam at erat. Prae­sent in ornare eros. Sed non sem odio. Donec ali­quet nisi non augue sodales con­se­quat. Ali­quam erat volut­pat. Pel­len­tesque urna eros, con­se­quat eu ultri­ces a, congue sit amet lorem. Vestibu­lum var­ius eleifend iac­ulis. Viva­mus sit amet magna neque. Mae­ce­nas non risus hen­drerit sem tem­pus tin­cidunt at at lorem. Mae­ce­nas non augue at metus cur­sus sem­per. Nam eget elit arcu, quis sem­per ante. Nulla ullam­cor­per facil­i­sis port­ti­tor. Fusce ac erat mau­ris, nec sodales enim.</p>
 
 		<p>Proin id felis ut dui posuere adip­isc­ing sit amet et arcu. Nulla male­suada auc­tor nisi, a gravida felis blandit in. In con­va­l­lis, dui vel ultri­ces ultricies, erat magna sol­lic­i­tudin sem, at cur­sus ligula nibh et erat. Inte­ger orci augue, sol­lic­i­tudin non vestibu­lum sed, auc­tor a ligula. Morbi congue porta leo, eget posuere mau­ris vulpu­tate vel. Pel­len­tesque habi­tant morbi tris­tique senec­tus et netus et male­suada fames ac turpis eges­tas. Etiam sem­per augue vel risus accum­san et congue neque sodales. Ut rutrum eros lorem. Prae­sent a lacus purus. Mau­ris posuere con­se­quat dic­tum. Pel­len­tesque imperdiet, lacus sit amet eleifend imperdiet, ipsum libero molestie sem, nec mol­lis leo nisi ut elit. Donec ipsum eros, hen­drerit eget fau­cibus et, inter­dum ac eros. Inte­ger feu­giat auc­tor euismod.</p>
