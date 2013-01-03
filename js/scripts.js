@@ -103,7 +103,7 @@ $('.entry-title').animate({ 'opacity': 1 }, 800);
 				hidey.nav.delay(1000).fadeIn(1000, function(){
 					hidey.content.delay(500).animate({
 						'opacity': 1, 
-						'margin-top': 75 
+						'margin-top': 50 
 					}, 1000, function(){
 						console.log('pagebreak? ');
 						hidey.pageBreak.fadeIn(1000);
