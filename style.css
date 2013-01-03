@@ -166,9 +166,6 @@ body.home #primary {
   float: left;
   width: 300px;
 }
-body.home #content {
-  width: 500px;
-}
 .loader {
   width: 35px;
   opacity: 0;
@@ -179,15 +176,11 @@ body.home #content {
 }
 /* =Header
 ----------------------------------------------- */
-hgroup {
-  float: left;
-  margin-right: 50px;
-}
 .site-title {
   font-size: 2em;
   font-weight: 200;
   font-family: 'Kepler Std', Georgia;
-  display: inline-block;
+  text-align: center;
   padding: 15px 5px 15px 0;
 }
 .site-title a {
@@ -233,11 +226,12 @@ hgroup {
 ----------------------------------------------- */
 .entry-title,
 .post-title {
+  font-family: 'Gotham htf', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.2em;
   margin-bottom: 25px;
   margin-top: 75px;
   color: white;
-  font-family: 'Gotham htf', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 400;
   text-transform: uppercase;
   font-size: 6em;
   text-align: center;
@@ -417,9 +411,8 @@ object {
 /* =Navigation
 ----------------------------------------------- */
 .main-navigation {
-  float: left;
-  width: 100%;
-  margin-top: 10px;
+  width: 645px;
+  margin: 0 auto;
   font-family: 'Gotham htf', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 1em;
 }
@@ -463,6 +456,7 @@ body.home .main-navigation a {
 ----------------------------------------------- */
 body.home {
   background: #efefef;
+  text-align: center;
 }
 body.home #primary {
   background: none;
@@ -471,10 +465,12 @@ body.home h3 {
   font-size: 3em;
   font-weight: 400;
   color: white;
+  margin-bottom: 40px;
 }
 body.home h3 span {
-  font-size: .5em;
+  font-size: .45em;
   display: block;
+  text-transform: uppercase;
 }
 /* =Comments
 ----------------------------------------------- */

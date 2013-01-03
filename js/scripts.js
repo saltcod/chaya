@@ -80,12 +80,17 @@ $('.entry-title').animate({ 'opacity': 1 }, 800);
 	
 	var hidey = {
 		
-		kitchenSink: $('.site-title, .site-navigation, #primary, #colophon, img.featured'),
+		kitchenSink: $('.site-title, .page-break, .site-navigation, #colophon, img.featured'),
 		title: $('.site-title'),
 		nav: $('.site-navigation'),
 		content: $('#primary'),
 		img: $('img.featured'), 
 		footer: $('#colophon'),
+		pageBreak: $('.page-break'),
+
+		opacify: function(){
+			hidey.content.css('opacity', 0);	
+		},
 
 		hideIt: function(){
 			this.kitchenSink.hide();
@@ -95,8 +100,15 @@ $('.entry-title').animate({ 'opacity': 1 }, 800);
 
 		showIt: function(){
 			this.title.delay(4400).fadeIn(1000,function(){
-				hidey.nav.delay(2000).fadeIn(1000, function(){
-					hidey.content.delay(1000).fadeIn(800).animate({'margin-top': 100}, { queue: false, duration: 800 });
+				hidey.nav.delay(1000).fadeIn(1000, function(){
+					hidey.content.delay(500).animate({
+						'opacity': 1, 
+						'margin-top': 75 
+					}, 1000, function(){
+						console.log('pagebreak? ');
+						hidey.pageBreak.fadeIn(1000);
+					} );
+					
 					hidey.footer.fadeIn(500);
 				});
 			});
@@ -104,6 +116,7 @@ $('.entry-title').animate({ 'opacity': 1 }, 800);
 	};
 
 	if( $('body').hasClass('home') ){
+		hidey.opacify();
 		hidey.hideIt();
 		hidey.showIt();
 	}
