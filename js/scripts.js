@@ -13,23 +13,23 @@ jQuery(function($) {
 function backstretch(){
 	if( $('body').hasClass('home') ){
 		$.backstretch(
-			"http://localhost:8888/chaya/wp-content/themes/chaya/images/window-colour.jpg",
+			"http://chayaczernowin.com/wp-content/themes/chaya/images/window-colour.jpg",
 			{ fade: 2250 });	
 	
 	}  else if ( $('body').hasClass('page-biography') ) {
 		$.backstretch(
-			"http://localhost:8888/chaya/wp-content/themes/chaya/images/field-landscape.jpg",
+			"http://chayaczernowin.com/wp-content/themes/chaya/images/field-landscape.jpg",
 			{ fade: 1250 });	
 
 	}  else if ( $('body').hasClass('page-music') ){
 		console.log('bio');
 		$.backstretch(
-			"http://localhost:8888/chaya/wp-content/themes/chaya/images/scores.jpg",
+			"http://chayaczernowin.com/wp-content/themes/chaya/images/scores.jpg",
 			{ fade: 1250 });	
 	
 	} else {
 		$.backstretch(
-			"http://localhost:8888/chaya/wp-content/themes/chaya/images/window-colour.jpg",
+			"http://chayaczernowin.com/wp-content/themes/chaya/images/window-colour.jpg",
 			{ fade: 1250 });	
 		}
 }	
