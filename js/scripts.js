@@ -34,7 +34,7 @@ function backstretch(){
 		}
 }	
 
-if( ! $('html').hasClass('ie') && $('body').hasClass('home') ){
+if( ! $('html').hasClass('lte9') && $('body').hasClass('home') ){
 	setTimeout(backstretch, 1700);
 	} else {
 		setTimeout(backstretch, 0);
@@ -115,7 +115,7 @@ $('.entry-title').animate({ 'opacity': 1 }, 800);
 		}
 	};
 
-	if( ! $('html').hasClass('ie') && $('body').hasClass('home') ){
+	if( ! $('html').hasClass('lte9') && $('body').hasClass('home') ){
 		hidey.opacify();
 		hidey.hideIt();
 		hidey.showIt();
