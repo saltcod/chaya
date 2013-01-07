@@ -1,6 +1,5 @@
 jQuery(function($) {
  
- 
 function backstretch(){
 	if( $('body').hasClass('home') ){
 		$.backstretch(
@@ -91,6 +90,35 @@ if ( ! $('body').hasClass('lte9') ){
 		} else {
 			setTimeout(backstretch, 0);
 	}
+
+
+
+	// Fade out header elements when the window scrolls
+
+	var windowScroll, 
+	masthead = $('#masthead'), 
+	main = $('#main'); 
+
+	$(window).scroll(function(){
+
+	    //Get scroll position of window
+	    windowScroll = $(this).scrollTop();
+
+
+	    //Fade the .nav out
+	    masthead.css({
+	    	'opacity' : 1-(windowScroll/300),
+	    	'margin-top': -(windowScroll/3)
+	    });
+ 
+
+	    $('#fadey-nav').css({
+	    	'opacity' : 0 +(windowScroll/600)
+	    });  
+ 
+
+	});
+
 
 
 
