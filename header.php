@@ -76,6 +76,17 @@
 
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		</nav><!-- .site-navigation .main-navigation -->
+		
+		<?php if( ! is_home() ): ?>
+
+			<h1 class="entry-title"><?php the_title();?></h1>
+			<div class="page-break"> 
+				<img src="<?php echo get_template_directory_uri();?>/images/page-break.png">
+			</div>
+
+		<?php endif; ?>
+		
+		
 	</header><!-- #masthead .site-header -->
 </div>		
 		
