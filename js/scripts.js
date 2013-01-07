@@ -127,7 +127,7 @@ if ( ! $('body').hasClass('lte9') ){
 					hidey.nav.delay(1000).fadeIn(1000, function(){
 						hidey.content.delay(500).animate({
 							'opacity': 1, 
-							'margin-top': 50 
+							'margin-top': 30 
 						}, 1000, function(){
 							console.log('pagebreak? ');
 							hidey.pageBreak.fadeIn(1000);

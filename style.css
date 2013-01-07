@@ -467,15 +467,19 @@ body.home {
 }
 body.home #primary {
   background: none;
+  padding: 25px 120px;
 }
 body.home h3 {
-  font-size: 3em;
-  font-weight: 400;
+  font-size: 2em;
+  font-weight: 100;
+  font-style: italic;
   color: white;
   margin-bottom: 40px;
 }
 body.home h3 span {
-  font-size: .45em;
+  font-size: .5em;
+  font-style: normal;
+  margin-top: 25px;
   display: block;
   text-transform: uppercase;
 }
@@ -723,6 +727,10 @@ footer#colophon a {
 -------------------------------------------------------------- */
 .last {
   margin-right: 0;
+}
+.white {
+  color: white;
+  border-bottom: 1px solid;
 }
 /* =Group/Clearfix
 -------------------------------------------------------------- */
