@@ -149,15 +149,18 @@ body.home #main {
 }
 #masthead {
   position: fixed;
-  border-bottom: 1px solid white;
   text-align: left;
+  width: 960px;
 }
 #primary {
   float: left;
   width: 100%;
   padding: 25px;
-  margin-top: 350px;
-  background: white;
+  margin-top: 30em;
+  background: url(images/contour.png) top left no-repeat #ffffff;
+  -webkit-box-shadow: 0 -3px 3px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 -3px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 -3px 3px rgba(0, 0, 0, 0.2);
 }
 body.home #primary {
   background: none;
@@ -183,12 +186,15 @@ body.home #primary {
 ----------------------------------------------- */
 hgroup {
   float: left;
-  width: 255px;
+  width: 100%;
+  margin-bottom: 4em;
 }
 .site-title {
+  float: left;
   font-size: 1.5em;
   font-weight: 200;
-  font-family: 'Kepler Std', Georgia;
+  font-family: 'freight-sans-pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  width: 185px;
   padding: 15px 5px 15px 0;
 }
 .site-title a {
@@ -234,7 +240,7 @@ hgroup {
 ----------------------------------------------- */
 .entry-title,
 .post-title {
-  font-family: 'Gotham htf', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'freight-sans-pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 4em;
   font-weight: 400;
   line-height: 1.2em;
@@ -275,7 +281,7 @@ hgroup {
 body.page-biography sidebar {
   float: left;
   width: 30%;
-  font-family: 'Gotham htf', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'freight-sans-pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 body.page-biography .featured-image {
   margin-right: 50px;
@@ -335,7 +341,7 @@ dl.dates {
 dl.dates dt {
   float: left;
   width: 40px;
-  font-family: 'Gotham htf', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'freight-sans-pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: .75em;
 }
 dl.dates dd {
@@ -423,9 +429,8 @@ object {
 .main-navigation {
   float: right;
   width: 555px;
-  margin-top: 20px;
-  font-family: 'Gotham htf', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: .8em;
+  margin-top: 1.8em;
+  font-family: 'freight-sans-pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 .main-navigation li {
   float: left;
@@ -467,14 +472,18 @@ body.home .main-navigation a {
 ----------------------------------------------- */
 body.home {
   background: #efefef;
-  text-align: center;
 }
 body.home #primary {
   background: none;
   padding: 25px 120px;
+  margin-top: 10em;
+  -webkit-box-shadow: 0 0 0;
+  -moz-box-shadow: 0 0 0;
+  box-shadow: 0 0 0;
+  text-align: center;
 }
 body.home h3 {
-  font-size: 2em;
+  font-size: 1.8em;
   font-weight: 100;
   font-style: italic;
   color: white;
@@ -710,22 +719,27 @@ textarea {
 /* =Footer
 ----------------------------------------------- */
 footer#colophon {
-  background: #444;
-  background: rgba(0, 0, 0, 0.8);
-  color: white;
-  padding: 10px 25px;
-  position: fixed;
-  bottom: -65px;
+  padding: 25px;
+  color: #444;
+  background: #fff;
   width: 100%;
-}
-footer#colophon a.tab {
-  position: absolute;
-  padding: 5px 20px;
-  top: -34px;
-  background: #000;
 }
 footer#colophon a {
   color: white;
+}
+footer#colophon .wrap {
+  border-top: 1px solid #ccc;
+  padding: 25px 0;
+}
+body.home footer#colophon {
+  color: white;
+  background: none;
+}
+body.home footer#colophon  a {
+  color: white;
+}
+body.home footer#colophon  .wrap {
+  border-top: 1px solid #fff;
 }
 /* =Helpers
 -------------------------------------------------------------- */

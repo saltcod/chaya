@@ -11,7 +11,7 @@ Tags:
 */
 
 
-@sans: 'Gotham htf', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+@sans: 'freight-sans-pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 @kepler: 'Kepler Std', Georgia;
 
 @light-blue: rgba(81, 215, 233, 0.29);
@@ -124,28 +124,29 @@ a:active {
 #main {
 	background: none;
 	padding-top: 50px;
-	body.home & { background: none; }
+		body.home & { background: none; }
 }
 
 .wrap {
 	max-width: 960px;
 	margin: 0 auto;
 	overflow: hidden;
-}
+ }
 
 
 #masthead {
 	position: fixed;
-	border-bottom: 1px solid white;
-	text-align: left;
+ 	text-align: left;
+	width: 960px;
 }
 
 #primary {
 	float: left;
 	width: 100%;
 	padding: 25px;
-	margin-top: 350px;
-	background: white;
+	margin-top: 30em;
+	background: url(images/contour.png) top left no-repeat white;
+	.box-shadow(0 -3px 3px rgba(0, 0, 0, .2)); 
 
 	body.home & { background: none; }
 }
@@ -176,13 +177,15 @@ footer#colophon {}
 
 hgroup{
 	float: left;
-	width: 255px;
-
+	width: 100%;
+	margin-bottom: 4em;
 }
 .site-title {
+	float: left;
 	font-size: 1.5em;
 	font-weight: 200;
-	font-family: @kepler;
+	font-family: @sans;
+	width: 185px;
  	padding: 15px 5px 15px 0;
 
 		a {  color: white; }
@@ -447,9 +450,9 @@ object {
 .main-navigation {
 	float: right;
 	width: 555px;
-	margin-top: 20px;
+	margin-top: 1.8em;
 	font-family: @sans;
-	font-size: .8em;
+
 	
 	li { 
 		float: left;
@@ -496,20 +499,19 @@ object {
 ----------------------------------------------- */
 body.home {
 	background: #efefef;
-	text-align: center;
-	
-	.site-title {
- 	}
-	
+ 	
 	 
 
 	#primary { 
 		background: none;
 		padding: 25px 120px;
+		margin-top: 10em;
+		.box-shadow(0 0 0 );
+		text-align: center;
 	}
 
 	h3{ 
-		font-size: 2em;
+		font-size: 1.8em;
 		font-weight: 100;
 		font-style: italic;
 		color: white; 
@@ -720,27 +722,31 @@ textarea {
 ----------------------------------------------- */
 
 footer#colophon {
-	background: #444;
-	background: rgba(0,0,0,.8);
-	color: white;
-	padding: 10px 25px;
-	position: fixed;
-	bottom: -65px;
+ 	padding: 25px;
+	color: #444;
+	background: #fff;
 	width: 100%;
 
-	a.tab {
-		position: absolute;
-		padding: 5px 20px;
-		top: -34px;
-		background: #000;
-	}
-	a { color: white; }
+		a { color: white; }
+	
+	
+		.wrap { border-top: 1px solid #ccc; padding: 25px 0; }	 
+
+		body.home & { 
+			color: white; 
+			background: none; 
+				a{ color: white; }
+				.wrap { border-top: 1px solid #fff;}	 
+			}
+
+
 }
 
 
 /* =Helpers
 -------------------------------------------------------------- */
 .last{ margin-right: 0; }
+
 .white { color: white; border-bottom: 1px solid;}
 
 /* =Group/Clearfix

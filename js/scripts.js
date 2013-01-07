@@ -107,7 +107,7 @@ if ( ! $('body').hasClass('lte9') ){
 
 	    //Fade the .nav out
 	    masthead.css({
-	    	'opacity' : 1-(windowScroll/300),
+	    	'opacity' : 1-(windowScroll/500),
 	    	'margin-top': -(windowScroll/3)
 	    });
  
@@ -133,7 +133,8 @@ if ( ! $('body').hasClass('lte9') ){
 		var hidey = {
 			
 			kitchenSink: $('.site-title, .page-break, .site-navigation, #colophon, img.featured'),
-			title: $('.site-title'),
+ 			title: $('.site-title'),
+ 			hgroup: $('hgroup'),
 			nav: $('.site-navigation'),
 			content: $('#primary'),
 			img: $('img.featured'), 
@@ -155,13 +156,15 @@ if ( ! $('body').hasClass('lte9') ){
 					hidey.nav.delay(1000).fadeIn(1000, function(){
 						hidey.content.delay(500).animate({
 							'opacity': 1, 
-							'margin-top': 30 
+							'margin-top': '7em' 
 						}, 1000, function(){
 							console.log('pagebreak? ');
-							hidey.pageBreak.fadeIn(1000);
+							hidey.pageBreak.fadeIn(1000, function(){
+								hidey.footer.fadeIn(500);
+							});
 						} );
 						
-						hidey.footer.fadeIn(500);
+						hidey.hgroup.css('border-bottom', '1px solid #fff');
 					});
 				});
 			}
@@ -179,12 +182,7 @@ if ( ! $('body').hasClass('lte9') ){
 
 
 
-// Toggle the Footer when you click on Contact + 
-$('footer a.tab').on('click', function( e ){
-	e.preventDefault();
-	$('#colophon').animate({'bottom': 0 }, 600);
-})
-
+ 
 
 
 
