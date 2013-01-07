@@ -19,9 +19,11 @@ get_header(); ?>
 		<div id="content" class="site-content" role="main">
 
 			<?php if ( is_front_page() ): ?>
-			<h3>Walter Bigelow Rosen <br>Professor of Music
-				<span>Harvard University</span></h3>
-				<div class="page-break"> 
+			
+			<h3>....heartbreakingly vulnerable. <br> Its sounds—often rasping, grating bundles of energy—project across impossibly large spaces, like concrete cantilevers, precisely tensioned just short of breaking point. Listening is like discovering butterflies trapped under stones.
+			<span>Tim Rutherford-Johnson reviewing <em>Shifting Gravity</em> in  <a class="white" href="http://johnsonsrambler.wordpress.com/">The Rambler</a>, May 26th 2011</span></h3>
+			
+ 				<div class="page-break"> 
 					<img src="<?php echo get_template_directory_uri();?>/images/page-break.png">
 				</div>
 			<?php endif; ?>
