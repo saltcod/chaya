@@ -1,4 +1,19 @@
 jQuery(function($) {
+
+// Hide the fancy from older IE and mobile devices 
+var newBrowser;
+
+if( navigator.userAgent.match(/Android/i) ||
+    navigator.userAgent.match(/webOS/i) ||
+    navigator.userAgent.match(/iPhone/i) ||
+    navigator.userAgent.match(/iPod/i) ||
+    navigator.userAgent.match(/iPad/i) ||
+    navigator.userAgent.match(/BlackBerry/)
+|| $('body').hasClass('lte9')){
+  newBrowser = true;
+}
+
+
  
 function backstretch(){
 	if( $('body').hasClass('home') ){
@@ -57,7 +72,7 @@ if ( $('.nav').length !== 0 ){
 
 
 // Only do fancy things for gtIE9 
-if ( ! $('body').hasClass('lte9') ){
+if ( ! newBrowser ){
 
 
 	function backstretch_good_browsers(){
@@ -178,7 +193,7 @@ if ( ! $('body').hasClass('lte9') ){
 
 	})();
 
-} // ltIE9
+} // newBrowser
 
 
 
