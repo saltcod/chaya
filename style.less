@@ -324,17 +324,20 @@ body.page-biography {
 	}
 	.nav{	
 		margin-top: 65px;
-		width: 225px;
-		font-size: .75em;
+		width: 235px;
+		font-size: .85em;
 		&.fixed {
 			position: fixed;
 			top: 0;
 		}
-		li { display: inline-block; }
-		.active {
-			background: @light-blue;
+		li { 
+			display: block; 
+			&.active a {
+				background: @light-blue;
+			}
 		}
-	}
+		 
+	} 
 }
 
 /* =Interactions and Fade-ins

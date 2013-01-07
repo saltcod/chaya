@@ -308,17 +308,17 @@ body.page-biography blockquote {
 }
 body.page-biography .nav {
   margin-top: 65px;
-  width: 225px;
-  font-size: .75em;
+  width: 235px;
+  font-size: .85em;
 }
 body.page-biography .nav.fixed {
   position: fixed;
   top: 0;
 }
 body.page-biography .nav li {
-  display: inline-block;
+  display: block;
 }
-body.page-biography .nav .active {
+body.page-biography .nav li.active a {
   background: rgba(81, 215, 233, 0.29);
 }
 /* =Interactions and Fade-ins
