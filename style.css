@@ -494,6 +494,21 @@ body.home h3 span {
   display: block;
   text-transform: uppercase;
 }
+/* =Milestones
+----------------------------------------------- */
+.milestone {
+  background: rgba(81, 215, 233, 0.29);
+  margin: 25px 0;
+  padding: 25px;
+  text-align: center;
+}
+.milestone h3 {
+  font-size: 1.5em;
+}
+.milestone date {
+  font-family: 'freight-sans-pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 600;
+}
 /* =Comments
 ----------------------------------------------- */
 /* =Widgets

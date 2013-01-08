@@ -62,6 +62,10 @@ get_header(); ?>
 	</p><p>Aliquam quis arcu at ipsum gravida sagittis. Nunc id tellus sed tellus pretium ullamcorper sit amet vel urna. Nunc vitae adipiscing risus. Etiam luctus vehicula mi at aliquet. Vivamus malesuada, est sit amet ornare suscipit, magna turpis dapibus justo, sit amet rhoncus dui nisi ac lectus. Duis eros neque, auctor et blandit at, bibendum eu tortor. Fusce sagittis, ante sit amet tempor sodales, mauris ipsum gravida eros, ac hendrerit est libero ut sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lacus enim, commodo quis interdum ut, accumsan sed tortor. Pellentesque sed leo non risus auctor vestibulum porttitor at nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus lacinia risus at elit suscipit dignissim varius sapien lobortis. Fusce venenatis ullamcorper gravida. Maecenas id enim vel orci sagittis ultricies ac ut lacus. Mauris dapibus auctor dolor ut rhoncus. Praesent lobortis, elit id molestie ultrices, nulla ante iaculis dui, eu faucibus nisi turpis et felis.
 </p>
 
+
+<img src="http://placehold.it/760x350/E8117F/fff&text=Placeholder">
+
+
 <div id="juries"></div>
 <h2>Juries</h2>
 
