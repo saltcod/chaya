@@ -84,9 +84,11 @@ add_action( 'wp_enqueue_scripts', 'waterstreet_scripts' );
  */
 
 function waterstreet_show_template() {
-	global $template;
-	echo '<strong>Template file:</strong>';
-	 print_r($template);
+	if ( is_super_admin() ){	
+		global $template;
+		echo '<strong>Template file:</strong>';
+		print_r($template);
+	}
 }
 add_action('wp_footer', 'waterstreet_show_template');
 

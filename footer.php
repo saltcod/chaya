@@ -9,18 +9,16 @@
  */
 ?>
 
-	</div><!-- #main .site-main -->
+</div><!-- #main .site-main -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-	<a class="tab" href="contact">Contact +</a>
+<footer id="colophon" class="site-footer" role="contentinfo">
+	<div class="wrap">
 		<div class="site-info">
-			<?php do_action( 'waterstreet_credits' ); ?>
-			<a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'waterstreet' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'waterstreet' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'waterstreet' ), 'waterstreet', '<a href="http://automattic.com/" rel="designer">Automattic</a>' ); ?>
+			<p><strong>Contact:</strong> Aliquam quis arcu at ipsum gravida sagittis. Nunc id tellus sed tellus pretium ullamcorper sit amet vel urna. </p>
 		</div><!-- .site-info -->
-<?php wp_footer(); ?>
-	</footer><!-- #colophon .site-footer -->
+		<?php wp_footer(); ?>
+	</div><!-- .wrap -->
+</footer><!-- #colophon .site-footer -->
 </div><!-- #page .hfeed .site -->
 
 

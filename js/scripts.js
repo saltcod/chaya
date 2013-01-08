@@ -1,5 +1,19 @@
 jQuery(function($) {
- 
+
+// Hide the fancy from older IE and mobile devices 
+var newBrowser;
+
+if( navigator.userAgent.match(/Android/i) ||
+    navigator.userAgent.match(/webOS/i) ||
+    navigator.userAgent.match(/iPhone/i) ||
+    navigator.userAgent.match(/iPod/i) ||
+    navigator.userAgent.match(/iPad/i) ||
+    navigator.userAgent.match(/BlackBerry/)
+|| $('body').hasClass('lte9')){
+  newBrowser = true;
+}
+
+
  
 function backstretch(){
 	if( $('body').hasClass('home') ){
@@ -58,7 +72,7 @@ if ( $('.nav').length !== 0 ){
 
 
 // Only do fancy things for gtIE9 
-if ( ! $('body').hasClass('lte9') ){
+if ( ! newBrowser ){
 
 
 	function backstretch_good_browsers(){
@@ -94,6 +108,35 @@ if ( ! $('body').hasClass('lte9') ){
 
 
 
+	// Fade out header elements when the window scrolls
+
+	var windowScroll, 
+	masthead = $('#masthead'), 
+	main = $('#main'); 
+
+	$(window).scroll(function(){
+
+	    //Get scroll position of window
+	    windowScroll = $(this).scrollTop();
+
+
+	    //Fade the .nav out
+	    masthead.css({
+	    	'opacity' : 1-(windowScroll/500),
+	    	'margin-top': -(windowScroll/3)
+	    });
+ 
+
+	    $('#fadey-nav').css({
+	    	'opacity' : 0 +(windowScroll/600)
+	    });  
+ 
+
+	});
+
+
+
+
 
 
 	// Fade in images slowly when a page loads
@@ -105,7 +148,8 @@ if ( ! $('body').hasClass('lte9') ){
 		var hidey = {
 			
 			kitchenSink: $('.site-title, .page-break, .site-navigation, #colophon, img.featured'),
-			title: $('.site-title'),
+ 			title: $('.site-title'),
+ 			hgroup: $('hgroup'),
 			nav: $('.site-navigation'),
 			content: $('#primary'),
 			img: $('img.featured'), 
@@ -127,13 +171,15 @@ if ( ! $('body').hasClass('lte9') ){
 					hidey.nav.delay(1000).fadeIn(1000, function(){
 						hidey.content.delay(500).animate({
 							'opacity': 1, 
-							'margin-top': 30 
+							'margin-top': '7em' 
 						}, 1000, function(){
 							console.log('pagebreak? ');
-							hidey.pageBreak.fadeIn(1000);
+							hidey.pageBreak.fadeIn(1000, function(){
+								hidey.footer.fadeIn(500);
+							});
 						} );
 						
-						hidey.footer.fadeIn(500);
+						hidey.hgroup.css('border-bottom', '1px solid #fff');
 					});
 				});
 			}
@@ -147,16 +193,11 @@ if ( ! $('body').hasClass('lte9') ){
 
 	})();
 
-} // ltIE9
+} // newBrowser
 
 
 
-// Toggle the Footer when you click on Contact + 
-$('footer a.tab').on('click', function( e ){
-	e.preventDefault();
-	$('#colophon').animate({'bottom': 0 }, 600);
-})
-
+ 
 
 
 
