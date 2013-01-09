@@ -179,8 +179,7 @@ if ( ! newBrowser ){
 							});
 						} );
 						
-						hidey.hgroup.css('border-bottom', '1px solid #fff');
-					});
+ 					});
 				});
 			}
 		};

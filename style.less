@@ -128,7 +128,7 @@ a:active {
 }
 
 .wrap {
-	max-width: 960px;
+	max-width: 88%;
 	margin: 0 auto;
 	overflow: hidden;
  }
@@ -137,7 +137,7 @@ a:active {
 #masthead {
 	position: fixed;
  	text-align: left;
-	width: 960px;
+	width: 88%;
 }
 
 #primary {
@@ -261,7 +261,8 @@ hgroup{
 .page-break {
 	position: relative; 
 	margin: 0 auto; 
-	width: 800px;
+	width: 100%;
+		img { max-width: 100%; }
 }
 
 .sticky {
@@ -373,24 +374,7 @@ dl.dates {
 /* =Media
 ----------------------------------------------- */
 
-.site-header img,
-.entry-content img,
-.comment-content img,
-.widget img {
-	max-width: 100%; /* Fluid images for posts, comments, and widgets */
-}
-.site-header img,
-.entry-content img,
-img[class*="align"],
-img[class*="wp-image-"] {
-	height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
-}
-.site-header img,
-.entry-content img,
-img.size-full {
-	max-width: 100%;
-	width: auto; /* Prevent stretching of full-size images with height and width attributes in IE8 */
-}
+   
 .entry-content img.wp-smiley,
 .comment-content img.wp-smiley {
 	border: none;
@@ -448,13 +432,12 @@ object {
 ----------------------------------------------- */
 
 .main-navigation {
-	width: 645px;
 	margin: 5em auto 0;
 	font-family: @sans;
-
+	text-align: center;
 	
 	li { 
-		float: left;
+		display: inline;
 		margin-right: 35px;
 		padding-bottom: 5px;
 		&.current-menu-item a{
@@ -464,16 +447,16 @@ object {
 
 		&.last {margin-right: 0;}
 
-		a:hover {
-			border-bottom: 3px solid;
-			padding-bottom: 5px;
+		a { 
+			display: inline-block; 
+			color: #fff; 
+			border: none; 
+				&:hover {
+					border-bottom: 3px solid;
+					padding-bottom: 5px;
+				}
 		}
 
-	}
-	a { 
-		color: #fff; 
-		border: none; 
-		body.home & { color: #fff; }
 	}
 
 
@@ -816,9 +799,15 @@ TABLET & SMALLER LAPTOPS
 This is the average viewing window. So Desktops, Laptops, and
 in general anyone not viewing on a mobile device. 
 */
-@media only screen and (min-width: 768px) {
-	body {  }
+@media only screen and (min-width: 768px) 
+and (max-width: 1024px) {
+	#primary .wrap {
+		max-width: 100%; 
+	 }
 } // end of media query
+
+  
+
 
 
 
