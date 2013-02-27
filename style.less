@@ -28,6 +28,8 @@ Tags:
 /* =Global
 ----------------------------------------------- */
 
+
+
 body,
 button,
 input,
@@ -128,7 +130,7 @@ a:active {
 }
 
 .wrap {
-	max-width: 88%;
+	max-width: 960px;
 	margin: 0 auto;
 	overflow: hidden;
  }
@@ -137,20 +139,18 @@ a:active {
 #masthead {
 	position: fixed;
  	text-align: left;
-	width: 88%;
+	width: 960px;
 }
 
 #primary {
 	float: left;
 	width: 100%;
 	padding: 25px;
-	margin-top: 100px;
-	background: white;
-	.box-shadow(0 -3px 3px rgba(0,0,0,.2)); 
 	margin-top: 30em;
 	background: url(images/contour.png) top left no-repeat white;
 	.box-shadow(0 -3px 3px rgba(0, 0, 0, .2)); 
-		body.home & { background: none; }
+
+	body.home & { background: none; }
 }
 
 #secondary {
@@ -180,15 +180,13 @@ footer#colophon {}
 hgroup{
 	float: left;
 	width: 100%;
-	text-align: center;
 	margin-bottom: 4em;
+	text-align: center;
 }
 .site-title {
-	float: left;
 	font-size: 1.5em;
 	font-weight: 200;
 	font-family: @sans;
-	width: 100%;
  	padding: 15px 5px 15px 0;
 
 		a {  color: white; }
@@ -215,6 +213,57 @@ hgroup{
 	margin: 0 auto;
 }
 
+
+
+/* =Navigation
+----------------------------------------------- */
+
+.main-navigation {
+	margin-top: 1.8em;
+	font-family: @sans;
+	display: inline-block;
+
+	
+	li { 
+		float: left;
+		margin-right: 35px;
+		padding-bottom: 5px;
+		&.current-menu-item a{
+			border-bottom: 3px solid;
+			padding-bottom: 5px;
+		}
+
+		&.last {margin-right: 0;}
+
+		a:hover {
+			border-bottom: 3px solid;
+			padding-bottom: 5px;
+		}
+
+	}
+	a { 
+		color: #fff; 
+		border: none; 
+		body.home & { color: #fff; }
+	}
+
+
+}
+
+
+.site-content .site-navigation {
+	margin: 0 0 1.5em;
+	overflow: hidden;
+}
+.site-content .nav-previous {
+	float: left;
+	width: 50%;
+}
+.site-content .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
 
 
 /* =Secondary
@@ -261,8 +310,7 @@ hgroup{
 .page-break {
 	position: relative; 
 	margin: 0 auto; 
-	width: 100%;
-		img { max-width: 100%; }
+	width: 800px;
 }
 
 .sticky {
@@ -319,7 +367,13 @@ body.page-biography {
 		margin-top: 50px;
 	}
 
-	 
+	blockquote {
+		font-style: italic;
+		font-size: 1.5em;
+		border-top: 1px solid;
+		padding-top: 40px;
+		margin: 0;
+	}
 	.nav{	
 		margin-top: 65px;
 		width: 235px;
@@ -374,7 +428,24 @@ dl.dates {
 /* =Media
 ----------------------------------------------- */
 
-   
+.site-header img,
+.entry-content img,
+.comment-content img,
+.widget img {
+	max-width: 100%; /* Fluid images for posts, comments, and widgets */
+}
+.site-header img,
+.entry-content img,
+img[class*="align"],
+img[class*="wp-image-"] {
+	height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
+}
+.site-header img,
+.entry-content img,
+img.size-full {
+	max-width: 100%;
+	width: auto; /* Prevent stretching of full-size images with height and width attributes in IE8 */
+}
 .entry-content img.wp-smiley,
 .comment-content img.wp-smiley {
 	border: none;
@@ -428,55 +499,6 @@ object {
 }
 
 
-/* =Navigation
------------------------------------------------ */
-
-.main-navigation {
-	margin: 5em auto 0;
-	font-family: @sans;
-	text-align: center;
-	
-	li { 
-		display: inline;
-		margin-right: 35px;
-		padding-bottom: 5px;
-		&.current-menu-item a{
-			border-bottom: 3px solid;
-			padding-bottom: 5px;
-		}
-
-		&.last {margin-right: 0;}
-
-		a { 
-			display: inline-block; 
-			color: #fff; 
-			border: none; 
-				&:hover {
-					border-bottom: 3px solid;
-					padding-bottom: 5px;
-				}
-		}
-
-	}
-
-
-}
-
-
-.site-content .site-navigation {
-	margin: 0 0 1.5em;
-	overflow: hidden;
-}
-.site-content .nav-previous {
-	float: left;
-	width: 50%;
-}
-.site-content .nav-next {
-	float: right;
-	text-align: right;
-	width: 50%;
-}
-
 /* =Front page
 ----------------------------------------------- */
 body.home {
@@ -510,17 +532,6 @@ body.home {
 
 
 
-/* =Milestones
------------------------------------------------ */
-.milestone{
-	background: @light-blue;
-	margin: 25px 0;
-	padding: 25px;
-	text-align: center;
-		h3{ font-size: 1.5em; }
-		date { font-family: @sans; font-weight: 600;}
-	}
-
 /* =Comments
 ----------------------------------------------- */
 
@@ -542,18 +553,7 @@ body.home {
 
 /* Extra Text elements */
 blockquote {
-	font-size: 1.5em;
-	font-style: italic;
-	padding: 25px;
-	background: @light-blue;
-		cite{
-			font-size: .5em;
-			margin-top: 1em;
-			display: block;
-			font-style: normal;
-			text-transform: uppercase;
-
-			}
+	margin: 0 1.5em;
 }
 dt {
 	font-weight: bold;
@@ -799,15 +799,9 @@ TABLET & SMALLER LAPTOPS
 This is the average viewing window. So Desktops, Laptops, and
 in general anyone not viewing on a mobile device. 
 */
-@media only screen and (min-width: 768px) 
-and (max-width: 1024px) {
-	#primary .wrap {
-		max-width: 100%; 
-	 }
+@media only screen and (min-width: 768px) {
+	body {  }
 } // end of media query
-
-  
-
 
 
 
