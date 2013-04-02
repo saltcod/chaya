@@ -30,12 +30,12 @@ function waterstreet_setup() {
 	require( get_template_directory() . '/inc/template-tags.php' );
 
 	add_theme_support( 'automatic-feed-links' );
-	 
+
 	add_theme_support( 'post-thumbnails' );
- 
+
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'waterstreet' ),
-	) );
+		) );
 
 }
 endif; // waterstreet_setup
@@ -54,7 +54,7 @@ function waterstreet_widgets_init() {
 		'after_widget' => '</aside>',
 		'before_title' => '<h1 class="widget-title">',
 		'after_title' => '</h1>',
-	) );
+		) );
 }
 add_action( 'widgets_init', 'waterstreet_widgets_init' );
 
@@ -76,6 +76,215 @@ add_action( 'wp_enqueue_scripts', 'waterstreet_scripts' );
 
 
 
+
+/**
+ * Register the 'Performances' & 'Works' post types
+ *   
+ * @since 0.1
+ */
+ 
+register_post_type(
+	'performances',
+	array(
+		'label' => 'Performances',
+		'description' => '',
+		'public' => true,
+		'menu_icon' => get_bloginfo( 'template_directory' ) . '/images/ticket.png',
+		'show_ui' => true,
+		'show_in_menu' => true,
+		'capability_type' => 'post',
+		'has_archive' => true,
+		'hierarchical' => true,
+		'rewrite' => array( 'slug' => '' ),
+		'query_var' => true,
+		'supports' => array( 'title', 'custom-fields'),
+		'labels' => array (
+			'name' => 'Performances',
+			'singular_name' => 'Performance',
+			'menu_name' => 'Performances',
+			'add_new' => 'Add Performance',
+			'add_new_item' => 'Add new performance',
+			'edit' => 'Edit',
+			'edit_item' => 'Edit Performance',
+			'new_item' => 'New Performance',
+			'view' => 'View Performance',
+			'view_item' => 'View Performance',
+			'search_items' => 'Search Performances',
+			'not_found' => 'No Performances Found',
+			'not_found_in_trash' => 'No Performances Found in Trash',
+			'parent' => 'Parent Performance',
+			), ) );
+
+register_post_type(
+	'work',
+	array(
+		'label' => 'Work',
+		'description' => '',
+		'public' => true,
+		'menu_icon' => get_bloginfo( 'template_directory' ) . '/images/music-icon.png',
+		'show_ui' => true,
+		'show_in_menu' => true,
+		'capability_type' => 'post',
+		'has_archive' => true,
+		'hierarchical' => true,
+		'rewrite' => array( 'slug' => '' ),
+		'query_var' => true,
+		'supports' => array( 'title', 'custom-fields'),
+		'labels' => array (
+			'name' => 'Works',
+			'singular_name' => 'Work',
+			'menu_name' => 'Works',
+			'add_new' => 'Add Work',
+			'add_new_item' => 'Add new Work',
+			'edit' => 'Edit',
+			'edit_item' => 'Edit Work',
+			'new_item' => 'New Work',
+			'view' => 'View Work',
+			'view_item' => 'View Work',
+			'search_items' => 'Search Works',
+			'not_found' => 'No Works Found',
+			'not_found_in_trash' => 'No Works Found in Trash',
+			'parent' => 'Parent Work',
+			), ) );
+
+
+//Register a taxonomy for type of work/music
+
+function register_guide_type_taxonomy() {
+	register_taxonomy(
+		'work-type', 'work', array(
+			'label' => __( 'Work type' ),
+			'sort' => true,
+			'args' => array( 'orderby' => 'term_order' ),
+			'hierarchical' => true,
+ 			'show_admin_column' => true
+			)
+		);
+}
+
+add_action( 'init', 'register_guide_type_taxonomy' );
+
+
+
+/**
+ * Fetch a list of Performances, via WP_Query 
+ *  
+ * @param: $year
+ *
+ * @since 0.1
+ */
+
+function chaya_fetch_performances( $year ){
+	global $performances;
+
+	$performances = new WP_Query( array( 
+		'post_type' => 'performances', 
+		'posts_per_page' => -1, 
+		'orderby' => 'meta_value',
+		'meta_key'=>'date',
+		'order'=>'DESC',
+		'meta_query' => array(
+			array(
+				'key' => 'year',
+				'value' => $year
+				)
+			)
+		));
+}
+
+
+
+
+
+/**
+ * Fetch a list of Works, via WP_Query 
+ *  
+ * @param: $year
+ *
+ * @since 0.1
+ */
+
+function chaya_fetch_work(){
+	global $work;
+
+	$work = new WP_Query( array( 
+		'post_type' => 'work', 
+		'posts_per_page' => -1, 
+		'order'=>'DESC',
+		));
+}
+
+
+
+
+
+
+
+/**
+ * Add admin columns  for Performances
+ *
+ * @since 0.1
+ */
+
+add_filter( 'manage_edit-performances_columns', 'my_edit_performances_columns' ) ;
+
+function my_edit_performances_columns( $columns ) {
+
+	$columns = array(
+		'cb' => '<input type="checkbox" />',
+		'title' => __( 'Performance' ),
+		'year' => __( 'Year' ),
+		'Details' => __( 'Details' ),
+		);
+
+	return $columns;
+}
+
+/* Add info to the columns */
+
+add_action( 'manage_performances_posts_custom_column', 'my_manage_performances_columns', 10, 2 );
+
+function my_manage_performances_columns( $column, $post_id ) {
+	global $post;
+
+	switch( $column ) {
+
+		/* If displaying the 'year' column. */
+		case 'year' :
+
+		/* Get the post meta. */
+		$year = get_post_meta( $post_id, 'year', true );
+
+		echo $year;
+
+		/* If no duration is found, output a default message. */
+		if ( empty( $year ) )
+			echo 'Unknown';
+
+		break;
+
+		case 'Details' :
+
+		/* Get the post meta. */
+		$details = get_post_meta( $post_id, 'details', true );
+
+		echo $details;
+
+		/* If no duration is found, output a default message. */
+		if ( empty( $details ) )
+			echo 'Unknown';
+
+		break;
+
+		/* Just break out of the switch statement for everything else. */
+		default :
+		break;
+	}
+}
+
+
+ 
+
 /**
  * Print out the current template file to the footer. 
  * Obviously to be removed in production
@@ -83,14 +292,16 @@ add_action( 'wp_enqueue_scripts', 'waterstreet_scripts' );
  * @since 0.1
  */
 
-function waterstreet_show_template() {
-	if ( is_super_admin() ){	
+function chaya_show_template() {
+	if ( is_super_admin() ){
 		global $template;
 		echo '<strong>Template file:</strong>';
-		print_r($template);
-	}
+	 	print_r($template);
+	 }
 }
-add_action('wp_footer', 'waterstreet_show_template');
+add_action('wp_footer', 'chaya_show_template');
+
+
 
 
  /**
@@ -100,14 +311,14 @@ add_action('wp_footer', 'waterstreet_show_template');
  *
  */
 
-function waterstreet_better_body_classes( $classes ){
-    global $post;
-    if ( isset( $post ) ) {
-        $classes[] = $post->post_type . '-' . $post->post_name;
-    }
-    return $classes;
-}
-	add_filter('body_class', 'waterstreet_better_body_classes');
+ function waterstreet_better_body_classes( $classes ){
+ 	global $post;
+ 	if ( isset( $post ) ) {
+ 		$classes[] = $post->post_type . '-' . $post->post_name;
+ 	}
+ 	return $classes;
+ }
+ add_filter('body_class', 'waterstreet_better_body_classes');
 
 
 
@@ -133,4 +344,3 @@ add_filter('wp_nav_menu', 'waterstreet_add_slug_class_to_menu_item');
 
 
 
- 
