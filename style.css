@@ -41,6 +41,7 @@ select,
 textarea {
   font: normal 100%/1.6 'Kepler Std', Georgia;
   color: #404040;
+  font-weight: 100;
 }
 /* Headings */
 h1,
@@ -68,7 +69,23 @@ p {
   margin-bottom: 1.5em;
   margin-top: 0;
 }
-p.two-col {
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+.entry-content {
+  /* -webkit-column-count: 2;
+	-webkit-column-gap: 40px; */
+
+  text-align: justify;
+  width: 70%;
+}
+.entry-content ul,
+.entry-content ol {
+  margin-left: 2em;
+}
+.two-col {
   -moz-column-width: 50%;
   -moz-column-count: 2;
   -moz-column-gap: 25px;
@@ -87,25 +104,11 @@ p.two-col {
   column-rule-color: #ffffff;
   column-rule-style: solid;
   column-rule-width: 1px;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  hyphens: auto;
 }
-ul,
-ol {
-  margin: 0;
-  padding: 0;
-}
-.entry-content {
-  /* -webkit-column-count: 2;
-	-webkit-column-gap: 40px; */
-
-  text-align: justify;
-  width: 70%;
-}
-.entry-content ul,
-.entry-content ol {
-  margin-left: 2em;
+.two-col p {
+  -webkit-hyphens: manual;
+  -moz-hyphens: manual;
+  hyphens: manual;
 }
 ul {
   list-style: none;
@@ -151,6 +154,8 @@ body.home #main {
   position: fixed;
   text-align: left;
   width: 960px;
+  text-align: left;
+  width: 88%;
 }
 #primary {
   float: left;
@@ -168,6 +173,10 @@ body.home #primary {
 #secondary {
   float: left;
   width: 300px;
+}
+#content {
+  width: 820px;
+  margin: 0 auto;
 }
 .loader {
   width: 35px;
@@ -193,7 +202,13 @@ hgroup {
 .site-title {
   font-size: 1.5em;
   font-weight: 200;
-  font-family: 'freight-sans-pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Kepler Std', 'freight-sans-pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  padding: 15px 5px 15px 0;
+  float: left;
+  font-size: 2em;
+  font-weight: 200;
+  font-family: 'Kepler Std', 'freight-sans-pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  width: 100%;
   padding: 15px 5px 15px 0;
 }
 .site-title a {
@@ -222,7 +237,7 @@ hgroup {
 ----------------------------------------------- */
 .main-navigation {
   margin-top: 1.8em;
-  font-family: 'freight-sans-pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Kepler Std', 'freight-sans-pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   display: inline-block;
 }
 .main-navigation li {
@@ -282,9 +297,10 @@ body.home .main-navigation a {
 ----------------------------------------------- */
 .entry-title,
 .post-title {
-  font-family: 'freight-sans-pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Kepler Std', 'freight-sans-pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 4em;
-  font-weight: 400;
+  font-weight: 100;
+  letter-spacing: 5px;
   line-height: 1.2em;
   margin-bottom: 1em;
   margin-top: 1em;
@@ -296,6 +312,9 @@ body.home .main-navigation a {
   position: relative;
   margin: 0 auto;
   width: 800px;
+}
+.page-break img {
+  max-width: 100%;
 }
 .hentry {
   margin: 0 0 1.5em;
@@ -323,7 +342,7 @@ body.home .main-navigation a {
 body.page-biography sidebar {
   float: left;
   width: 30%;
-  font-family: 'freight-sans-pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Kepler Std', 'freight-sans-pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 body.page-biography .featured-image {
   margin-right: 50px;
@@ -383,7 +402,7 @@ dl.dates {
 dl.dates dt {
   float: left;
   width: 40px;
-  font-family: 'freight-sans-pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Kepler Std', 'freight-sans-pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: .75em;
 }
 dl.dates dd {
@@ -466,6 +485,48 @@ iframe,
 object {
   max-width: 100%;
 }
+/* =Navigation
+----------------------------------------------- */
+.main-navigation {
+  margin: 5em auto 0;
+  font-family: 'Kepler Std', 'freight-sans-pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1.25em;
+  text-align: center;
+}
+.main-navigation li {
+  display: inline;
+  margin-right: 35px;
+  padding-bottom: 5px;
+}
+.main-navigation li.current-menu-item a {
+  border-bottom: 3px solid;
+  padding-bottom: 5px;
+}
+.main-navigation li.last {
+  margin-right: 0;
+}
+.main-navigation li a {
+  display: inline-block;
+  color: #fff;
+  border: none;
+}
+.main-navigation li a:hover {
+  border-bottom: 3px solid;
+  padding-bottom: 5px;
+}
+.site-content .site-navigation {
+  margin: 0 0 1.5em;
+  overflow: hidden;
+}
+.site-content .nav-previous {
+  float: left;
+  width: 50%;
+}
+.site-content .nav-next {
+  float: right;
+  text-align: right;
+  width: 50%;
+}
 /* =Front page
 ----------------------------------------------- */
 body.home {
@@ -494,6 +555,95 @@ body.home h3 span {
   display: block;
   text-transform: uppercase;
 }
+/* =Concerts and Presentations
+----------------------------------------------- */
+.year-group {
+  border-bottom: 1px solid;
+}
+.year {
+  float: left;
+  width: 125px;
+  margin-top: 1em;
+  margin-left: 25px;
+}
+.performance-list {
+  float: left;
+  width: 670px;
+}
+.performance {
+  border-bottom: 1px solid #eee;
+  padding: 1em 0;
+}
+.performance a {
+  font-weight: normal;
+  background: rgba(81, 215, 233, 0.29);
+}
+.performance .title {
+  float: left;
+  clear: both;
+  font-size: 1.25em;
+}
+.performance .sub-title {
+  float: left;
+  clear: both;
+}
+.performance .details {
+  font-style: italic;
+  clear: both;
+  float: left;
+}
+.performance .conductor {
+  float: left;
+  clear: both;
+}
+/* =Works
+----------------------------------------------- */
+.works .title {
+  float: left;
+  clear: both;
+  font-size: 1.25em;
+}
+.works .composer {
+  float: left;
+  clear: both;
+}
+.works .details {
+  font-style: italic;
+  clear: both;
+  float: left;
+}
+.works .publisher {
+  float: left;
+  clear: both;
+}
+.works .release-year {
+  float: left;
+  clear: both;
+}
+.works .work-type {
+  float: left;
+  clear: both;
+  font-style: italic;
+}
+.works .work-type a {
+  background: none;
+  border-bottom: 1px solid;
+}
+/* =Milestones
+----------------------------------------------- */
+.milestone {
+  background: rgba(81, 215, 233, 0.29);
+  margin: 25px 0;
+  padding: 25px;
+  text-align: center;
+}
+.milestone h3 {
+  font-size: 1.5em;
+}
+.milestone date {
+  font-family: 'Kepler Std', 'freight-sans-pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 600;
+}
 /* =Comments
 ----------------------------------------------- */
 /* =Widgets
@@ -508,6 +658,18 @@ body.home h3 span {
 /* Extra Text elements */
 blockquote {
   margin: 0 1.5em;
+  font-size: 1.5em;
+  font-style: italic;
+  padding: 25px;
+  margin: 25px 0 50px;
+  background: rgba(81, 215, 233, 0.29);
+}
+blockquote cite {
+  font-size: .5em;
+  margin-top: 1em;
+  display: block;
+  font-style: normal;
+  text-transform: uppercase;
 }
 dt {
   font-weight: bold;
@@ -789,6 +951,11 @@ in general anyone not viewing on a mobile device.
 */
 @media only screen and (min-width: 768px) {
   
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  #primary .wrap {
+    max-width: 100%;
+  }
 }
 /*
 RETINA (2x RESOLUTION DEVICES)
