@@ -26,7 +26,7 @@ function backstretch(){
 			"http://chayaczernowin.com/wp-content/themes/chaya/images/field-landscape.jpg",
 			{ fade: 0 });	
 
-	}  else if ( $('body').hasClass('page-music') ){
+	}  else if ( $('body').hasClass('page-works') ){
 		console.log('bio');
 		$.backstretch(
 			"http://chayaczernowin.com/wp-content/themes/chaya/images/scores.jpg",
