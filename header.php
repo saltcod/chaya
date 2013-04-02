@@ -80,9 +80,7 @@
 		<?php if( ! is_home() ): ?>
 
 			<h1 class="entry-title"><?php the_title();?></h1>
-			<div class="page-break"> 
-				<img src="<?php echo get_template_directory_uri();?>/images/page-break.png">
-			</div>
+			 
 
 		<?php endif; ?>
 		
