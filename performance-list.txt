@@ -1,0 +1,203 @@
+
+            <div class="year-group group">
+
+                <div class="year">
+                    <h2>2011</h2>
+                </div>
+
+                <div class="performance-list">
+
+                    <div class="performance group">
+                        <span class="title"><a href="http://www.schott-music.com/composers_authors/calendar/performances/show,37639,250152.html">Anea Crystal</a></span>
+                        <span class="sub-title">Two String Quartets and an Octet</span>
+                        <span class="details">January 19, 2011 | La Maison Francaise of the French Embassy - Washington D.C. - United States of America</span>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="year-group group">
+
+                <div class="year">
+                    <h2>2010</h2>
+                </div>
+
+
+                <div class="performance-list">
+
+                    <div class="performance group">
+                        <span class="title"><a href="http://www.schott-music.com/composers_authors/calendar/performances/show,28089,168969.html">Afatsim</a></span><br>
+                        <span class="sub-title">for mixed ensemble—ensemble recherche</span>
+                        <span class="details">January 16, 2010 / Morat-Institut für Kunst und Kunstwissenschaft - Freiburg - Germany</span>            
+                    </div>
+
+                    <div class="performance group">
+                        <span class="title"><a href="http://www.schott-music.com/composers_authors/calendar/performances/show,32889,140011.html">Ina</a></span><br>
+                        <span class="details">January 26, 2010 / Radialsystem V - Berlin - Germany</span>
+                    </div>
+
+                    <div class="performance group">
+                        <span class="title"><a href="http://www.schott-music.com/composers_authors/calendar/performances/show,33969,140011.html">Ina</a></span><br>
+                        <span class="details">February 20, 2010 / Theater Odeon - Wien - Austria </span>           
+                    </div>
+
+                    <div class="performance group">
+                        <span class="title"><a href="http://www.schott-music.com/composers_authors/calendar/performances/show,31122,139011.html">The hour glass bleeds still</a></span>
+                        <span class="sub-title">Das Stundenglas rinnt noch</span>
+                        <span class="details">February 26, 2010 / Tenri Gallery - New York, NY - United States of America </span>           
+                    </div>
+
+                    <div class="performance group">
+                        <span class="title"><a href="http://www.schott-music.com/composers_authors/calendar/performances/show,31122,140011.html">Ina</a></span><br>
+                        <span class="details">February 26, 2010 / Tenri Gallery - New York, NY - United States of America </span>           
+                    </div>
+
+
+                    <div class="performance group">
+                        <span class="title"><a href="http://www.schott-music.com/composers_authors/calendar/performances/show,31122,140095.html">Die Kreuzung</a></span><br>
+                        <span class="sub-title">A Crossbreed</span>
+                        <span class="details">February 26, 2010 / Tenri Gallery - New York, NY - United States of America</span>            
+                    </div>
+
+                    <div class="performance group">
+                        <span class="title"><a href="http://www.schott-music.com/composers_authors/calendar/performances/show,31122,250152.html">Anea Crystal</a></span>
+                        <span class="sub-title">Two String Quartets and an Octet</span>
+                        <span class="details">February 26, 2010 / Tenri Gallery - New York, NY - United States of America</span>            
+                    </div>
+
+
+                    <div class="performance group">
+                        <span class="title"><a href="http://www.schott-music.com/composers_authors/calendar/performances/show,34302,272763.html">The last leaf</a></span><br>
+                        <span class="details">February 28, 2010 / E-Werk, Großer Saal - Freiburg - Germany</span>            
+                    </div>
+
+
+                    <div class="performance group">
+                        <span class="title"><a href="http://www.schott-music.com/composers_authors/calendar/performances/show,28205,139011.html">The hour glass bleeds still</a></span>
+                        <span class="sub-title">Das Stundenglas rinnt noch</span>
+                        Conductor:&nbsp;Stefan Schreiber<br>    
+                        <span class="details">May 19, 2010 / Liederhalle, Mozart-Saal - Stuttgart - Germany </span>           
+                    </div>
+
+
+                    <div class="performance group">
+                        <span class="title"><a href="http://www.schott-music.com/composers_authors/calendar/performances/show,28205,176127.html">Winter Songs III: Roots</a></span>
+                        <span class="sub-title">for seven instrumentalists, sampler player, three amplified percussionists and IRCAM electronics</span>
+                        <span class="conductor">Conductor:&nbsp;Stefan Schreiber</span>     
+                        <span class="details">May 19, 2010 / Liederhalle, Mozart-Saal - Stuttgart - Germany </span>           
+                    </div>
+
+
+                    <div class="performance group">
+                        <span class="title"><a href="http://www.schott-music.com/composers_authors/calendar/performances/show,28205,235467.html">Sheva</a></span><br>
+                        <span class="sub-title">(Seven)</span>
+                        <span class="conductor">Conductor:&nbsp;Stefan Schreiber</span>
+                        <span class="details">May 19, 2010 / Liederhalle, Mozart-Saal - Stuttgart - Germany </span>           
+                    </div>
+
+
+                    <div class="performance group">
+                        <span class="title"><a href="http://www.schott-music.com/composers_authors/calendar/performances/show,28205,235516.html">Drift</a></span><br>
+                        (Sahaf)</span>
+                        <span class="conductor">Conductor:&nbsp;Stefan Schreiber</span>
+                        <span class="details">May 19, 2010 / Liederhalle, Mozart-Saal - Stuttgart - Germany </span>           
+                    </div>
+
+
+                    <div class="performance group">
+                        <span class="title"><a href="http://www.schott-music.com/composers_authors/calendar/performances/show,28205,250152.html">Anea Crystal</a></span> 
+                        <span class="sub-title">Two String Quartets and an Octet</span>
+                        <span class="conductor">Conductor:&nbsp;Stefan Schreiber</span>
+                        <span class="details">May 19, 2010 / Liederhalle, Mozart-Saal - Stuttgart - Germany </span>           
+                    </div>
+
+
+                    <div class="performance group">
+                        <span class="title"><a href="http://www.schott-music.com/composers_authors/calendar/performances/show,36851,275258.html">Lovesong</a></span>
+                        <span class="sub-title">for mixed ensemble-ensemble recherche</span>  
+                        <span class="details">June 12, 2010 / Morat-Institut - Freiburg - Germany </span>           
+                    </div>
+
+
+                    <div class="performance group">
+                        <span class="title"><a href="http://www.schott-music.com/composers_authors/calendar/performances/show,34301,272761.html">DUO LEAT</a></span> 
+                        <span class="sub-title">(slow duo)</span>
+                        <span class="details">June 13, 2010 / Jüdisches Museum - Hohenems - Austria </span>           
+                    </div>
+
+
+                    <div class="performance group">
+                        <span class="title"><a href="http://www.schott-music.com/composers_authors/calendar/performances/show,33814,139011.html">The hour glass bleeds still</a></span>
+                        <span class="sub-title">Das Stundenglas rinnt noch</span>
+                        <span class="details">June 17, 2010 / New England Conservatory, Brown Hall - Boston, MA - United States of America </span>           
+                    </div>
+
+                    <div class="performance group">
+                        <span class="title"><a href="http://www.schott-music.com/composers_authors/calendar/performances/show,33814,168969.html">Afatsim </a></span>
+                        <span class="sub-title">for mixed ensemble</span>
+                        <span class="details">June 17, 2010 / New England Conservatory, Brown Hall - Boston, MA - United States of America </span>           
+                    </div>
+
+                    <div class="performance group">
+                        <span class="title"><a href="http://www.schott-music.com/composers_authors/calendar/performances/show,33814,235516.html">Drift</a></span> 
+                        <span class="sub-title">(Sahaf)</span>
+                        <span class="details">June 17, 2010 / New England Conservatory, Brown Hall - Boston, MA - United States of America </span>           
+                    </div>
+
+
+                    <div class="performance group">
+                        <span class="title"><a href="http://www.schott-music.com/composers_authors/calendar/performances/show,33879,235516.html">Drift</a></span><br>
+                        <span class="sub-title">(Sahaf)</span>
+                        <span class="details">July 2, 2010 / The Felicja Blumental Music Center - Tel Aviv - Israel </span>           
+                    </div>
+
+
+                    <div class="performance group">
+                        <span class="title"><a href="http://www.schott-music.com/composers_authors/calendar/performances/show,14394,168965.html">Pnima... Inwards</a></span>
+                        <span class="sub-title">Chamber opera for 4 vocal soloists, instrumental soloists and a string orchestra</span>
+                        <span class="conductor">Conductor:&nbsp;Johannes Kalitzke<br>      </span>          
+                        <span class="details">July 9, 2010 / Opernhaus - Stuttgart - Germany </span>           
+                    </div>
+
+
+                    <div class="performance group">
+                        <span class="title"><a href="http://www.schott-music.com/composers_authors/calendar/performances/show,37636,272538.html">Manoalchadia</a></span>
+                        <span class="sub-title">for two female voices and bass flute</span>
+                        <span class="details">July 10, 2010 / Staatstheater - Stuttgart - Germany </span>           
+                    </div>
+
+
+                    <div class="performance group">
+                        <span class="title"><a href="http://www.schott-music.com/composers_authors/calendar/performances/show,14394,168965.html">Pnima... Inwards</a></span><br>
+                        <span class="conductor">Conductor:&nbsp;Johannes Kalitzke</span> 
+                        <span class="sub-title">Chamber opera for 4 vocal soloists, instrumental soloists and a string orchestra</span>               
+                        <span class="details">July 11, 2010 / Opernhaus - Stuttgart - Germany </span>           
+                    </div>
+
+                    <div class="performance group">
+                        <span class="title"><a href="http://www.schott-music.com/composers_authors/calendar/performances/show,14394,168965.html">Pnima... Inwards</a></span><br>
+                        <span class="sub-title">Chamber opera for 4 vocal soloists, instrumental soloists and a string orchestra</span> 
+                        <span class="conductor">Conductor:&nbsp;Johannes Kalitzke</span>                
+                        <span class="details">July 11, 2010 / Opernhaus - Stuttgart - Germany </span>           
+                    </div>
+
+
+                    <div class="performance group">
+                        <span class="title"><a href="http://www.schott-music.com/composers_authors/calendar/performances/show,37636,272538.html">Manoalchadia</a></span>
+                        <span class="sub-title">for two female voices and bass flute</span>
+                        <span class="details">July 14, 2010 / Literaturhaus - Stuttgart - Germany </span>           
+                    </div>
+
+
+                    <div class="performance group">
+                        <span class="title"><a href="http://www.schott-music.com/composers_authors/calendar/performances/show,14394,168965.html">Pnima... Inwards</a></span>
+                        <span class="sub-title">Chamber opera for 4 vocal soloists, instrumental soloists and a string orchestra</span>
+                        <span class="conductor">Conductor:&nbsp;Johannes Kalitzke</span>                
+                        <span class="details">July 15, 2010 / Opernhaus - Stuttgart - Germany </span>           
+                    </div>
+                </div>
+
+            </div>
+
