@@ -152,17 +152,18 @@ body.home #main {
 }
 #masthead {
   position: fixed;
-  text-align: left;
   width: 960px;
-  text-align: left;
-  width: 88%;
+  left: 50%;
+  margin-left: -480px;
 }
 #primary {
   float: left;
   width: 100%;
+  position: relative;
+  z-index: 10;
   padding: 25px;
   margin-top: 30em;
-  background: url(images/contour.png) top left no-repeat #ffffff;
+  background: url(images/contour-map-lg.png) top left no-repeat #ffffff;
   -webkit-box-shadow: 0 -3px 3px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 -3px 3px rgba(0, 0, 0, 0.2);
   box-shadow: 0 -3px 3px rgba(0, 0, 0, 0.2);
@@ -202,17 +203,21 @@ hgroup {
 .site-title {
   font-size: 1.5em;
   font-weight: 200;
-  font-family: 'Kepler Std', 'freight-sans-pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   padding: 15px 5px 15px 0;
   float: left;
   font-size: 2em;
   font-weight: 200;
-  font-family: 'Kepler Std', 'freight-sans-pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Kepler Std', Georgia;
   width: 100%;
   padding: 15px 5px 15px 0;
 }
 .site-title a {
   color: white;
+}
+.colophon {
+  font-size: 12px ;
+  font-style: italic;
+  color: #999;
 }
 .site-description {
   font-size: 18px;
@@ -232,49 +237,6 @@ hgroup {
   clear: both;
   display: block;
   margin: 0 auto;
-}
-/* =Navigation
------------------------------------------------ */
-.main-navigation {
-  margin-top: 1.8em;
-  font-family: 'Kepler Std', 'freight-sans-pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  display: inline-block;
-}
-.main-navigation li {
-  float: left;
-  margin-right: 35px;
-  padding-bottom: 5px;
-}
-.main-navigation li.current-menu-item a {
-  border-bottom: 3px solid;
-  padding-bottom: 5px;
-}
-.main-navigation li.last {
-  margin-right: 0;
-}
-.main-navigation li a:hover {
-  border-bottom: 3px solid;
-  padding-bottom: 5px;
-}
-.main-navigation a {
-  color: #fff;
-  border: none;
-}
-body.home .main-navigation a {
-  color: #fff;
-}
-.site-content .site-navigation {
-  margin: 0 0 1.5em;
-  overflow: hidden;
-}
-.site-content .nav-previous {
-  float: left;
-  width: 50%;
-}
-.site-content .nav-next {
-  float: right;
-  text-align: right;
-  width: 50%;
 }
 /* =Secondary
 ----------------------------------------------- */
@@ -297,7 +259,7 @@ body.home .main-navigation a {
 ----------------------------------------------- */
 .entry-title,
 .post-title {
-  font-family: 'Kepler Std', 'freight-sans-pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Kepler Std', Georgia;
   font-size: 4em;
   font-weight: 100;
   letter-spacing: 5px;
@@ -339,10 +301,13 @@ body.home .main-navigation a {
 }
 /* =Template: Two thirds 
 ----------------------------------------------- */
+body.page-biography .colophon {
+  color: #fff;
+}
 body.page-biography sidebar {
   float: left;
   width: 30%;
-  font-family: 'Kepler Std', 'freight-sans-pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Kepler Std', Georgia;
 }
 body.page-biography .featured-image {
   margin-right: 50px;
@@ -363,9 +328,8 @@ body.page-biography h2 {
 body.page-biography blockquote {
   font-style: italic;
   font-size: 1.5em;
-  border-top: 1px solid;
   padding-top: 40px;
-  margin: 0;
+  margin: 1em 0;
 }
 body.page-biography .nav {
   margin-top: 65px;
@@ -402,7 +366,7 @@ dl.dates {
 dl.dates dt {
   float: left;
   width: 40px;
-  font-family: 'Kepler Std', 'freight-sans-pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Kepler Std', Georgia;
   font-size: .75em;
 }
 dl.dates dd {
@@ -488,19 +452,17 @@ object {
 /* =Navigation
 ----------------------------------------------- */
 .main-navigation {
-  margin: 5em auto 0;
-  font-family: 'Kepler Std', 'freight-sans-pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  margin: 1em auto 0;
   font-size: 1.25em;
   text-align: center;
+  font-weight: 100;
 }
 .main-navigation li {
   display: inline;
   margin-right: 35px;
-  padding-bottom: 5px;
 }
 .main-navigation li.current-menu-item a {
-  border-bottom: 3px solid;
-  padding-bottom: 5px;
+  border-bottom: 1px solid;
 }
 .main-navigation li.last {
   margin-right: 0;
@@ -511,8 +473,7 @@ object {
   border: none;
 }
 .main-navigation li a:hover {
-  border-bottom: 3px solid;
-  padding-bottom: 5px;
+  border-bottom: 1px solid;
 }
 .site-content .site-navigation {
   margin: 0 0 1.5em;
@@ -528,14 +489,17 @@ object {
   width: 50%;
 }
 /* =Front page
------------------------------------------------ */
+ ----------------------------------------------- */
 body.home {
   background: #efefef;
+}
+body.home .colophon {
+  color: #fff;
 }
 body.home #primary {
   background: none;
   padding: 25px 120px;
-  margin-top: 10em;
+  margin-top: 12em;
   -webkit-box-shadow: 0 0 0;
   -moz-box-shadow: 0 0 0;
   box-shadow: 0 0 0;
@@ -557,6 +521,60 @@ body.home h3 span {
 }
 /* =Concerts and Presentations
 ----------------------------------------------- */
+/* =Concerts and Presentations
+----------------------------------------------- */
+.page-concerts-and-presentations {
+  background: url(images/contour-map-lg.png) top left no-repeat #ffffff;
+}
+.page-concerts-and-presentations #primary {
+  -webkit-box-shadow: 0 0 0 0;
+  -moz-box-shadow: 0 0 0 0;
+  box-shadow: 0 0 0 0;
+  background: none;
+  margin-top: 20em;
+}
+.page-concerts-and-presentations #masthead {
+  color: #444;
+}
+.page-concerts-and-presentations .entry-title,
+.page-concerts-and-presentations .site-title a {
+  color: #444;
+  font-size: 2em;
+}
+.page-concerts-and-presentations .main-navigation li a {
+  color: #444;
+}
+.page-concerts-and-presentations .entry-content {
+  width: 100%;
+}
+.page-concerts-and-presentations #content {
+  width: 620px;
+  background: #fff;
+}
+.page-concerts-and-presentations .performance-list {
+  width: 230px;
+}
+.page-concerts-and-presentations .performances-container {
+  float: right;
+  width: 380px;
+}
+.page-concerts-and-presentations .featured-sidebar {
+  float: left;
+  width: 150px;
+  margin-right: 75px;
+  -moz-opacity: 0.5;
+  -khtml-opacity: 0.5;
+  -webkit-opacity: 0.5;
+  opacity: 0.5;
+}
+.page-concerts-and-presentations .featured-sidebar img {
+  margin-top: 50px;
+}
+.page-concerts-and-presentations .featured-sidebar img.fixed {
+  position: fixed;
+  width: 150px;
+  top: 25px;
+}
 .year-group {
   border-bottom: 1px solid;
 }
@@ -576,7 +594,7 @@ body.home h3 span {
 }
 .performance a {
   font-weight: normal;
-  background: rgba(81, 215, 233, 0.29);
+  background: rgba(149, 231, 242, 0.29);
 }
 .performance .title {
   float: left;
@@ -596,12 +614,59 @@ body.home h3 span {
   float: left;
   clear: both;
 }
+/* = Template for Pages without Backstretch
+----------------------------------------------- */
+.page-template-templatesno-backstretch-php {
+  background: url(images/contour-map-lg.png) top left no-repeat #ffffff;
+}
+.page-template-templatesno-backstretch-php #content {
+  width: 550px;
+}
+.page-template-templatesno-backstretch-php #primary {
+  -webkit-box-shadow: 0 0 0 0;
+  -moz-box-shadow: 0 0 0 0;
+  box-shadow: 0 0 0 0;
+  background: none;
+  margin-top: 20em;
+}
+.page-template-templatesno-backstretch-php #masthead {
+  color: #444;
+}
+.page-template-templatesno-backstretch-php .entry-title,
+.page-template-templatesno-backstretch-php .site-title a {
+  color: #444;
+}
+.page-template-templatesno-backstretch-php .main-navigation li a {
+  color: #444;
+}
+.page-template-templatesno-backstretch-php .entry-content {
+  width: 100%;
+}
 /* =Works
 ----------------------------------------------- */
+body.page-works #content {
+  width: 550px;
+}
+.works {
+  float: right;
+  width: 320px;
+  margin-left: 50px;
+  margin-top: 10px;
+}
+.works .work {
+  float: left;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
 .works .title {
   float: left;
   clear: both;
   font-size: 1.25em;
+  font-weight: 500;
+}
+.works .title a {
+  background: rgba(149, 231, 242, 0.29);
 }
 .works .composer {
   float: left;
@@ -629,10 +694,67 @@ body.home h3 span {
   background: none;
   border-bottom: 1px solid;
 }
+.works .edit-link {
+  float: left;
+  clear: both;
+  font: 10px Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  background: #aaa;
+  padding: 2px 4px;
+}
+.works .edit-link a {
+  color: white;
+}
+#works-filter {
+  float: left;
+  width: 150px;
+  margin-top: 10px;
+}
+.works-filter-wrap {
+  width: 150px;
+}
+.works-filter-wrap.fixed {
+  position: fixed;
+  width: 150px;
+  top: 35px;
+}
 /* =Milestones
 ----------------------------------------------- */
+body.page-milestones {
+  background: rgba(81, 215, 233, 0.2);
+  border: 50px solid rgba(81, 215, 233, 0.29);
+}
+body.page-milestones #primary {
+  -webkit-box-shadow: 0 0 0 0;
+  -moz-box-shadow: 0 0 0 0;
+  box-shadow: 0 0 0 0;
+  background: none;
+  margin-top: 20em;
+}
+body.page-milestones #masthead {
+  color: #444;
+}
+body.page-milestones .entry-title,
+body.page-milestones .site-title a {
+  color: #444;
+}
+body.page-milestones .main-navigation li a {
+  color: #444;
+}
+body.page-milestones .entry-content {
+  width: 100%;
+}
+body.page-milestones #content {
+  width: 550px;
+}
 .milestone {
-  background: rgba(81, 215, 233, 0.29);
+  background: #fff;
   margin: 25px 0;
   padding: 25px;
   text-align: center;
@@ -641,11 +763,52 @@ body.home h3 span {
   font-size: 1.5em;
 }
 .milestone date {
-  font-family: 'Kepler Std', 'freight-sans-pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   font-weight: 600;
 }
 /* =Comments
 ----------------------------------------------- */
+/* =Isotope
+----------------------------------------------- */
+/**** Isotope CSS3 transitions ****/
+#filters {
+  background: rgba(81, 215, 233, 0.29);
+  padding: 8px 10px 5px;
+  margin-bottom: 25px;
+}
+#filters li {
+  float: left;
+  margin-right: 25px;
+  width: 100%;
+}
+#filters .selected {
+  border-bottom: 1px solid;
+}
+.work {
+  width: 800px;
+}
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+  -moz-transition-duration: 0.8s;
+  -ms-transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
+  transition-duration: 0.8s;
+}
+.isotope {
+  -webkit-transition-property: height, width;
+  -moz-transition-property: height, width;
+  -ms-transition-property: height, width;
+  -o-transition-property: height, width;
+  transition-property: height, width;
+}
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+  -moz-transition-property: -moz-transform, opacity;
+  -ms-transition-property: -ms-transform, opacity;
+  -o-transition-property: -o-transform, opacity;
+  transition-property: transform, opacity;
+}
 /* =Widgets
 ----------------------------------------------- */
 .widget {

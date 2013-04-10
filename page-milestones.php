@@ -25,10 +25,9 @@ get_header(); ?>
 				<div class="entry-content">
 					<p>Proin id felis ut dui posuere adipiscing sit amet et arcu. Nulla malesuada auctor nisi, a gravida felis blandit in. In convallis, dui vel ultrices ultricies, erat magna sollicitudin sem, at cursus ligula nibh et erat. Integer orci augue, sollicitudin non vestibulum sed, auctor a ligula. Morbi congue porta leo, eget posuere mauris vulputate vel. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. </p>
 
+					<img src="http://chayaczernowin.com/wp-content/themes/chaya/images/field-landscape.jpg" alt="">
 
-
-					<img src="http://placehold.it/760x350/E8117F/fff&text=Placeholder">
-
+ 
 					<div class="milestone-list">
 						
 						<div class="milestone">

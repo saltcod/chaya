@@ -16,48 +16,53 @@ get_header(); ?>
 
 <div id="primary" class="content-area">
     <div class="wrap group">
-        <div id="content" class="site-content" role="main">
+        <div id="content" class="site-content group" role="main">
+
+            <div class="featured-sidebar">
+                <img class="lecturn" src="<?php echo get_template_directory_uri();?>/images/lecturn.png" alt="">
+            </div>
+            
+            <div class="performances-container">
+
+                <div class="year-group group">
+                    <div class="year"><h2>2013</h2> </div>
+
+                    <div class="performance-list">
+                        <?php chaya_fetch_performances( 2013 ); ?>
+                        <?php get_template_part('content', 'performances');?>
+                    </div>
+                </div> <!-- .year-group -->
 
 
+                <div class="year-group group">
+                    <div class="year"><h2>2012</h2></div>
 
-            <div class="year-group group">
-                <div class="year"><h2>2013</h2> </div>
-
-                <div class="performance-list">
-                    <?php chaya_fetch_performances( 2013 ); ?>
-                    <?php get_template_part('content', 'performances');?>
-                </div>
-            </div> <!-- .year-group -->
-
-
-            <div class="year-group group">
-                <div class="year"><h2>2012</h2></div>
-
-                <div class="performance-list">
-                    <?php chaya_fetch_performances( 2012 ); ?>
-                    <?php get_template_part('content', 'performances');?>
-                </div>
-            </div> <!-- .year-group -->
+                    <div class="performance-list">
+                        <?php chaya_fetch_performances( 2012 ); ?>
+                        <?php get_template_part('content', 'performances');?>
+                    </div>
+                </div> <!-- .year-group -->
 
 
-            <div class="year-group group">
-                <div class="year"><h2>2011</h2></div>
+                <div class="year-group group">
+                    <div class="year"><h2>2011</h2></div>
 
-                <div class="performance-list">
-                    <?php chaya_fetch_performances( 2011 ); ?>
-                    <?php get_template_part('content', 'performances');?>
-                </div>
-            </div> <!-- .year-group -->
+                    <div class="performance-list">
+                        <?php chaya_fetch_performances( 2011 ); ?>
+                        <?php get_template_part('content', 'performances');?>
+                    </div>
+                </div> <!-- .year-group -->
 
 
-            <div class="year-group group">
-                <div class="year"><h2>2010</h2></div>
+                <div class="year-group group">
+                    <div class="year"><h2>2010</h2></div>
 
-                <div class="performance-list">
-                    <?php chaya_fetch_performances( 2010 ); ?>
-                    <?php get_template_part('content', 'performances');?>
-                </div>
-            </div> <!-- .year-group -->
+                    <div class="performance-list">
+                        <?php chaya_fetch_performances( 2010 ); ?>
+                        <?php get_template_part('content', 'performances');?>
+                    </div>
+                </div> <!-- .year-group -->
+            </div>
 
 
         </div><!-- #content .site-content -->

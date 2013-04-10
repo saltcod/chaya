@@ -12,7 +12,7 @@
 </div><!-- #main .site-main -->
 
 <footer id="colophon" class="site-footer" role="contentinfo">
-	<div class="wrap">
+	<div class="wrap group">
 		<div class="site-info">
 			<p><strong>Contact:</strong> Aliquam quis arcu at ipsum gravida sagittis. Nunc id tellus sed tellus pretium ullamcorper sit amet vel urna. </p>
 		</div><!-- .site-info -->

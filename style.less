@@ -11,7 +11,7 @@ Tags:
 */
 
 
-@sans: 'Kepler Std','freight-sans-pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+@sans: Helvetica, Arial, sans-serif;
 @kepler: 'Kepler Std', Georgia;
 
 @light-blue: rgba(81, 215, 233, 0.29);
@@ -142,18 +142,19 @@ a:active {
 
 #masthead {
 	position: fixed;
- 	text-align: left;
 	width: 960px;
-	text-align: left;
-	width: 88%;
- }
+	left: 50%;
+	margin-left: -480px;
+}
 
 #primary {
 	float: left;
 	width: 100%;
+	position: relative;
+	z-index: 10;
 	padding: 25px;
 	margin-top: 30em;
-	background: url(images/contour.png) top left no-repeat white;
+	background: url(images/contour-map-lg.png) top left no-repeat white;
 	.box-shadow(0 -3px 3px rgba(0, 0, 0, .2)); 
 	body.home & { background: none; }
 }
@@ -191,20 +192,23 @@ hgroup{
 	text-align: center;
 }
 .site-title {
- 	font-size: 1.5em;
+	font-size: 1.5em;
 	font-weight: 200;
-	font-family: @sans;
- 	padding: 15px 5px 15px 0;
- 	float: left;
+	padding: 15px 5px 15px 0;
+	float: left;
 	font-size: 2em;
 	font-weight: 200;
-	font-family: @sans;
+	font-family: @kepler;
 	width: 100%;
 	padding: 15px 5px 15px 0;
- 
+
 	a {  color: white; }
 }
-
+.colophon {
+	font-size:12px ;
+	font-style: italic;
+	color: #999;
+}
 .site-description{
 	font-size: 18px;
 }
@@ -228,61 +232,10 @@ hgroup{
 
 
 
-/* =Navigation
------------------------------------------------ */
-
-.main-navigation {
-	margin-top: 1.8em;
-	font-family: @sans;
-	display: inline-block;
-
-	
-	li { 
-		float: left;
-		margin-right: 35px;
-		padding-bottom: 5px;
-		&.current-menu-item a{
-			border-bottom: 3px solid;
-			padding-bottom: 5px;
-		}
-
-		&.last {margin-right: 0;}
-
-		a:hover {
-			border-bottom: 3px solid;
-			padding-bottom: 5px;
-		}
-
-	}
-	a { 
-		color: #fff; 
-		border: none; 
-		body.home & { color: #fff; }
-	}
-
-
-}
-
-
-.site-content .site-navigation {
-	margin: 0 0 1.5em;
-	overflow: hidden;
-}
-.site-content .nav-previous {
-	float: left;
-	width: 50%;
-}
-.site-content .nav-next {
-	float: right;
-	text-align: right;
-	width: 50%;
-}
-
 
 /* =Secondary
 ----------------------------------------------- */
-#secondary {
-}
+
 
 
 
@@ -308,7 +261,7 @@ hgroup{
 /* =Content
 ----------------------------------------------- */
 .entry-title, .post-title {
-	font-family: @sans;
+	font-family: @kepler;
 	font-size: 4em;
 	font-weight: 100;
 	letter-spacing: 5px;
@@ -326,7 +279,7 @@ hgroup{
 	margin: 0 auto; 
 	width: 800px;
 	img { max-width: 100%; }
- 
+
 }
 
 .sticky {
@@ -360,11 +313,11 @@ hgroup{
 /* =Template: Two thirds 
 ----------------------------------------------- */
 body.page-biography {
-	
+	.colophon { color: #fff; }
 	sidebar{
 		float: left;
 		width: 30%;	
-		font-family: @sans;
+		font-family: @kepler;
 	}
 	.featured-image {
 		margin-right: 50px;
@@ -383,14 +336,13 @@ body.page-biography {
 		margin-top: 50px;
 	}
 
- 	blockquote {
+	blockquote {
 		font-style: italic;
 		font-size: 1.5em;
-		border-top: 1px solid;
 		padding-top: 40px;
-		margin: 0;
+		margin: 1em 0;
 	}
- 
+
 	.nav{	
 		margin-top: 65px;
 		width: 235px;
@@ -427,7 +379,7 @@ body.page-biography {
 dl.dates {
 	clear: both;
 	display: block;
-	dt{float: left; width: 40px; font-family: @sans; font-size: .75em;}	
+	dt{float: left; width: 40px; font-family: @kepler; font-size: .75em;}	
 	dd{ float: left; width: 85%;  }	
 }
 
@@ -517,23 +469,21 @@ object {
 }
 
 
- 
+
 /* =Navigation
 ----------------------------------------------- */
 
 .main-navigation {
-	margin: 5em auto 0;
-	font-family: @sans;
+	margin: 1em auto 0;
 	font-size: 1.25em;
 	text-align: center;
+	font-weight: 100;
 	
 	li { 
 		display: inline;
 		margin-right: 35px;
-		padding-bottom: 5px;
 		&.current-menu-item a{
-			border-bottom: 3px solid;
-			padding-bottom: 5px;
+			border-bottom: 1px solid;
 		}
 
 		&.last {margin-right: 0;}
@@ -543,8 +493,7 @@ object {
 			color: #fff; 
 			border: none; 
 			&:hover {
-				border-bottom: 3px solid;
-				padding-bottom: 5px;
+				border-bottom: 1px solid;
 			}
 		}
 
@@ -569,39 +518,95 @@ object {
 }
 
  /* =Front page
------------------------------------------------ */
-body.home {
-	background: #efefef;
+ ----------------------------------------------- */
+ body.home {
+ 	background: #efefef;
 
+ 	.colophon { color: #fff; }
+ 	#primary { 
+ 		background: none;
+ 		padding: 25px 120px;
+ 		margin-top: 12em;
+ 		.box-shadow(0 0 0 );
+ 		text-align: center;
+ 	}
 
-
-	#primary { 
-		background: none;
-		padding: 25px 120px;
-		margin-top: 10em;
-		.box-shadow(0 0 0 );
-		text-align: center;
-	}
-
-	h3{ 
-		font-size: 1.8em;
-		font-weight: 100;
-		font-style: italic;
-		color: white; 
-		margin-bottom: 40px;
-		span {
-			font-size: .5em;
-			font-style: normal;
-			margin-top: 25px;
-			display: block;
-			text-transform: uppercase;
-		}
-	}
-}
+ 	h3{ 
+ 		font-size: 1.8em;
+ 		font-weight: 100;
+ 		font-style: italic;
+ 		color: white; 
+ 		margin-bottom: 40px;
+ 		span {
+ 			font-size: .5em;
+ 			font-style: normal;
+ 			margin-top: 25px;
+ 			display: block;
+ 			text-transform: uppercase;
+ 		}
+ 	}
+ }
 
  
 /* =Concerts and Presentations
 ----------------------------------------------- */
+
+/* =Concerts and Presentations
+----------------------------------------------- */
+.page-concerts-and-presentations {
+	background: url(images/contour-map-lg.png) top left no-repeat #ffffff;
+	#primary {
+		.box-shadow(0 0 0 0);
+		background: none;
+		margin-top: 20em;
+	}
+	#masthead {
+		color: #444;
+	}
+	.entry-title,
+	.site-title a{
+		color: #444;
+		font-size: 2em;
+	}
+	.main-navigation li a{
+		color: #444;
+	}
+	.entry-content {
+		width: 100%;
+	}
+	#content {
+		width: 620px;
+		background: #fff;
+	}
+	.performance-list {
+		width: 230px;
+	}
+
+	.performances-container{
+		float: right;
+		width: 380px;
+	}
+	.featured-sidebar{
+		float: left;
+		width: 150px;
+		margin-right: 75px;
+		.opacity(.5);
+		img{
+			margin-top: 50px;
+			&.fixed { 
+				position: fixed; 
+				width: 150px;
+				top: 25px;
+			} 
+			
+		}
+	}
+
+} 
+
+
+
+
 .year-group {
 	border-bottom: 1px solid;
 }
@@ -622,7 +627,7 @@ body.home {
 	padding: 1em 0;
 	a { 
 		font-weight: normal;
-		background: @light-blue;
+		background: lighten(@light-blue, 15%);
 	}
 	.title {
 		float: left;
@@ -645,13 +650,66 @@ body.home {
 }
 
 
+
+
+
+/* = Template for Pages without Backstretch
+----------------------------------------------- */
+.page-template-templatesno-backstretch-php{
+	background: url(images/contour-map-lg.png) top left no-repeat #ffffff;
+	
+	#content {
+		width: 550px;
+	}
+	#primary {
+		.box-shadow(0 0 0 0);
+		background: none;
+		margin-top: 20em;
+	}
+	#masthead {
+		color: #444;
+	}
+	.entry-title,
+	.site-title a{
+		color: #444;
+ 	}
+	.main-navigation li a{
+		color: #444;
+	}
+	.entry-content {
+		width: 100%;
+	}
+}
+
+
+
 /* =Works
 ----------------------------------------------- */
+
+body.page-works{ 
+	#content {
+		width: 550px;
+	}
+}
+
 .works {
+	float: right;
+	width: 320px;
+	margin-left: 50px;
+	margin-top: 10px;
+	
+	.work{
+		float: left;
+		margin-bottom: 25px;
+		border-bottom: 1px solid #ccc;
+		padding-bottom: 10px;
+	}
 	.title {
 		float: left;
 		clear: both;
 		font-size: 1.25em;
+		font-weight: 500;
+		a{ background: lighten(@light-blue, 15%);}
 	}
 	.composer {
 		float: left;
@@ -677,13 +735,69 @@ body.home {
 		font-style: italic;
 		a { background: none; border-bottom: 1px solid;}
 	}
+	.edit-link {
+		float: left;
+		clear: both;
+		font: 10px @sans;
+		text-transform: uppercase;
+		.rounded(4px);
+		background: #aaa;
+		padding: 2px 4px;
+		a{ color: white; }
+
+
+	}
 } 
+
+#works-filter{
+	float: left;
+	width: 150px;
+	margin-top: 10px;
+}
+
+.works-filter-wrap{
+	width: 150px;
+	&.fixed { 
+		position: fixed; 
+		width: 150px;
+		top: 35px;
+	} 
+}
+
 
 
 /* =Milestones
 ----------------------------------------------- */
+body.page-milestones {
+	background: rgba(81, 215, 233, 0.2);
+	border: 50px solid @light-blue;
+
+	#primary {
+		.box-shadow(0 0 0 0);
+		background: none;
+		margin-top: 20em;
+	}
+	#masthead {
+		color: #444;
+	}
+	.entry-title,
+	.site-title a{
+		color: #444;
+	}
+	.main-navigation li a{
+		color: #444;
+	}
+	.entry-content {
+		width: 100%;
+	}
+	#content {
+		width: 550px;
+	}
+
+}
+
 .milestone{
-	background: @light-blue;
+	background: #fff;
 	margin: 25px 0;
 	padding: 25px;
 	text-align: center;
@@ -692,12 +806,61 @@ body.home {
 }
 
 
- 
+
+
+
 /* =Comments
 ----------------------------------------------- */
 
 .bypostauthor {
 }
+
+/* =Isotope
+----------------------------------------------- */
+
+/**** Isotope CSS3 transitions ****/
+#filters {
+	background: @light-blue;
+	padding: 8px 10px 5px;
+	margin-bottom: 25px;
+	li {
+		float: left;
+		margin-right: 25px;
+		width: 100%;
+	}
+	.selected {
+		border-bottom: 1px solid;
+	}
+}
+
+.work {
+	width: 800px;
+}
+.isotope,
+.isotope .isotope-item {
+	-webkit-transition-duration: 0.8s;
+	-moz-transition-duration: 0.8s;
+	-ms-transition-duration: 0.8s;
+	-o-transition-duration: 0.8s;
+	transition-duration: 0.8s;
+}
+
+.isotope {
+	-webkit-transition-property: height, width;
+	-moz-transition-property: height, width;
+	-ms-transition-property: height, width;
+	-o-transition-property: height, width;
+	transition-property: height, width;
+}
+
+.isotope .isotope-item {
+	-webkit-transition-property: -webkit-transform, opacity;
+	-moz-transition-property:    -moz-transform, opacity;
+	-ms-transition-property:     -ms-transform, opacity;
+	-o-transition-property:      -o-transform, opacity;
+	transition-property:         transform, opacity;
+}
+
 
 /* =Widgets
 ----------------------------------------------- */
@@ -715,7 +878,7 @@ body.home {
 /* Extra Text elements */
 blockquote {
 	margin: 0 1.5em;
- 	font-size: 1.5em;
+	font-size: 1.5em;
 	font-style: italic;
 	padding: 25px;
 	margin: 25px 0 50px;
@@ -728,7 +891,7 @@ blockquote {
 		text-transform: uppercase;
 
 	}
- 
+
 }
 dt {
 	font-weight: bold;
@@ -974,7 +1137,7 @@ TABLET & SMALLER LAPTOPS
 This is the average viewing window. So Desktops, Laptops, and
 in general anyone not viewing on a mobile device. 
 */
- 
+
 @media only screen and (min-width: 768px) {
 	body {  }
 } // end of media query
@@ -990,7 +1153,7 @@ and (max-width: 1024px) {
 
 
 
- 
+
 
 
 /*

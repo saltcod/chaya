@@ -68,9 +68,11 @@ function waterstreet_scripts() {
 	
 	wp_enqueue_script( 'scripts', get_template_directory_uri() . '/js/scripts.js', array( 'jquery' ), '2.0.3' );
 	
+	wp_enqueue_script( 'isotope', get_template_directory_uri() . '/js/jquery.isotope.min.js', array( 'jquery' ), '2.0.3', true );
+	
 	wp_enqueue_script( 'jquery.backstretch', get_template_directory_uri() . '/js/jquery.backstretch.min.js', array( 'jquery' ), '2.0.3' );
 
-	wp_enqueue_script( 'jquery.scrollspy', get_template_directory_uri() . '/js/jquery.scrollspy.js', array( 'jquery' ), '2.0' );
+	wp_enqueue_script( 'jquery.scrollspy', get_template_directory_uri() . '/js/jquery.scrollspy.js', array( 'jquery' ), '2.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'waterstreet_scripts' );
 
@@ -82,7 +84,7 @@ add_action( 'wp_enqueue_scripts', 'waterstreet_scripts' );
  *   
  * @since 0.1
  */
- 
+
 register_post_type(
 	'performances',
 	array(
@@ -157,7 +159,7 @@ function register_guide_type_taxonomy() {
 			'sort' => true,
 			'args' => array( 'orderby' => 'term_order' ),
 			'hierarchical' => true,
- 			'show_admin_column' => true
+			'show_admin_column' => true
 			)
 		);
 }
@@ -210,12 +212,12 @@ function chaya_fetch_work(){
 	$work = new WP_Query( array( 
 		'post_type' => 'work', 
 		'posts_per_page' => -1, 
-		'order'=>'DESC',
+		'orderby' => 'meta_value',
+		'meta_key'=>'release_year',  
+		'orderby' => 'meta_value_num', 
+		'order' => 'DESC'
 		));
 }
-
-
-
 
 
 
@@ -224,7 +226,6 @@ function chaya_fetch_work(){
  * Add admin columns  for Performances
  *
  * @since 0.1
- */
 
 add_filter( 'manage_edit-performances_columns', 'my_edit_performances_columns' ) ;
 
@@ -281,9 +282,21 @@ function my_manage_performances_columns( $column, $post_id ) {
 		break;
 	}
 }
-
-
  
+/**
+ * oembed for Soundcloud
+ *
+ * @since 0.1
+ */
+
+
+// Add SoundCloud oEmbed
+function chaya_add_oembed_soundcloud(){
+	wp_oembed_add_provider( 'http://soundcloud.com/*', 'http://soundcloud.com/oembed' );
+}
+add_action('init','chaya_add_oembed_soundcloud');
+
+
 
 /**
  * Print out the current template file to the footer. 
@@ -296,8 +309,8 @@ function chaya_show_template() {
 	if ( is_super_admin() ){
 		global $template;
 		echo '<strong>Template file:</strong>';
-	 	print_r($template);
-	 }
+		print_r($template);
+	}
 }
 add_action('wp_footer', 'chaya_show_template');
 

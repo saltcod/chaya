@@ -251,7 +251,7 @@ function waterstreet_settings_field_sample_textarea() {
  */
 function waterstreet_theme_options_render_page() {
 	?>
-	<div class="wrap">
+	<div class="wrap group">
 		<?php screen_icon(); ?>
 		<?php $theme_name = function_exists( 'wp_get_theme' ) ? wp_get_theme() : get_current_theme(); ?>
 		<h2><?php printf( __( '%s Theme Options', 'waterstreet' ), $theme_name ); ?></h2>
