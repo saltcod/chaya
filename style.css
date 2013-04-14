@@ -98,6 +98,10 @@ h6 {
   font-weight: 100;
   font-family: 'Kepler Std', Georgia;
 }
+.callout {
+  font-size: 110%;
+  font-style: italic;
+}
 h1 {
   font-size: 4em;
 }
@@ -117,42 +121,6 @@ ol {
   margin: 0;
   padding: 0;
 }
-.entry-content {
-  /* -webkit-column-count: 2;
-	-webkit-column-gap: 40px; */
-
-  text-align: justify;
-  width: 70%;
-}
-.entry-content ul,
-.entry-content ol {
-  margin-left: 2em;
-}
-.two-col {
-  -moz-column-width: 50%;
-  -moz-column-count: 2;
-  -moz-column-gap: 25px;
-  -moz-column-rule-color: #ffffff;
-  -moz-column-rule-style: solid;
-  -moz-column-rule-width: 1px;
-  -webkit-column-width: 50%;
-  -webkit-column-count: 2;
-  -webkit-column-gap: 25px;
-  -webkit-column-rule-color: #ffffff;
-  -webkit-column-rule-style: solid;
-  -webkit-column-rule-width: 1px;
-  column-width: 50%;
-  column-count: 2;
-  column-gap: 25px;
-  column-rule-color: #ffffff;
-  column-rule-style: solid;
-  column-rule-width: 1px;
-}
-.two-col p {
-  -webkit-hyphens: manual;
-  -moz-hyphens: manual;
-  hyphens: manual;
-}
 ul {
   list-style: none;
 }
@@ -170,6 +138,14 @@ ol ul {
 a {
   text-decoration: none;
   color: #444;
+}
+#content a,
+#content a:focus,
+#content a:active {
+  border-bottom: 1px solid;
+}
+#content a:hover {
+  background: rgba(217, 246, 250, 0.29);
 }
 /* Font awesome */
 @font-face {
@@ -213,10 +189,6 @@ body.home #primary {
 #secondary {
   float: left;
   width: 300px;
-}
-#content {
-  width: 820px;
-  margin: 0 auto;
 }
 .loader {
   width: 35px;
@@ -284,13 +256,6 @@ hgroup {
   clip: rect(1px, 1px, 1px, 1px);
   position: absolute !important;
 }
-/* Small menu */
-.menu-toggle {
-  cursor: pointer;
-}
-.main-small-navigation .menu {
-  display: none;
-}
 /* =Content
 ----------------------------------------------- */
 .entry-title,
@@ -337,14 +302,6 @@ hgroup {
 }
 /* =Template: Two thirds 
 ----------------------------------------------- */
-body.page-biography .colophon {
-  color: #fff;
-}
-body.page-biography sidebar {
-  float: left;
-  width: 30%;
-  font-family: 'Kepler Std', Georgia;
-}
 body.page-biography .featured-image {
   margin-right: 50px;
 }
@@ -511,6 +468,38 @@ object {
 .main-navigation li a:hover {
   border-bottom: 1px solid;
 }
+/* Small menu */
+.menu-toggle {
+  cursor: pointer;
+  font-size: 1.5em;
+  width: 30%;
+  margin: 0 auto;
+  background: #CBF2F8;
+  text-transform: uppercase;
+  padding-top: 6px;
+  line-height: 1.5;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.main-small-navigation .menu-sidebar-menu-container {
+  background: #333;
+  margin-top: 1em;
+}
+.main-small-navigation .menu-sidebar-menu-container li {
+  margin-bottom: 10px;
+  padding: 10px 0;
+  border-bottom: 1px dotted #777;
+}
+.main-small-navigation .menu-sidebar-menu-container a {
+  color: white;
+}
+.main-small-navigation .menu {
+  display: none;
+}
 .site-content .site-navigation {
   margin: 0 0 1.5em;
   overflow: hidden;
@@ -557,8 +546,6 @@ body.home h3 span {
 }
 /* =Concerts and Presentations
 ----------------------------------------------- */
-/* =Concerts and Presentations
------------------------------------------------ */
 .page-concerts-and-presentations {
   background: url(images/contour-map-lg.png) top left no-repeat #ffffff;
 }
@@ -576,7 +563,6 @@ body.home h3 span {
 }
 .page-concerts-and-presentations .entry-title {
   color: #444;
-  font-size: 3.5em;
 }
 .page-concerts-and-presentations .main-navigation li a {
   color: #444;
@@ -585,32 +571,11 @@ body.home h3 span {
   width: 100%;
 }
 .page-concerts-and-presentations #content {
-  width: 620px;
   background: #fff;
 }
-.page-concerts-and-presentations .performance-list {
-  width: 230px;
-}
-.page-concerts-and-presentations .performances-container {
-  float: right;
-  width: 380px;
-}
-.page-concerts-and-presentations .featured-sidebar {
-  float: left;
-  width: 150px;
-  margin-right: 75px;
-  -moz-opacity: 0.5;
-  -khtml-opacity: 0.5;
-  -webkit-opacity: 0.5;
-  opacity: 0.5;
-}
-.page-concerts-and-presentations .featured-sidebar img {
-  margin-top: 50px;
-}
-.page-concerts-and-presentations .featured-sidebar img.fixed {
-  position: fixed;
-  width: 150px;
-  top: 25px;
+.page-concerts-and-presentations aside {
+  margin-right: 50px;
+  margin-top: 1em;
 }
 .year-group {
   border-bottom: 1px solid;
@@ -623,7 +588,6 @@ body.home h3 span {
 }
 .performance-list {
   float: left;
-  width: 670px;
 }
 .performance {
   border-bottom: 1px solid #eee;
@@ -651,13 +615,13 @@ body.home h3 span {
   float: left;
   clear: both;
 }
+#content {
+  margin: 0 auto;
+}
 /* = Template for Pages without Backstretch
 ----------------------------------------------- */
 .page-template-templatesno-backstretch-php {
   background: url(images/contour-map-lg.png) top left no-repeat #ffffff;
-}
-.page-template-templatesno-backstretch-php #content {
-  width: 550px;
 }
 .page-template-templatesno-backstretch-php #primary {
   -webkit-box-shadow: 0 0 0 0;
@@ -680,12 +644,10 @@ body.home h3 span {
 }
 /* =Works
 ----------------------------------------------- */
-body.page-works #content {
-  width: 550px;
+body.page-works .listen {
+  margin-right: 3em;
 }
 .works {
-  float: right;
-  width: 320px;
   margin-left: 50px;
   margin-top: 10px;
 }
@@ -748,48 +710,13 @@ body.page-works #content {
   color: white;
 }
 #works-filter {
-  float: left;
-  width: 150px;
   margin-top: 10px;
 }
-.works-filter-wrap {
-  width: 150px;
-}
-.works-filter-wrap.fixed {
-  position: fixed;
-  width: 150px;
-  top: 35px;
-}
-/* =Milestones
------------------------------------------------ */
-body.page-milestones {
-  background: rgba(81, 215, 233, 0.2);
-  border: 50px solid rgba(81, 215, 233, 0.29);
-}
-body.page-milestones #primary {
-  -webkit-box-shadow: 0 0 0 0;
-  -moz-box-shadow: 0 0 0 0;
-  box-shadow: 0 0 0 0;
-  background: none;
-}
-body.page-milestones #masthead {
-  color: #444;
-}
-body.page-milestones .entry-title,
-body.page-milestones .site-title a {
-  color: #444;
-}
-body.page-milestones .main-navigation li a {
-  color: #444;
-}
-body.page-milestones .entry-content {
-  width: 100%;
-}
-body.page-milestones #content {
-  width: 550px;
+#works-filter a {
+  border: none;
 }
 .milestone {
-  background: #fff;
+  background: rgba(81, 215, 233, 0.29);
   margin: 25px 0;
   padding: 25px;
   text-align: center;
@@ -1107,6 +1034,9 @@ body.home footer#colophon  .wrap {
 .white {
   color: white;
   border-bottom: 1px solid;
+}
+.hide {
+  display: none;
 }
 /* =Group/Clearfix
 -------------------------------------------------------------- */
@@ -1443,6 +1373,17 @@ Graciously borrowed from Eddie Machado's Bones
 http://themble.com/bones/
 ******************************************************************/
 /*
+iPhones
+*/
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  aside {
+    display: none;
+  }
+  .entry-title {
+    font-size: 2em;
+  }
+}
+/*
 LARGER MOBILE DEVICES
 This is for devices like the Galaxy Note or something that's
 larger than an iPhone but smaller than a tablet. 
@@ -1452,22 +1393,48 @@ larger than an iPhone but smaller than a tablet.
 }
 /*
 TABLET & SMALLER LAPTOPS
-This is the average viewing window. So Desktops, Laptops, and
-in general anyone not viewing on a mobile device. 
 */
 @media only screen and (min-width: 768px) {
-  
+  .two-col {
+    -moz-column-width: 50%;
+    -moz-column-count: 2;
+    -moz-column-gap: 25px;
+    -moz-column-rule-color: #ffffff;
+    -moz-column-rule-style: solid;
+    -moz-column-rule-width: 1px;
+    -webkit-column-width: 50%;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 25px;
+    -webkit-column-rule-color: #ffffff;
+    -webkit-column-rule-style: solid;
+    -webkit-column-rule-width: 1px;
+    column-width: 50%;
+    column-count: 2;
+    column-gap: 25px;
+    column-rule-color: #ffffff;
+    column-rule-style: solid;
+    column-rule-width: 1px;
+  }
+  .two-col p {
+    -webkit-hyphens: manual;
+    -moz-hyphens: manual;
+    hyphens: manual;
+  }
 }
+/* iPad */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   #primary .wrap {
     max-width: 100%;
   }
 }
 /*
+DESKTOP — 1000PX AND ABOVE
+*/
+@media only screen and (min-width: 1000px) {
+  
+}
+/*
 RETINA (2x RESOLUTION DEVICES)
-This applies to the retina iPhone (4s) and iPad (2,3) along with
-other displays with a 2x resolution. You can also create a media
-query for retina AND a certain size if you want. Go Nuts.
 */
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
   

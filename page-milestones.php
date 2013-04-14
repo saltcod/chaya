@@ -14,20 +14,20 @@
 
 get_header(); ?>
 
-<div id="primary" class="content-area">
+<section id="primary" class="content-area">
 	<div class="wrap group">
-		<div id="content" class="site-content" role="main">
-
-
-
+		
+		
+		<div id="content" class="site-content six" role="main">
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-				<div class="entry-content">
+ 				<div class="entry-content">
+					
 					<p>Proin id felis ut dui posuere adipiscing sit amet et arcu. Nulla malesuada auctor nisi, a gravida felis blandit in. In convallis, dui vel ultrices ultricies, erat magna sollicitudin sem, at cursus ligula nibh et erat. Integer orci augue, sollicitudin non vestibulum sed, auctor a ligula. Morbi congue porta leo, eget posuere mauris vulputate vel. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. </p>
 
 					<img src="http://chayaczernowin.com/wp-content/themes/chaya/images/field-landscape.jpg" alt="">
 
- 
+
 					<div class="milestone-list">
 						
 						<div class="milestone">
@@ -55,15 +55,10 @@ get_header(); ?>
 							<h3 class="title">Ars Electronica Prize for Stilleben and Io; one year residency at the University of San Diego</h3>
 							<date>1995</date>
 						</div>
-						
-						
-						
-						
-						
 					</div>
 
 
-
+ 
 				</div><!-- .entry-content -->
 
 

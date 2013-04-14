@@ -14,7 +14,7 @@
 
 get_header(); ?>
  
-<div id="primary" class="content-area">
+<section id="primary" class="content-area">
 	<div class="wrap group">
 		<div id="content" class="site-content" role="main">
 

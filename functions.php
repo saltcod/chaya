@@ -223,6 +223,35 @@ function chaya_fetch_work(){
 
 
 /**
+ * Fetch a specific page, via WP_Query 
+ *  
+ * @param: $slug
+ *
+ * @since 0.1
+ */
+
+function chaya_fetch_page($slug){
+ 
+	$page = new WP_Query( array( 
+ 		'pagename' => $slug
+	));
+
+ 
+	// The Loop
+	if ( $page->have_posts() ) :
+		while ( $page->have_posts() ) : $page->the_post();
+			get_template_part('content');
+		endwhile;
+	endif;
+ 
+	// Reset Post Data
+	wp_reset_postdata();
+}
+
+
+
+
+/**
  * Add admin columns  for Performances
  *
  * @since 0.1

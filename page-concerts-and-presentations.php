@@ -14,20 +14,16 @@
 
 get_header(); ?>
 
-<div id="primary" class="content-area">
+<section id="primary" class="content-area">
     <div class="wrap group">
-        <div id="content" class="site-content group" role="main">
-
-
-            <h1>Large quote? </h1>
-            http://michieldegraaf.com/
-
-            <div class="featured-sidebar">
-                <img class="lecturn" src="<?php echo get_template_directory_uri();?>/images/lecturn.png" alt="">
-            </div>
+        <div id="content" class="site-content eight group" role="main">
             
-            <div class="performances-container">
-
+            <aside class="col three">
+                    <h2 class="callout">Nunc quis quam vel ante pretium dignissim sed ac augue. Praesent venenatis, urna vel commodo varius, elit massa ullamcorper tortor, eu congue diam metus interdum sapien.</h2>
+                    <cite>—Praesent venenatis</cite>
+            </aside>
+            
+            <div class="performances-container col eight">
                 <div class="year-group group">
                     <div class="year"><h2>2013</h2> </div>
 

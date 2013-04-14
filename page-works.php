@@ -14,21 +14,29 @@
 
 get_header(); ?>
 
-<div id="primary" class="content-area">
+<section id="primary" class="content-area">
     <div class="wrap group">
         <div id="content" class="site-content" role="main">
 
-            <section id="works-filter" class="group">
-                <div class="works-filter-wrap">
-                    <h3 class="inline">Category:</h3>
+            <aside class="listen col three">
+                <h2>Listen</h2>
+                <?php chaya_fetch_page('listen');?>
+            </aside>
 
-                    <ul id="filters" class="option-set group" data-option-key="filter">
-                       <li><a href="#filter" data-option-value="*" class="selected">Show all</a></li>
 
-                       <?php 
-                       $terms = get_terms("work-type");
-                       $count = count($terms);
-                       if ( $count > 0 ){
+
+            <section class="col eight">
+                <h2>List of Works</h2>
+                <aside id="works-filter" class="col three group">
+                   <h3 class="inline">Category:</h3>
+
+                   <ul id="filters" class="option-set group" data-option-key="filter">
+                     <li><a href="#filter" data-option-value="*" class="selected">Show all</a></li>
+
+                     <?php 
+                     $terms = get_terms("work-type");
+                     $count = count($terms);
+                     if ( $count > 0 ){
 
                         foreach ( $terms as $term ) {
                             echo "<li><a href='#filter' data-option-value='" ."." .$term->name ."'>";
@@ -37,24 +45,18 @@ get_header(); ?>
                     }
                     ?>
                 </ul>
-            </div>
-        </section> <!-- #options -->
+            </aside> <!-- #options -->
 
+            <div class="works group col eight">
+                <div class="works-list">
+                    <div id="works-container" class="group">
 
-
-
-
-        <div class="works group">
-            <div class="works-list">
-                <div id="works-container" class="group">
-
-                    <?php chaya_fetch_work(); ?>
-                    <?php get_template_part('content', 'works');?>
+                        <?php chaya_fetch_work(); ?>
+                        <?php get_template_part('content', 'works');?>
+                    </div>
                 </div>
-            </div>
-        </div> <!-- .year-group -->
-
-
+            </div> <!-- .year-group -->
+        </section>
 
 
 

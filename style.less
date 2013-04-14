@@ -14,12 +14,12 @@ Tags:
 @sans: Helvetica, Arial, sans-serif;
 @kepler: 'Kepler Std', Georgia;
 
-@light-blue: rgba(81, 215, 233, 0.29);
+@blue: rgba(81, 215, 233, 0.29);
 
 @import url('inc/css/grid.less');
 @import url('inc/css/normalize.css');
 @import url('inc/css/elements.less');
- 
+
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 /* Font Awesome icon font */
@@ -46,6 +46,10 @@ h1,h2,h3,h4,h5,h6 {
 	font-family: @kepler;
 }
 
+.callout {
+	font-size: 110%;
+	font-style: italic;
+}
 h1 { font-size: 4em;}
 
 hr {
@@ -64,29 +68,13 @@ ul, ol {
 	margin: 0;
 	padding: 0;
 }
-.entry-content { 
-	/* -webkit-column-count: 2;
-	-webkit-column-gap: 40px; */
-	text-align: justify;
-	width: 70%;		
 
-	ul, ol { margin-left: 2em; }
-}
-
-.two-col{
-	.columns(50%, 2, 25px, #fff, solid, 1px);
-	p {
-		-webkit-hyphens: manual;
-		-moz-hyphens: manual;
-		hyphens: manual;
-	}
-}
 
 
 ul {
 	list-style: none;
 }
-ol {
+ol { 
 	list-style: decimal;
 }
 ul ul, ol ol, ul ol, ol ul {
@@ -101,11 +89,13 @@ a {
 	color: #444;
 }
 
-a:hover,
-a:focus,
-a:active {
-
-
+#content {
+	a,
+	a:focus,
+	a:active {
+		border-bottom: 1px solid;
+	}
+	a:hover { background: lighten(@blue, 30%); }
 }
 
 
@@ -138,7 +128,7 @@ a:active {
 
 
 #masthead {
- 	max-width: 1020px;
+	max-width: 1020px;
 }
 
 #primary {
@@ -158,10 +148,6 @@ a:active {
 	width: 300px;
 }
 
-#content {
-	width: 820px;
-	margin: 0 auto;
-}
 
 footer#colophon {}
 
@@ -200,7 +186,7 @@ hgroup{
 
 	a {  color: white; }
 }
- 
+
 .site-description{
 	font-size: 18px;
 }
@@ -240,14 +226,6 @@ hgroup{
 
 
 
-
-/* Small menu */
-.menu-toggle {
-	cursor: pointer;
-}
-.main-small-navigation .menu {
-	display: none;
-}
 
 
 /* =Content
@@ -305,12 +283,7 @@ hgroup{
 /* =Template: Two thirds 
 ----------------------------------------------- */
 body.page-biography {
-	.colophon { color: #fff; }
-	sidebar{
-		float: left;
-		width: 30%;	
-		font-family: @kepler;
-	}
+
 	.featured-image {
 		margin-right: 50px;
 		img { max-width: 100%; }
@@ -346,7 +319,7 @@ body.page-biography {
 		li { 
 			display: block; 
 			&.active a {
-				background: @light-blue;
+				background: @blue;
 			}
 		}
 
@@ -490,9 +463,42 @@ object {
 		}
 
 	}
-
-
 }
+
+
+
+/* Small menu */
+.menu-toggle {
+	cursor: pointer;
+	font-size: 1.5em;
+	width: 30%;
+	margin: 0 auto;
+	background: #CBF2F8;
+	text-transform: uppercase;
+	padding-top: 6px;
+	line-height: 1.5;
+	.rounded(4px);
+}
+
+
+.main-small-navigation{
+	.menu-sidebar-menu-container{
+		background: #333;
+		margin-top: 1em;
+		li { 
+			margin-bottom: 10px; 
+			padding: 10px 0;
+			border-bottom: 1px dotted #777;
+		}
+		a { color: white; }
+	}
+	
+}
+
+.main-small-navigation .menu {
+	display: none;
+}
+
 
 
 .site-content .site-navigation {
@@ -539,9 +545,6 @@ object {
  	}
  }
 
- 
-/* =Concerts and Presentations
------------------------------------------------ */
 
 /* =Concerts and Presentations
 ----------------------------------------------- */
@@ -559,7 +562,7 @@ object {
 	}
 	.entry-title{
 		color: #444;
-		font-size: 3.5em;
+		 
 	}
 	.main-navigation li a{
 		color: #444;
@@ -568,37 +571,18 @@ object {
 		width: 100%;
 	}
 	#content {
-		width: 620px;
-		background: #fff;
+ 		background: #fff;
 	}
 	.performance-list {
-		width: 230px;
+		 
 	}
 
-	.performances-container{
-		float: right;
-		width: 380px;
-	}
-	.featured-sidebar{
-		float: left;
-		width: 150px;
-		margin-right: 75px;
-		.opacity(.5);
-		img{
-			margin-top: 50px;
-			&.fixed { 
-				position: fixed; 
-				width: 150px;
-				top: 25px;
-			} 
-			
-		}
+	aside { 
+		margin-right: 50px;
+		margin-top: 1em;
 	}
 
 } 
-
-
-
 
 .year-group {
 	border-bottom: 1px solid;
@@ -612,15 +596,14 @@ object {
 
 .performance-list{
 	float: left;
-	width: 670px;
-}
+ }
 
 .performance{
 	border-bottom: 1px solid #eee;
 	padding: 1em 0;
 	a { 
 		font-weight: normal;
-		background: lighten(@light-blue, 15%);
+		background: lighten(@blue, 15%);
 	}
 	.title {
 		float: left;
@@ -643,7 +626,9 @@ object {
 }
 
 
-
+#content { 
+	margin: 0 auto;
+}
 
 
 /* = Template for Pages without Backstretch
@@ -652,8 +637,7 @@ object {
 	background: url(images/contour-map-lg.png) top left no-repeat #ffffff;
 	
 	#content {
-		width: 550px;
-	}
+ 	}
 	#primary {
 		.box-shadow(0 0 0 0);
 		background: none;
@@ -664,7 +648,7 @@ object {
 	.entry-title,
 	.site-title a{
 		color: #444;
- 	}
+	}
 	.main-navigation li a{
 		color: #444;
 	}
@@ -679,14 +663,13 @@ object {
 ----------------------------------------------- */
 
 body.page-works{ 
-	#content {
-		width: 550px;
-	}
+	 .listen {
+	 	margin-right: 3em;
+	 }
 }
 
 .works {
-	float: right;
-	width: 320px;
+
 	margin-left: 50px;
 	margin-top: 10px;
 	
@@ -701,7 +684,7 @@ body.page-works{
 		clear: both;
 		font-size: 1.25em;
 		font-weight: 500;
-		a{ background: lighten(@light-blue, 15%);}
+		a{ background: lighten(@blue, 15%);}
 	}
 	.composer {
 		float: left;
@@ -742,53 +725,14 @@ body.page-works{
 } 
 
 #works-filter{
-	float: left;
-	width: 150px;
 	margin-top: 10px;
+		a { border: none; }
 }
 
-.works-filter-wrap{
-	width: 150px;
-	&.fixed { 
-		position: fixed; 
-		width: 150px;
-		top: 35px;
-	} 
-}
-
-
-
-/* =Milestones
------------------------------------------------ */
-body.page-milestones {
-	background: rgba(81, 215, 233, 0.2);
-	border: 50px solid @light-blue;
-
-	#primary {
-		.box-shadow(0 0 0 0);
-		background: none;
-	}
-	#masthead {
-		color: #444;
-	}
-	.entry-title,
-	.site-title a{
-		color: #444;
-	}
-	.main-navigation li a{
-		color: #444;
-	}
-	.entry-content {
-		width: 100%;
-	}
-	#content {
-		width: 550px;
-	}
-
-}
-
+ 
+ 
 .milestone{
-	background: #fff;
+	background: @blue;
 	margin: 25px 0;
 	padding: 25px;
 	text-align: center;
@@ -811,7 +755,7 @@ body.page-milestones {
 
 /**** Isotope CSS3 transitions ****/
 #filters {
-	background: @light-blue;
+	background: @blue;
 	padding: 8px 10px 5px;
 	margin-bottom: 25px;
 	li {
@@ -873,7 +817,7 @@ blockquote {
 	font-style: italic;
 	padding: 25px;
 	margin: 25px 0 50px;
-	background: @light-blue;
+	background: @blue;
 	cite{
 		font-size: .5em;
 		margin-top: 1em;
@@ -1082,6 +1026,9 @@ footer#colophon {
 
 .white { color: white; border-bottom: 1px solid;}
 
+.hide {display: none;}
+
+
 /* =Group/Clearfix
 -------------------------------------------------------------- */
 
@@ -1196,12 +1143,24 @@ http://themble.com/bones/
 
 
 /*
+iPhones
+*/
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+	body {    }
+	#primary {  }
+	aside { .hide(); }
+	.entry-title{ font-size: 2em; }
+
+} // end of media query
+
+
+/*
 LARGER MOBILE DEVICES
 This is for devices like the Galaxy Note or something that's
 larger than an iPhone but smaller than a tablet. 
 */
 @media only screen and (min-width: 481px) {
-	body {   }
+	
 
 } // end of media query
 
@@ -1209,20 +1168,48 @@ larger than an iPhone but smaller than a tablet.
 
 /*
 TABLET & SMALLER LAPTOPS
-This is the average viewing window. So Desktops, Laptops, and
-in general anyone not viewing on a mobile device. 
 */
 
+
 @media only screen and (min-width: 768px) {
-	body {  }
+	body {    }
+	
+	.two-col{
+		.columns(50%, 2, 25px, #fff, solid, 1px);
+		p {
+			-webkit-hyphens: manual;
+			-moz-hyphens: manual;
+			hyphens: manual;
+		}
+	}
+
 } // end of media query
 
 
-@media only screen and (min-width: 768px) 
-and (max-width: 1024px) {
+/* iPad */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
 	#primary .wrap {
 		max-width: 100%; 
 	}
+
+	
+} // end of media query
+
+
+/*
+DESKTOP — 1000PX AND ABOVE
+*/
+
+@media only screen and (min-width: 1000px) {
+	
+
+	
+
+
+
+
+
+
 } // end of media query
 
 
@@ -1233,9 +1220,6 @@ and (max-width: 1024px) {
 
 /*
 RETINA (2x RESOLUTION DEVICES)
-This applies to the retina iPhone (4s) and iPad (2,3) along with
-other displays with a 2x resolution. You can also create a media
-query for retina AND a certain size if you want. Go Nuts.
 */
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
 only screen and (min--moz-device-pixel-ratio: 1.5),
