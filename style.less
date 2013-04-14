@@ -16,10 +16,10 @@ Tags:
 
 @light-blue: rgba(81, 215, 233, 0.29);
 
+@import url('inc/css/grid.less');
 @import url('inc/css/normalize.css');
 @import url('inc/css/elements.less');
-@import url('inc/css/1140.css');
-
+ 
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 /* Font Awesome icon font */
@@ -27,8 +27,6 @@ Tags:
 
 /* =Global
 ----------------------------------------------- */
-
-
 
 body,
 button,
@@ -134,17 +132,13 @@ a:active {
 }
 
 .wrap {
-	max-width: 960px;
+	max-width: 1020px;
 	margin: 0 auto;
-	overflow: hidden;
 }
 
 
 #masthead {
-	position: fixed;
-	width: 960px;
-	left: 50%;
-	margin-left: -480px;
+ 	max-width: 1020px;
 }
 
 #primary {
@@ -152,8 +146,8 @@ a:active {
 	width: 100%;
 	position: relative;
 	z-index: 10;
+	margin-top: 5em;
 	padding: 25px;
-	margin-top: 30em;
 	background: url(images/contour-map-lg.png) top left no-repeat white;
 	.box-shadow(0 -3px 3px rgba(0, 0, 0, .2)); 
 	body.home & { background: none; }
@@ -188,7 +182,7 @@ footer#colophon {}
 hgroup{
 	float: left;
 	width: 100%;
-	margin-bottom: 4em;
+	margin-bottom: 2em;
 	text-align: center;
 }
 .site-title {
@@ -198,17 +192,15 @@ hgroup{
 	float: left;
 	font-size: 2em;
 	font-weight: 200;
+	text-align: center;
 	font-family: @kepler;
+	margin-bottom: .5em;
 	width: 100%;
 	padding: 15px 5px 15px 0;
 
 	a {  color: white; }
 }
-.colophon {
-	font-size:12px ;
-	font-style: italic;
-	color: #999;
-}
+ 
 .site-description{
 	font-size: 18px;
 }
@@ -267,7 +259,7 @@ hgroup{
 	letter-spacing: 5px;
 	line-height: 1.2em;
 	margin-bottom: 1em;
-	margin-top: 1em;
+	margin-top: 3em;
 	color: white;
 	text-transform: uppercase;
 	text-align: center;
@@ -526,7 +518,7 @@ object {
  	#primary { 
  		background: none;
  		padding: 25px 120px;
- 		margin-top: 12em;
+ 		margin-top: 0;
  		.box-shadow(0 0 0 );
  		text-align: center;
  	}
@@ -558,15 +550,16 @@ object {
 	#primary {
 		.box-shadow(0 0 0 0);
 		background: none;
-		margin-top: 20em;
 	}
 	#masthead {
 		color: #444;
 	}
-	.entry-title,
 	.site-title a{
 		color: #444;
-		font-size: 2em;
+	}
+	.entry-title{
+		color: #444;
+		font-size: 3.5em;
 	}
 	.main-navigation li a{
 		color: #444;
@@ -664,7 +657,6 @@ object {
 	#primary {
 		.box-shadow(0 0 0 0);
 		background: none;
-		margin-top: 20em;
 	}
 	#masthead {
 		color: #444;
@@ -775,7 +767,6 @@ body.page-milestones {
 	#primary {
 		.box-shadow(0 0 0 0);
 		background: none;
-		margin-top: 20em;
 	}
 	#masthead {
 		color: #444;
@@ -1111,6 +1102,90 @@ footer#colophon {
 	width: 100%;
 	clear: both;
 }
+
+
+
+
+
+
+/* =Grid
+----------------------------------------------- */
+
+
+
+/*
+ * Here comes the grid! You can use semantic class names or numerical, whatever works for you.
+ * All column declarations go inside a media query for mobile-first responsiveness. The default column width is 100%. 
+ */
+
+ @media only screen and (min-width: @breakpoint ) {
+ 	.primary {
+ 		.columns(8);
+ 	}
+
+ 	.secondary {
+ 		.columns(4);
+ 	}
+
+ 	.one {
+ 		.columns(1);
+ 	}
+
+ 	.two {
+ 		.columns(2);
+ 	}
+
+ 	.three {
+ 		.columns(3);
+ 	}
+
+ 	.four {
+ 		.columns(4);
+ 	}
+
+ 	.five {
+ 		.columns(5);
+ 	}
+
+ 	.six {
+ 		.columns(6);
+ 	}
+
+ 	.seven {
+ 		.columns(7);
+ 	}
+
+ 	.eight {
+ 		.columns(8);
+ 	}
+
+ 	.nine {
+ 		.columns(9);
+ 	}
+
+ 	.ten {
+ 		.columns(10);
+ 	}
+
+ 	.eleven {
+ 		.columns(11);
+ 	}
+
+ 	.twelve {
+ 		.columns(12);
+ 	}
+
+ 	.push-1 {
+ 		.push(1);
+ 	}
+
+ 	.push-4 {
+ 		.push(4);
+ 	}
+ }
+
+
+
 
 /* =Media Queries 
 ----------------------------------------------- */

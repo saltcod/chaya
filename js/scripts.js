@@ -175,7 +175,7 @@ if ( ! newBrowser ){
 		if( $('body').hasClass('home') ){
 			$.backstretch(
 				"http://chayaczernowin.com/wp-content/themes/chaya/images/window-colour.jpg",
-				{ fade: 2250 });	
+				{ fade: 50 });	
 
 		}  else if ( $('body').hasClass('page-biography') ) {
 			$.backstretch(
@@ -197,93 +197,44 @@ if ( ! newBrowser ){
 
 	// Fade in extra long on homepage
 	if( $('body').hasClass('home') ){
-		setTimeout(backstretch, 1500);
+		setTimeout(backstretch, 0);
 	} else {
 		setTimeout(backstretch, 0);
 	}
 
 
 
-	// Fade out header elements when the window scrolls
+	// // Parallax Fade out header elements when the window scrolls
 
-	var windowScroll, 
-	masthead = $('#masthead'), 
-	main = $('#main'); 
+	// var windowScroll, 
+	// masthead = $('#masthead'), 
+	// main = $('#main'); 
 
-	$(window).scroll(function(){
+	// $(window).scroll(function(){
 
-	    //Get scroll position of window
-	    windowScroll = $(this).scrollTop();
-
-
-	    //Fade the .nav out
-	    masthead.css({
-	    	'opacity' : 1-(windowScroll/500),
-	    	'margin-top': -(windowScroll/3)
-	    });
+	//     //Get scroll position of window
+	//     windowScroll = $(this).scrollTop();
 
 
-	    $('#fadey-nav').css({
-	    	'opacity' : 0 +(windowScroll/600)
-	    });  
+	//     //Fade the .nav out
+	//     masthead.css({
+	//     	'opacity' : 1-(windowScroll/500),
+	//     	'margin-top': -(windowScroll/3)
+	//     });
 
 
-	});
+	//     $('#fadey-nav').css({
+	//     	'opacity' : 0 +(windowScroll/600)
+	//     });  
 
 
+	// });
 
 	// Fade in images slowly when a page loads
 	$('.fade-in').animate({ 'opacity': 1 }, 1500);
 	$('.entry-title').animate({ 'opacity': 1 }, 1800);
 
-	(function(){
-		
-		var Hidey = {
-			
-			kitchenSink: $('.site-title, .page-break, .site-navigation, #colophon, .colophon, img.featured'),
-			title: $('.site-title'),
-			hgroup: $('hgroup'),
-			nav: $('.site-navigation'),
-			content: $('#primary'),
-			img: $('img.featured'), 
-			footer: $('#colophon'),
-			headerColophon: $('.colophon'),
-			pageBreak: $('.page-break'),
-			biograghyMenuItem: $('.menu .menu-item-biography'),
-
-			opacify: function(){
-				Hidey.content.css('opacity', 0);	
-			},
-
-			hideIt: function(){
-				this.kitchenSink.hide();
-				$(".loader").css('opacity', 1).fadeIn(100).fadeOut(100).fadeIn(200).fadeOut(100).fadeIn(200).fadeOut(200).fadeIn(1100).fadeOut(1200);
-			},
-
-			showIt: function(){
-				this.headerColophon.delay(3400).fadeIn(800,function(){
-					Hidey.title.delay(500).fadeIn(1000, function(){
-						Hidey.nav.delay(500).fadeIn(1000, function(){
-							Hidey.content.delay(800).animate({
-								'opacity': 1, 
-								'margin-top': '10em' 
-							}, 1000 );
-						});
-					});
-				});
-			}
-
-		};
-
-		if( ! $('html').hasClass('lte9') && $('body').hasClass('home') ){
-			Hidey.opacify();
-			Hidey.hideIt();
-			Hidey.showIt();
-
-		}
-
-	})();
-
+ 
 } // newBrowser
 
 

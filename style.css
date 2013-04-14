@@ -1,7 +1,5 @@
 @import url('inc/css/normalize.css');
 
-@import url('inc/css/1140.css');
-
 @import "inc/css/font-awesome.css";
 /*
 Theme Name: Chaya Czernowin
@@ -14,6 +12,51 @@ License: GNU General Public License
 Tags:
  
 */
+/* 
+ * Gridonkulous: a tiny fluid grid system for Less 
+ * http://github.com/daltonrooney/gridonkulous
+ * MIT License: http://opensource.org/licenses/MIT
+ */
+/* Change these variables */
+/* Any number of columns */
+/* in % */
+/* When do the columns kick in? By default, columns are 100% width. */
+/* You probably don't want to edit below this line */
+.row,
+.col {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.row {
+  padding: 0 20px;
+}
+.row:before,
+.row:after {
+  content: "";
+  display: table;
+}
+.row:after {
+  clear: both;
+}
+.row .row {
+  margin: 0 -2%;
+}
+.col {
+  float: left;
+  width: 100%;
+}
+@media only screen and (min-width: 600px) {
+  .col {
+    margin: 0 1%;
+  }
+  .col:first-child {
+    margin-left: 0;
+  }
+  .col:last-child {
+    margin-right: 0;
+  }
+}
 /*---------------------------------------------------
     LESS Elements 0.6
   ---------------------------------------------------
@@ -146,23 +189,19 @@ body.home #main {
   background: none;
 }
 .wrap {
-  max-width: 960px;
+  max-width: 1020px;
   margin: 0 auto;
-  overflow: hidden;
 }
 #masthead {
-  position: fixed;
-  width: 960px;
-  left: 50%;
-  margin-left: -480px;
+  max-width: 1020px;
 }
 #primary {
   float: left;
   width: 100%;
   position: relative;
   z-index: 10;
+  margin-top: 5em;
   padding: 25px;
-  margin-top: 30em;
   background: url(images/contour-map-lg.png) top left no-repeat #ffffff;
   -webkit-box-shadow: 0 -3px 3px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 -3px 3px rgba(0, 0, 0, 0.2);
@@ -197,7 +236,7 @@ body.home #primary {
 hgroup {
   float: left;
   width: 100%;
-  margin-bottom: 4em;
+  margin-bottom: 2em;
   text-align: center;
 }
 .site-title {
@@ -207,17 +246,14 @@ hgroup {
   float: left;
   font-size: 2em;
   font-weight: 200;
+  text-align: center;
   font-family: 'Kepler Std', Georgia;
+  margin-bottom: .5em;
   width: 100%;
   padding: 15px 5px 15px 0;
 }
 .site-title a {
   color: white;
-}
-.colophon {
-  font-size: 12px ;
-  font-style: italic;
-  color: #999;
 }
 .site-description {
   font-size: 18px;
@@ -265,7 +301,7 @@ hgroup {
   letter-spacing: 5px;
   line-height: 1.2em;
   margin-bottom: 1em;
-  margin-top: 1em;
+  margin-top: 3em;
   color: white;
   text-transform: uppercase;
   text-align: center;
@@ -499,7 +535,7 @@ body.home .colophon {
 body.home #primary {
   background: none;
   padding: 25px 120px;
-  margin-top: 12em;
+  margin-top: 0;
   -webkit-box-shadow: 0 0 0;
   -moz-box-shadow: 0 0 0;
   box-shadow: 0 0 0;
@@ -531,15 +567,16 @@ body.home h3 span {
   -moz-box-shadow: 0 0 0 0;
   box-shadow: 0 0 0 0;
   background: none;
-  margin-top: 20em;
 }
 .page-concerts-and-presentations #masthead {
   color: #444;
 }
-.page-concerts-and-presentations .entry-title,
 .page-concerts-and-presentations .site-title a {
   color: #444;
-  font-size: 2em;
+}
+.page-concerts-and-presentations .entry-title {
+  color: #444;
+  font-size: 3.5em;
 }
 .page-concerts-and-presentations .main-navigation li a {
   color: #444;
@@ -627,7 +664,6 @@ body.home h3 span {
   -moz-box-shadow: 0 0 0 0;
   box-shadow: 0 0 0 0;
   background: none;
-  margin-top: 20em;
 }
 .page-template-templatesno-backstretch-php #masthead {
   color: #444;
@@ -735,7 +771,6 @@ body.page-milestones #primary {
   -moz-box-shadow: 0 0 0 0;
   box-shadow: 0 0 0 0;
   background: none;
-  margin-top: 20em;
 }
 body.page-milestones #masthead {
   color: #444;
@@ -1092,6 +1127,314 @@ body.home footer#colophon  .wrap {
   display: block;
   width: 100%;
   clear: both;
+}
+/* =Grid
+----------------------------------------------- */
+/*
+ * Here comes the grid! You can use semantic class names or numerical, whatever works for you.
+ * All column declarations go inside a media query for mobile-first responsiveness. The default column width is 100%. 
+ */
+@media only screen and (min-width: 600px) {
+  .primary {
+    width: 64.66666666666666%;
+    -moz-column-width: 8;
+    -moz-column-count: 0;
+    -moz-column-gap: 50px;
+    -moz-column-rule-color: #eeeeee;
+    -moz-column-rule-style: solid;
+    -moz-column-rule-width: 1px;
+    -webkit-column-width: 8;
+    -webkit-column-count: 0;
+    -webkit-column-gap: 50px;
+    -webkit-column-rule-color: #eeeeee;
+    -webkit-column-rule-style: solid;
+    -webkit-column-rule-width: 1px;
+    column-width: 8;
+    column-count: 0;
+    column-gap: 50px;
+    column-rule-color: #eeeeee;
+    column-rule-style: solid;
+    column-rule-width: 1px;
+  }
+  .secondary {
+    width: 31.33333333333333%;
+    -moz-column-width: 4;
+    -moz-column-count: 0;
+    -moz-column-gap: 50px;
+    -moz-column-rule-color: #eeeeee;
+    -moz-column-rule-style: solid;
+    -moz-column-rule-width: 1px;
+    -webkit-column-width: 4;
+    -webkit-column-count: 0;
+    -webkit-column-gap: 50px;
+    -webkit-column-rule-color: #eeeeee;
+    -webkit-column-rule-style: solid;
+    -webkit-column-rule-width: 1px;
+    column-width: 4;
+    column-count: 0;
+    column-gap: 50px;
+    column-rule-color: #eeeeee;
+    column-rule-style: solid;
+    column-rule-width: 1px;
+  }
+  .one {
+    width: 6.333333333333332%;
+    -moz-column-width: 1;
+    -moz-column-count: 0;
+    -moz-column-gap: 50px;
+    -moz-column-rule-color: #eeeeee;
+    -moz-column-rule-style: solid;
+    -moz-column-rule-width: 1px;
+    -webkit-column-width: 1;
+    -webkit-column-count: 0;
+    -webkit-column-gap: 50px;
+    -webkit-column-rule-color: #eeeeee;
+    -webkit-column-rule-style: solid;
+    -webkit-column-rule-width: 1px;
+    column-width: 1;
+    column-count: 0;
+    column-gap: 50px;
+    column-rule-color: #eeeeee;
+    column-rule-style: solid;
+    column-rule-width: 1px;
+  }
+  .two {
+    width: 14.666666666666664%;
+    -moz-column-width: 2;
+    -moz-column-count: 0;
+    -moz-column-gap: 50px;
+    -moz-column-rule-color: #eeeeee;
+    -moz-column-rule-style: solid;
+    -moz-column-rule-width: 1px;
+    -webkit-column-width: 2;
+    -webkit-column-count: 0;
+    -webkit-column-gap: 50px;
+    -webkit-column-rule-color: #eeeeee;
+    -webkit-column-rule-style: solid;
+    -webkit-column-rule-width: 1px;
+    column-width: 2;
+    column-count: 0;
+    column-gap: 50px;
+    column-rule-color: #eeeeee;
+    column-rule-style: solid;
+    column-rule-width: 1px;
+  }
+  .three {
+    width: 23%;
+    -moz-column-width: 3;
+    -moz-column-count: 0;
+    -moz-column-gap: 50px;
+    -moz-column-rule-color: #eeeeee;
+    -moz-column-rule-style: solid;
+    -moz-column-rule-width: 1px;
+    -webkit-column-width: 3;
+    -webkit-column-count: 0;
+    -webkit-column-gap: 50px;
+    -webkit-column-rule-color: #eeeeee;
+    -webkit-column-rule-style: solid;
+    -webkit-column-rule-width: 1px;
+    column-width: 3;
+    column-count: 0;
+    column-gap: 50px;
+    column-rule-color: #eeeeee;
+    column-rule-style: solid;
+    column-rule-width: 1px;
+  }
+  .four {
+    width: 31.33333333333333%;
+    -moz-column-width: 4;
+    -moz-column-count: 0;
+    -moz-column-gap: 50px;
+    -moz-column-rule-color: #eeeeee;
+    -moz-column-rule-style: solid;
+    -moz-column-rule-width: 1px;
+    -webkit-column-width: 4;
+    -webkit-column-count: 0;
+    -webkit-column-gap: 50px;
+    -webkit-column-rule-color: #eeeeee;
+    -webkit-column-rule-style: solid;
+    -webkit-column-rule-width: 1px;
+    column-width: 4;
+    column-count: 0;
+    column-gap: 50px;
+    column-rule-color: #eeeeee;
+    column-rule-style: solid;
+    column-rule-width: 1px;
+  }
+  .five {
+    width: 39.66666666666667%;
+    -moz-column-width: 5;
+    -moz-column-count: 0;
+    -moz-column-gap: 50px;
+    -moz-column-rule-color: #eeeeee;
+    -moz-column-rule-style: solid;
+    -moz-column-rule-width: 1px;
+    -webkit-column-width: 5;
+    -webkit-column-count: 0;
+    -webkit-column-gap: 50px;
+    -webkit-column-rule-color: #eeeeee;
+    -webkit-column-rule-style: solid;
+    -webkit-column-rule-width: 1px;
+    column-width: 5;
+    column-count: 0;
+    column-gap: 50px;
+    column-rule-color: #eeeeee;
+    column-rule-style: solid;
+    column-rule-width: 1px;
+  }
+  .six {
+    width: 48%;
+    -moz-column-width: 6;
+    -moz-column-count: 0;
+    -moz-column-gap: 50px;
+    -moz-column-rule-color: #eeeeee;
+    -moz-column-rule-style: solid;
+    -moz-column-rule-width: 1px;
+    -webkit-column-width: 6;
+    -webkit-column-count: 0;
+    -webkit-column-gap: 50px;
+    -webkit-column-rule-color: #eeeeee;
+    -webkit-column-rule-style: solid;
+    -webkit-column-rule-width: 1px;
+    column-width: 6;
+    column-count: 0;
+    column-gap: 50px;
+    column-rule-color: #eeeeee;
+    column-rule-style: solid;
+    column-rule-width: 1px;
+  }
+  .seven {
+    width: 56.333333333333336%;
+    -moz-column-width: 7;
+    -moz-column-count: 0;
+    -moz-column-gap: 50px;
+    -moz-column-rule-color: #eeeeee;
+    -moz-column-rule-style: solid;
+    -moz-column-rule-width: 1px;
+    -webkit-column-width: 7;
+    -webkit-column-count: 0;
+    -webkit-column-gap: 50px;
+    -webkit-column-rule-color: #eeeeee;
+    -webkit-column-rule-style: solid;
+    -webkit-column-rule-width: 1px;
+    column-width: 7;
+    column-count: 0;
+    column-gap: 50px;
+    column-rule-color: #eeeeee;
+    column-rule-style: solid;
+    column-rule-width: 1px;
+  }
+  .eight {
+    width: 64.66666666666666%;
+    -moz-column-width: 8;
+    -moz-column-count: 0;
+    -moz-column-gap: 50px;
+    -moz-column-rule-color: #eeeeee;
+    -moz-column-rule-style: solid;
+    -moz-column-rule-width: 1px;
+    -webkit-column-width: 8;
+    -webkit-column-count: 0;
+    -webkit-column-gap: 50px;
+    -webkit-column-rule-color: #eeeeee;
+    -webkit-column-rule-style: solid;
+    -webkit-column-rule-width: 1px;
+    column-width: 8;
+    column-count: 0;
+    column-gap: 50px;
+    column-rule-color: #eeeeee;
+    column-rule-style: solid;
+    column-rule-width: 1px;
+  }
+  .nine {
+    width: 73%;
+    -moz-column-width: 9;
+    -moz-column-count: 0;
+    -moz-column-gap: 50px;
+    -moz-column-rule-color: #eeeeee;
+    -moz-column-rule-style: solid;
+    -moz-column-rule-width: 1px;
+    -webkit-column-width: 9;
+    -webkit-column-count: 0;
+    -webkit-column-gap: 50px;
+    -webkit-column-rule-color: #eeeeee;
+    -webkit-column-rule-style: solid;
+    -webkit-column-rule-width: 1px;
+    column-width: 9;
+    column-count: 0;
+    column-gap: 50px;
+    column-rule-color: #eeeeee;
+    column-rule-style: solid;
+    column-rule-width: 1px;
+  }
+  .ten {
+    width: 81.33333333333334%;
+    -moz-column-width: 10;
+    -moz-column-count: 0;
+    -moz-column-gap: 50px;
+    -moz-column-rule-color: #eeeeee;
+    -moz-column-rule-style: solid;
+    -moz-column-rule-width: 1px;
+    -webkit-column-width: 10;
+    -webkit-column-count: 0;
+    -webkit-column-gap: 50px;
+    -webkit-column-rule-color: #eeeeee;
+    -webkit-column-rule-style: solid;
+    -webkit-column-rule-width: 1px;
+    column-width: 10;
+    column-count: 0;
+    column-gap: 50px;
+    column-rule-color: #eeeeee;
+    column-rule-style: solid;
+    column-rule-width: 1px;
+  }
+  .eleven {
+    width: 89.66666666666666%;
+    -moz-column-width: 11;
+    -moz-column-count: 0;
+    -moz-column-gap: 50px;
+    -moz-column-rule-color: #eeeeee;
+    -moz-column-rule-style: solid;
+    -moz-column-rule-width: 1px;
+    -webkit-column-width: 11;
+    -webkit-column-count: 0;
+    -webkit-column-gap: 50px;
+    -webkit-column-rule-color: #eeeeee;
+    -webkit-column-rule-style: solid;
+    -webkit-column-rule-width: 1px;
+    column-width: 11;
+    column-count: 0;
+    column-gap: 50px;
+    column-rule-color: #eeeeee;
+    column-rule-style: solid;
+    column-rule-width: 1px;
+  }
+  .twelve {
+    width: 98%;
+    -moz-column-width: 12;
+    -moz-column-count: 0;
+    -moz-column-gap: 50px;
+    -moz-column-rule-color: #eeeeee;
+    -moz-column-rule-style: solid;
+    -moz-column-rule-width: 1px;
+    -webkit-column-width: 12;
+    -webkit-column-count: 0;
+    -webkit-column-gap: 50px;
+    -webkit-column-rule-color: #eeeeee;
+    -webkit-column-rule-style: solid;
+    -webkit-column-rule-width: 1px;
+    column-width: 12;
+    column-count: 0;
+    column-gap: 50px;
+    column-rule-color: #eeeeee;
+    column-rule-style: solid;
+    column-rule-width: 1px;
+  }
+  .push-1 {
+    margin-left: 9.333333333333332%;
+  }
+  .push-4 {
+    margin-left: 34.33333333333333%;
+  }
 }
 /* =Media Queries 
 ----------------------------------------------- */

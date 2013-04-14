@@ -18,6 +18,10 @@ get_header(); ?>
     <div class="wrap group">
         <div id="content" class="site-content group" role="main">
 
+
+            <h1>Large quote? </h1>
+            http://michieldegraaf.com/
+
             <div class="featured-sidebar">
                 <img class="lecturn" src="<?php echo get_template_directory_uri();?>/images/lecturn.png" alt="">
             </div>
