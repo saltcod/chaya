@@ -647,6 +647,9 @@ body.home h3 span {
 body.page-works .listen {
   margin-right: 3em;
 }
+body.page-works h2 {
+  border-bottom: 1px solid;
+}
 .works {
   margin-left: 50px;
   margin-top: 10px;
@@ -662,9 +665,6 @@ body.page-works .listen {
   clear: both;
   font-size: 1.25em;
   font-weight: 500;
-}
-.works .title a {
-  background: rgba(149, 231, 242, 0.29);
 }
 .works .composer {
   float: left;
