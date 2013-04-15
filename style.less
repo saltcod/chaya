@@ -38,6 +38,8 @@ textarea {
 	font-weight: 100;
 }
 
+body { font-size: 125%; }
+
 /* Headings */
 h1,h2,h3,h4,h5,h6 {
 	margin-top:0;
@@ -50,7 +52,7 @@ h1,h2,h3,h4,h5,h6 {
 	font-size: 110%;
 	font-style: italic;
 }
-h1 { font-size: 4em;}
+ 
 
 hr {
 	background-color: #ccc;
@@ -294,7 +296,6 @@ body.page-biography {
 	}
 
 	h2 {
-		font-size: 3em;
 		text-align: center;
 		border-top: 1px solid;
 		padding-top: 25px;
@@ -440,7 +441,7 @@ object {
 
 .main-navigation {
 	margin: 1em auto 0;
-	font-size: 1.25em;
+	font-size: 100%;
 	text-align: center;
 	font-weight: 100;
 	
@@ -523,7 +524,6 @@ object {
  	.colophon { color: #fff; }
  	#primary { 
  		background: none;
- 		padding: 25px 120px;
  		margin-top: 0;
  		.box-shadow(0 0 0 );
  		text-align: center;
@@ -562,7 +562,7 @@ object {
 	}
 	.entry-title{
 		color: #444;
-		 
+
 	}
 	.main-navigation li a{
 		color: #444;
@@ -571,16 +571,17 @@ object {
 		width: 100%;
 	}
 	#content {
- 		background: #fff;
+		background: #fff;
 	}
 	.performance-list {
-		 
+		width: 48%;
 	}
 
 	aside { 
 		margin-right: 50px;
 		margin-top: 1em;
-	}
+		width: 150px;
+ 	}
 
 } 
 
@@ -589,21 +590,20 @@ object {
 }
 .year {
 	float: left;
-	width: 125px;
+	width: 25%;
 	margin-top: 1em;
 	margin-left: 25px;
 }
 
 .performance-list{
 	float: left;
- }
+}
 
 .performance{
 	border-bottom: 1px solid #eee;
 	padding: 1em 0;
 	a { 
 		font-weight: normal;
-		background: lighten(@blue, 15%);
 	}
 	.title {
 		float: left;
@@ -637,10 +637,11 @@ object {
 	background: url(images/contour-map-lg.png) top left no-repeat #ffffff;
 	
 	#content {
- 	}
+	}
 	#primary {
 		.box-shadow(0 0 0 0);
 		background: none;
+		margin-top: 0;
 	}
 	#masthead {
 		color: #444;
@@ -663,13 +664,13 @@ object {
 ----------------------------------------------- */
 
 body.page-works{ 
-	 .listen {
-	 	margin-right: 3em;
-	 }
+	.listen {
+		margin-right: 3em;
+	}
 
-	 h2 {
-	 	border-bottom: 1px solid;
-	 }
+	h2 {
+		border-bottom: 1px solid;
+	}
 
 }
 
@@ -689,7 +690,7 @@ body.page-works{
 		clear: both;
 		font-size: 1.25em;
 		font-weight: 500;
- 	}
+	}
 	.composer {
 		float: left;
 		clear: both;
@@ -730,17 +731,16 @@ body.page-works{
 
 #works-filter{
 	margin-top: 10px;
-		a { border: none; }
+	a { border: none; }
 }
 
- 
- 
+
+
 .milestone{
 	background: @blue;
 	margin: 25px 0;
 	padding: 25px;
 	text-align: center;
-	h3{ font-size: 1.5em; }
 	date { font-family: @sans; font-weight: 600;}
 }
 
@@ -1150,10 +1150,34 @@ http://themble.com/bones/
 iPhones
 */
 @media only screen and (min-width: 320px) and (max-width: 767px) {
-	body {    }
-	#primary {  }
+
+	body{ font-size: 100%; }
+	
+	body.home h3 { font-size: 1.4em; }
+
 	aside { .hide(); }
+	
 	.entry-title{ font-size: 2em; }
+
+	/* Performance lists  */
+	.year, .year-group {
+		display: block; 
+		width: 100%;
+		text-align: center;
+	}
+	.performances-container{
+		.year-group, .year, .performance-list, .performance,.title , .sub-title, .details,.conductor {
+			float: none;
+			text-align: center;
+			display: block;
+			width: 100%;
+			margin: 0;
+		}
+	}
+
+
+
+
 
 } // end of media query
 

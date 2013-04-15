@@ -16,7 +16,7 @@ get_header(); ?>
  
 <section id="primary" class="content-area">
 	<div class="wrap group">
-		<div id="content" class="site-content" role="main">
+		<div id="content" class="site-content twelve" role="main">
 
 			<?php if ( is_front_page() ): ?>
 			

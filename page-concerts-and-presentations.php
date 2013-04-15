@@ -19,9 +19,8 @@ get_header(); ?>
         <div id="content" class="site-content eight group" role="main">
             
             <aside class="col three">
-                    <h2 class="callout">Nunc quis quam vel ante pretium dignissim sed ac augue. Praesent venenatis, urna vel commodo varius, elit massa ullamcorper tortor, eu congue diam metus interdum sapien.</h2>
-                    <cite>—Praesent venenatis</cite>
-            </aside>
+                    <h2 class="callout">A selection of recent concerts and presentations</h2>
+             </aside>
             
             <div class="performances-container col eight">
                 <div class="year-group group">

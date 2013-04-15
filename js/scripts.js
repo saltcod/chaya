@@ -1,17 +1,17 @@
 jQuery(function($) {
 
 // Hide the fancy from older IE and mobile devices 
-var newBrowser;
+// var mobileBrowser;
 
-if( navigator.userAgent.match(/Android/i) ||
-	navigator.userAgent.match(/webOS/i) ||
-	navigator.userAgent.match(/iPhone/i) ||
-	navigator.userAgent.match(/iPod/i) ||
-	navigator.userAgent.match(/iPad/i) ||
-	navigator.userAgent.match(/BlackBerry/)
-	|| $('body').hasClass('lte9')){
-	newBrowser = true;
-}
+// if( navigator.userAgent.match(/Android/i) ||
+// 	navigator.userAgent.match(/webOS/i) ||
+// 	navigator.userAgent.match(/iPhone/i) ||
+// 	navigator.userAgent.match(/iPod/i) ||
+// 	navigator.userAgent.match(/iPad/i) ||
+// 	navigator.userAgent.match(/BlackBerry/)
+// 	|| $('body').hasClass('lte9')){
+// 	mobileBrowser = true;
+// }
 
 
 
@@ -168,76 +168,15 @@ function backstretch(){
 	} 
 }	
 
-
-// Only do fancy things for gtIE9 
-if ( ! newBrowser ){
-	function backstretch_good_browsers(){
-		if( $('body').hasClass('home') ){
-			$.backstretch(
-				"http://chayaczernowin.com/wp-content/themes/chaya/images/window-colour.jpg",
-				{ fade: 50 });	
-
-		}  else if ( $('body').hasClass('page-biography') ) {
-			$.backstretch(
-				"http://chayaczernowin.com/wp-content/themes/chaya/images/field-landscape.jpg",
-				{ fade: 0 });	
-
-		}  else if ( $('body').hasClass('page-music') ){
-			console.log('bio');
-			$.backstretch(
-				"http://chayaczernowin.com/wp-content/themes/chaya/images/scores.jpg",
-				{ fade: 400 });	
-
-		} else {
-			$.backstretch(
-				"http://chayaczernowin.com/wp-content/themes/chaya/images/window-colour.jpg",
-				{ fade: 400 });	
-		}
-	}	
-
-	// Fade in extra long on homepage
-	if( $('body').hasClass('home') ){
-		setTimeout(backstretch, 0);
-	} else {
-		setTimeout(backstretch, 0);
-	}
+backstretch();
 
 
-
-	// // Parallax Fade out header elements when the window scrolls
-
-	// var windowScroll, 
-	// masthead = $('#masthead'), 
-	// main = $('#main'); 
-
-	// $(window).scroll(function(){
-
-	//     //Get scroll position of window
-	//     windowScroll = $(this).scrollTop();
-
-
-	//     //Fade the .nav out
-	//     masthead.css({
-	//     	'opacity' : 1-(windowScroll/500),
-	//     	'margin-top': -(windowScroll/3)
-	//     });
-
-
-	//     $('#fadey-nav').css({
-	//     	'opacity' : 0 +(windowScroll/600)
-	//     });  
-
-
-	// });
+	 
 
 	// Fade in images slowly when a page loads
 	$('.fade-in').animate({ 'opacity': 1 }, 1500);
 	$('.entry-title').animate({ 'opacity': 1 }, 1800);
-
  
-} // newBrowser
-
-
 
 
 
