@@ -626,13 +626,11 @@ body.home .entry-title {
 }
 /* = Awards
 ----------------------------------------------- */
-.awards {
-  text-align: center;
+.awards li {
+  margin-bottom: 20px;
 }
 .awards .wrapper {
-  margin-bottom: 1em;
-  padding: 1.5em 1em 1em;
-  border-bottom: 1px solid #eee;
+  margin-bottom: 10px;
 }
 .awards .award:after {
   content: '';

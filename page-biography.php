@@ -72,175 +72,232 @@ get_header(); ?>
 
 						<p><img class="fade-in" src="<?php echo get_template_directory_uri();?>/images/office-3.png" alt="Chaya, office"></p>
 
+						
+
+
 						<div class="awards">
 							<h2>Awards, residencies and fellowships</h2>
 
 							<div class="wrapper group">
-								<date>2013 </date>
-								<h3 class="award">Lucern Festival Artist in Residence.</h3>
-								<h3 class="award">Semester  long course about Czernowin's work:  " The Music of Chaya Czernowin - Sound, Body and Metaphor", Tel Aviv University Buchmann- Mehta School of Music. Taught by Prof. Zohar Eitan and Dr Hila Tamir. </h3>
-								<h3 class="award">Helsinki  Musica Nova, Finland   featured composer</h3>
-								<h3 class="award">Magister Ludi Festival featured composer, Moscow. </h3>
+								<date>2013 </date> 
+								
+								<ul>
+									<li>Lucern Festival Artist in Residence.</li>
+									<li>Semester  long course about Czernowin's work:  " The Music of Chaya Czernowin - Sound, Body and Metaphor", Tel Aviv University Buchmann- Mehta School of Music. Taught by Prof. Zohar Eitan and Dr Hila Tamir. </li>
+									<li>Helsinki  Musica Nova, Finland   featured composer</li>
+									<li>Magister Ludi Festival featured composer, Moscow. </li>
+								</ul>
 							</div>
 
 							<div class="wrapper group">
 								<date>2011 </date>
-								<h3 class="award">Guggenehim Fellowship </h3>
+								<ul>
+									<li>Guggenehim Fellowship </li>
+									
+								</ul>
 							</div>
 
 							<div class="wrapper group">
 								<date>2010 </date>
-								<h3 class="award">Maim one of the 10 best Cds of The wire Magazine</h3>
-								<h3 class="award">A symposium about Pnima... ins innere in Stadttheater Stuttgart </h3>
+								<ul>
+									<li>Maim one of the 10 best Cds of The wire Magazine</li>
+									<li>A symposium about Pnima... ins innere in Stadttheater Stuttgart </li>
+								</ul>
 							</div>
 
 							<div class="wrapper group">
 								<date>2009 </date>
-								<h3 class="award">Walter Bigelow Rosen Professor at Harvard University</h3>
+								<ul>
+									<li>Walter Bigelow Rosen Professor at Harvard University</li>
+								</ul>
 							</div>
 
 							<div class="wrapper group">
 								<date>2008 </date>
-								<h3 class="award">Stockholm  New Music Days, featured composer</h3>
-								<h3 class="award">Wissenschaftskolleg Berlin, nominated. </h3>
-								<h3 class="award">Fromm Foundation Commission</h3>
+								<ul>
+									<li>Stockholm  New Music Days, featured composer</li>
+									<li>Wissenschaftskolleg Berlin, nominated. </li>
+									<li>Fromm Foundation Commission</li>
+								</ul>
 							</div>
 
-							 
+
 
 							<div class="wrapper group">
 								<date>2007 </date>
-								<h3 class="award">Resou Varese support for Maim</h3>
-								<h3 class="award">Artist in residence in Basel Stadttheater, Switzerland. </h3>
+								<ul>
+									<li>Resou Varese support for Maim</li>
+									<li>Artist in residence in Basel Stadttheater, Switzerland. </li>
+								</ul>
 							</div>
 
-							 
+
 
 							<div class="wrapper group">
 								<date>2005-6 </date>
-								<h3 class="award">Professor at the Universtiy of Music and Performing Arts Vienna</h3>
-								<h3 class="award">Composer in Residence at the Salzburg Festival</h3>
+								<ul>
+									<li>Professor at the Universtiy of Music and Performing Arts Vienna</li>
+									<li>Composer in Residence at the Salzburg Festival</li>
+								</ul>
 							</div>
 
 							
 							<div class="wrapper group">
 								<date>2004 </date>
-								<h3 class="award">Hellerau European Center for the Arts,, Dresden Composer in Residence. </h3>
-								<h3 class="award">Rockefeller foundation grant</h3>
-								<h3 class="award">Ultraschall Berlin featured composer</h3>
+								<ul>
+									<li>Hellerau European Center for the Arts,, Dresden Composer in Residence. </li>
+									<li>Rockefeller foundation grant</li>
+									<li>Ultraschall Berlin featured composer</li>
+								</ul>
 							</div>
 
-							 
+
 
 							<div class="wrapper group">
 								<date>2003 </date>
-								<h3 class="award">Composers Preis (Komponisten Foerderpreis) from the Siemens Foundation. </h3>
+								<ul>
+									<li>Composers Preis (Komponisten Foerderpreis) from the Siemens Foundation. </li>
+								</ul>
 							</div>
 
 							<div class="wrapper group">
 								<date>2001 </date>
-								<h3 class="award">Composer in residence in Bern Triennale. </h3>
-								<h3 class="award">Die Kreuzung chosen for  ISCM performance, Japan. </h3>
+								<ul>
+									<li>Composer in residence in Bern Triennale. </li>
+									<li>Die Kreuzung chosen for  ISCM performance, Japan. </li>
+								</ul>
 							</div>
- 
+
 
 							<div class="wrapper group">
 								<date>2000 </date>
-								<h3 class="award">Pnima... Ins Innere chosen to be the best premier of the year 2000  by the critics servey of the  Magazine Opernwelt. </h3>
-								<h3 class="award">Bayerischer theater preis for the opera  Pnima... ins Innere</h3>
+								<ul>
+									<li>Pnima... Ins Innere chosen to be the best premier of the year 2000  by the critics servey of the  Magazine Opernwelt. </li>
+									<li>Bayerischer theater preis for the opera  Pnima... ins Innere</li>
+								</ul>
 							</div>
 
-							 
+
 
 							<div class="wrapper group">
 								<date>1998 </date>
-								<h3 class="award">IRCAM reading panel commission. </h3>
+								<ul>
+									<li>IRCAM reading panel commission. </li>
+								</ul>
 							</div>
 
 							<div class="wrapper group">
 								<date>1997 </date>
-								<h3 class="award">Esperimentalstudio of the Heinrich Strobel Stiftung SWR (also in 99 02 05 07) </h3>
-								<h3 class="award">Assistant professor position at the University of California San Diego. </h3>
+								<ul>
+									<li>Esperimentalstudio of the Heinrich Strobel Stiftung SWR (also in 99 02 05 07) </li>
+									<li>Assistant professor position at the University of California San Diego. </li>
+								</ul>
 							</div>
 
-							 
+
 
 							<div class="wrapper group">
 								<date>1996 </date>
-								<h3 class="award">A fellow for a year at Akademie Schloss Solitude </h3>
+								<ul>
+									<li>A fellow for a year at Akademie Schloss Solitude </li>
+								</ul>
 							</div>
 
 							<div class="wrapper group">
 								<date>1994-5 </date>
-								<h3 class="award">Amber for orchetsra chosen for ISCM World music days Germany</h3>
-								<h3 class="award">American NEA fellowship for composing a piece for a Gagaku orchestra while living in  Japan. </h3>
+								<ul>
+									<li>Amber for orchetsra chosen for ISCM World music days Germany</li>
+									<li>American NEA fellowship for composing a piece for a Gagaku orchestra while living in  Japan. </li>
+								</ul>
 							</div>
 
-							 
+
 
 							<div class="wrapper group">
 								<date>1993/4 </date>
-								<h3 class="award">Asahi Shimbun Fellowship (a generous  invitation given to 4 international individual in all area to come and live in Japan for a year) </h3>
+								<ul>
+									<li>Asahi Shimbun Fellowship (a generous  invitation given to 4 international individual in all area to come and live in Japan for a year) </li>
+								</ul>
 							</div>
 
 							<div class="wrapper group">
 								<date>1992 </date>
-								<h3 class="award">Kranichsteiner Preis at the Darmstadt Summer  courses for new music</h3>
+								<ul>
+									<li>Kranichsteiner Preis at the Darmstadt Summer  courses for new music</li>
+								</ul>
 							</div>
 
 							<div class="wrapper group">
 								<date>1991 </date>
-								<h3 class="award">Macdowell/ Yaddo fellowship (nominated) .</h3>
+								<ul>
+									<li>Macdowell/ Yaddo fellowship (nominated) .</li>
+								</ul>
 							</div>
 
 							<div class="wrapper group">
 								<date>1988 </date>
-								<h3 class="award">Stipendium preis At the Darmstadt summer course for new music.  </h3>
+								<ul>
+									<li>Stipendium preis At the Darmstadt summer course for new music.  </li>
+								</ul>
 							</div>
 
 							<div class="wrapper group">
 								<date>1987 </date>
-								<h3 class="award">93 Various scholarships at The University of California San Diego. </h3>
+								<ul>
+									<li>93 Various scholarships at The University of California San Diego. </li>
+								</ul>
 							</div>
 
 							<div class="wrapper group">
 								<date>1985 </date>
-								<h3 class="award">Milton Avery School of the Arts at Bard College grant</h3>
+								<ul>
+									<li>Milton Avery School of the Arts at Bard College grant</li>
+								</ul>
 							</div>
 
 							<div class="wrapper group">
 								<date>1984 </date>
-								<h3 class="award">Gaudeamus Workshop scholarship, Netherlands.</h3>
-								<h3 class="award">Ensemblia international competition honorary mention.  </h3>
+								<ul>
+									<li>Gaudeamus Workshop scholarship, Netherlands.</li>
+									<li>Ensemblia international competition honorary mention.  </li>
+								</ul>
 							</div>
 
-							<div class="wrapper group">
-								<date>1984 </date>
-							</div>
+							
 
 							<div class="wrapper group">
 								<date>1983-85 </date>
-								<h3 class="award">DAAD scholarship for studying in Berlin with Dieter Schnebel. </h3>
+								<ul>
+									<li>DAAD scholarship for studying in Berlin with Dieter Schnebel. </li>
+								</ul>
 							</div>
 
 							<div class="wrapper group">
 								<date>1983 </date>
-								<h3 class="award">First prize for composition at the Rubin Academy Tel Aviv</h3>
+								<ul>
+									<li>First prize for composition at the Rubin Academy Tel Aviv</li>
+								</ul>
 							</div>
 
 							<div class="wrapper group">
 								<date>1982 </date>
-								<h3 class="award">Second place at the Clairmont competition, Israel </h3>
+								<ul>
+									<li>Second place at the Clairmont competition, Israel </li>
+								</ul>
 							</div>
 
 							<div class="wrapper group">
 								<date>1981 </date>
-								<h3 class="award">Represented Israel in Unsco's  Rostorum. </h3>
+								<ul>
+									<li>Represented Israel in Unsco's  Rostorum. </li>
+								</ul>
 							</div>
 
 							<div class="wrapper group">
 								<date>1978-83 </date>
-								<h3 class="award">America Israel Foundation grants and participation in Young Artist Week, Israel. </h3>
+								<ul>
+								</ul>
+								<li>America Israel Foundation grants and participation in Young Artist Week, Israel. </li>
 							</div>
 
 						</div> <!-- .awards -->
