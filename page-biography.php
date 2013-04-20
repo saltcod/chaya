@@ -263,7 +263,7 @@ get_header(); ?>
 								</ul>
 							</div>
 
-							
+
 
 							<div class="wrapper group">
 								<date>1983-85 </date>
@@ -296,8 +296,8 @@ get_header(); ?>
 							<div class="wrapper group">
 								<date>1978-83 </date>
 								<ul>
+									<li>America Israel Foundation grants and participation in Young Artist Week, Israel. </li>
 								</ul>
-								<li>America Israel Foundation grants and participation in Young Artist Week, Israel. </li>
 							</div>
 
 						</div> <!-- .awards -->
@@ -306,7 +306,7 @@ get_header(); ?>
 					</div>
 
 					<div class="block group">	
-						<div class="juries center">
+						<div class="juries">
 							<h2>Juries</h2>
 
 							<?php
