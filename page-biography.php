@@ -41,26 +41,10 @@ get_header(); ?>
 					
 					<p>In addition to numerous other prizes, Czernowin represented Israel at Uncesco composer's Rostorum 1980; and was awarded the DAAD scholarship 83- 85; Stipendiumpreis (88) and Kranichsteiner Musikpreis (92) , at the Darmstadt Fereinkurse,: IRCAM (Paris) reading panel commission 1998; scholarships of SWR experimental Studio Freiburg 98/00/ 01; The composer’s prize of Siemens Foundation 2003; the Rockefeller Foundation, 2004; a nomination as a fellow to the Wissenschaftkolleg Berlin in 2008; Fromm Foundation Award 2009; and Guggenheim Foundation fellowship 2011. She is published by Schott. Her music is recorded on Mode records NY, Wergo, Col Legno, Deutsche Gramophone, Neos , Ethos, Telos and Einstein Records. She lives near Boston with, composer Steven Kazuo Takasugi and their son. </p>
 
-					<p>During the first decade of the 21st century Czernowin’s work moved gradually from engaging with the psychological to the natural arena by creating musical objects or organisms which evolve with their own specific internal logic, at times on the border of what can be considered “logical”. The works Maim and Sahaf, characterize this period. Since 2010 she has written a few large orchestral pieces where she works towards avoiding the schism between sound as a phenomenon and time as the force which develops sound material. The works Zohar Iver, the Quiet, Esh and At the fringe of our gaze have been written from 2010-2013. These works are neither processes or sonic meditations alone. They are musical experiences attempting to be seen touched and felt through the ear. </p>
-
-					<p>In 2013 She is composer in residence at Lucerne Festival, with a large perspective of her work, including Pnima, at the fringe of our gaze, (for WEDO and Daniel Barenboim) White wind waiting (for guitarist Stephan Schmidt and SWR with François-Xavier Roth) and a variety of chamber pieces</p>
-					<hr>
+ 
+ 					<hr>
 
 					<p><img class="fade-in" src="<?php echo get_template_directory_uri();?>/images/office-2up.png" alt="Chaya, office"></p>
-
-
-
-
-
-					<div class="two-col">
-
-						<p>Czernowin sees composition teaching as directly connected to her compositional work. She has taught composition at the Yoshiro Irino Institute, JML, Tokyo City Japan and at the Darmstadt International Summer Courses for New Music. 1997-2006 Czernowin was professor of music composition at the University of California, San Diego. In 2006-2009 she was chosen to be the first female composition professor at the University of Music in Vienna. In September 2009 she became the Walter Bigelow Rosen Professor of Music at Harvard University. Since 2003 Czernowin has taught at the Academy for Composers at the "Akademie Schloss Solitude", Stuttgart with her husband Steven Kazuo Takasugi. Since 2010 they have taught together also at Tzlil Meudcan summer course and festival in Israel. Czernowin has been invited as a Guest professorships to many of the world leading institutions in new music (from Eastman school of music to Basel Academy, Graz, Sibelius Academy, and Stanford University, Matrix and Impuls to mention just a few). </p>
-
-						<p>In addition to numerous other prizes, Czernowin represented Israel at the Unesco Composers Rostrum in 1980, and recieved the DAAD scholarship ´83-´85, Various fellowships at Bard college and UCSD 85-93, Yaddo and Macdowell fellowships 91 Kranichsteiner Musikpreis Darmstadt Ferienkurse 1992, 1993 Asahi Shimbun Fellowship, 1994 American National Endowment of the Arts Fellowship, ISCM 1995/2001, IRCAM reading panel commission 1998, a few scholarships of the SWR experimental Studio Freiburg, Composer prize of the Ernst-von-Siemens Music Foundation in 2003, Rockefeller Foundation grant 2004, Fromm Foundation Award 2008, and a nomination as a fellow to the Wissenschaftkolleg Berlin in 2008, Guggenheim fellowship 2011. Her work is exclusively published by Schott.</p> 
-
-						<p>She live in Newton MA with her husband Composer Steven Kazuo Takasugi and their son.</p>
-					</div>
-
 
 
 					<div class="block group">
@@ -316,6 +300,7 @@ get_header(); ?>
 
 						</div> <!-- .awards -->
 
+					<p><img class="fade-in" src="<?php echo get_template_directory_uri();?>/images/office4.jpeg" alt="Chaya, office"></p>
 
 					</div>
 
