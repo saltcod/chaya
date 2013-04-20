@@ -41,6 +41,10 @@ function waterstreet_setup() {
 endif; // waterstreet_setup
 add_action( 'after_setup_theme', 'waterstreet_setup' );
 
+// Make the HTML editor the default when creating content
+	add_filter( 'wp_default_editor', create_function( '', 'return "html";' ) );
+
+
 /**
  * Register widgetized area and update sidebar with default widgets
  *
