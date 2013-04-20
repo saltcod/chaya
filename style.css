@@ -340,7 +340,8 @@ body.page-biography .nav li.active a {
 body.page-biography .center .entry-content {
   float: none;
 }
-.juries date {
+.juries date,
+.teaching date {
   font: 0.75em "Lucida Grande", Helvetica, Arial, sans-serif;
   font-weight: bold;
   margin-right: 10px;

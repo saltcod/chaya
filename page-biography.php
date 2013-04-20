@@ -66,8 +66,22 @@ get_header(); ?>
 					<div class="block group">
 						<div class="teaching group">
 							<h2>Teaching</h2>
-							<p>Nunc in eros lectus. Donec a eros massa, vel pretium magna. Nunc vestibulum laoreet neque, nec convallis elit auctor a. Fusce commodo augue id ligula condimentum dictum. Aenean sed mauris erat. Donec non augue odio. Integer a urna elit, ullamcorper laoreet nisi. Donec rhoncus ligula at ipsum lacinia semper malesuada turpis consectetur. Phasellus sed eros vitae leo fringilla iaculis a id dui. Sed eros leo, venenatis a venenatis in, tristique non lectus. Praesent dignissim venenatis justo, ac suscipit nulla pharetra et. Praesent posuere dui quis metus vestibulum ut pulvinar velit dapibus. Praesent ac lobortis nisl. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-							<p>Aliquam quis arcu at ipsum gravida sagittis. Nunc id tellus sed tellus pretium ullamcorper sit amet vel urna. Nunc vitae adipiscing risus. Etiam luctus vehicula mi at aliquet. Vivamus malesuada, est sit amet ornare suscipit, magna turpis dapibus justo, sit amet rhoncus dui nisi ac lectus. Duis eros neque, auctor et blandit at, bibendum eu tortor. Fusce sagittis, ante sit amet tempor sodales, mauris ipsum gravida eros, ac hendrerit est libero ut sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lacus enim, commodo quis interdum ut, accumsan sed tortor. Pellentesque sed leo non risus auctor vestibulum porttitor at nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus lacinia risus at elit suscipit dignissim varius sapien lobortis. Fusce venenatis ullamcorper gravida. Maecenas id enim vel orci sagittis ultricies ac ut lacus. Mauris dapibus auctor dolor ut rhoncus. Praesent lobortis, elit id molestie ultrices, nulla ante iaculis dui, eu faucibus nisi turpis et felis.</p>
+ 
+ 							<?php
+							$args = array( 'pagename' => 'teaching'); 
+
+							$the_query = new WP_Query( $args );
+
+	 
+							if ( $the_query->have_posts() ) :
+								while ( $the_query->have_posts() ) : $the_query->the_post();
+							get_template_part('content');
+							endwhile;
+							endif;
+
+							 
+							wp_reset_postdata();
+							?>
 						</div>
 
 						<p><img class="fade-in" src="<?php echo get_template_directory_uri();?>/images/office-3.png" alt="Chaya, office"></p>
@@ -314,14 +328,14 @@ get_header(); ?>
 
 							$the_query = new WP_Query( $args );
 
-	// The Loop
+	 
 							if ( $the_query->have_posts() ) :
 								while ( $the_query->have_posts() ) : $the_query->the_post();
 							get_template_part('content');
 							endwhile;
 							endif;
 
-	// Reset Post Data
+							 
 							wp_reset_postdata();
 							?>
 						</div>
