@@ -154,10 +154,6 @@ function backstretch(){
 			"http://chayaczernowin.com/wp-content/themes/chaya/images/field-portrait.jpg",
 			{ fade: 0 });	
 
-	}  else if ( $('body').hasClass('page-discography') ) {
-		$.backstretch(
-			"http://chayaczernowin.com/wp-content/themes/chaya/images/field-portrait.jpg",
-			{ fade: 0 });	
 
 	}  else if ( $('body').hasClass('page-discography') ) {
 		$.backstretch(
