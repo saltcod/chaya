@@ -14,7 +14,9 @@ Tags:
 @sans: "Lucida Grande",Helvetica, Arial, sans-serif;
 @kepler: 'Kepler Std', Georgia;
 
-@blue: rgba(81, 215, 233, 0.29);
+@purple-hex: #F0E4F8;
+@purple: rgba(206, 165, 233, 0.29);
+@dark-purple: #160E1F;
 
 
 @import url('inc/css/grid.less');
@@ -98,7 +100,7 @@ a {
 	a:active {
 		border-bottom: 1px solid;
 	}
-	a:hover { background: lighten(@blue, 30%); }
+	a:hover { background: lighten(@purple, 30%); }
 }
 
 
@@ -320,7 +322,7 @@ body.page-biography {
 		li { 
 			display: block; 
 			&.active a {
-				background: @blue;
+				background: @purple;
 			}
 		}
 	} 
@@ -495,12 +497,16 @@ object {
 	.menu-sidebar-menu-container{
 		background: #333;
 		margin-top: 1em;
-		li { 
+			 
+		 
+		a { 
+			color: white; 
 			margin-bottom: 10px; 
 			padding: 10px 0;
+			display: block;
 			border-bottom: 1px dotted #777;
+			font-size: 120%;
 		}
-		a { color: white; }
 	}
 	
 }
@@ -641,6 +647,21 @@ object {
 #content { 
 	margin: 0 auto;
 }
+
+
+/* = Discography
+----------------------------------------------- */
+
+.discography{
+	 .disc{
+	 	border-bottom: 1px solid #ccc;
+	 	margin-top: 2em;
+	 }
+	 .thumbnail img{
+	 	max-width: 125px;
+	 }
+}
+
 
 
 /* = Awards
@@ -787,7 +808,9 @@ body.page-works{
 
 
 .milestone{
-	background: @blue;
+	background: @purple-hex;
+	background: @purple;
+	color: @dark-purple;
 	margin: 25px 0;
 	padding: 35px 25px 15px;
 	text-align: center;
@@ -855,7 +878,7 @@ body.single-post{
 
 /**** Isotope CSS3 transitions ****/
 #filters {
-	background: @blue;
+	background: @purple;
 	padding: 8px 10px 5px;
 	margin-bottom: 25px;
 	li {
@@ -917,7 +940,8 @@ blockquote {
 	font-style: italic;
 	padding: 25px;
 	margin: 25px 0 50px;
-	background: @blue;
+	background: @purple;
+	color: @dark-purple;
 	cite{
 		font-size: .5em;
 		margin-top: 1em;

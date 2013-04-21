@@ -145,7 +145,7 @@ a {
   border-bottom: 1px solid;
 }
 #content a:hover {
-  background: rgba(217, 246, 250, 0.29);
+  background: rgba(255, 255, 255, 0.29);
 }
 /* Font awesome */
 @font-face {
@@ -335,7 +335,7 @@ body.page-biography .nav li {
   display: block;
 }
 body.page-biography .nav li.active a {
-  background: rgba(81, 215, 233, 0.29);
+  background: rgba(206, 165, 233, 0.29);
 }
 body.page-biography .center .entry-content {
   float: none;
@@ -496,13 +496,13 @@ object {
   background: #333;
   margin-top: 1em;
 }
-.main-small-navigation .menu-sidebar-menu-container li {
-  margin-bottom: 10px;
-  padding: 10px 0;
-  border-bottom: 1px dotted #777;
-}
 .main-small-navigation .menu-sidebar-menu-container a {
   color: white;
+  margin-bottom: 10px;
+  padding: 10px 0;
+  display: block;
+  border-bottom: 1px dotted #777;
+  font-size: 120%;
 }
 .main-small-navigation .menu {
   display: none;
@@ -629,6 +629,15 @@ body.home .entry-title {
 }
 #content {
   margin: 0 auto;
+}
+/* = Discography
+----------------------------------------------- */
+.discography .disc {
+  border-bottom: 1px solid #ccc;
+  margin-top: 2em;
+}
+.discography .thumbnail img {
+  max-width: 125px;
 }
 /* = Awards
 ----------------------------------------------- */
@@ -759,7 +768,9 @@ body.page-works h2 {
   border: none;
 }
 .milestone {
-  background: rgba(81, 215, 233, 0.29);
+  background: #f0e4f8;
+  background: rgba(206, 165, 233, 0.29);
+  color: #160e1f;
   margin: 25px 0;
   padding: 35px 25px 15px;
   text-align: center;
@@ -818,7 +829,7 @@ body.single-post #masthead {
 ----------------------------------------------- */
 /**** Isotope CSS3 transitions ****/
 #filters {
-  background: rgba(81, 215, 233, 0.29);
+  background: rgba(206, 165, 233, 0.29);
   padding: 8px 10px 5px;
   margin-bottom: 25px;
 }
@@ -871,7 +882,8 @@ blockquote {
   font-style: italic;
   padding: 25px;
   margin: 25px 0 50px;
-  background: rgba(81, 215, 233, 0.29);
+  background: rgba(206, 165, 233, 0.29);
+  color: #160e1f;
 }
 blockquote cite {
   font-size: .5em;
