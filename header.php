@@ -54,10 +54,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-
-<?php if( ! is_home() ): ?>
-	<div class="loader">+</div>
-<?php endif; ?>
+ 
 
 <div id="page" class="hfeed site">
 	<?php do_action( 'before' ); ?>
