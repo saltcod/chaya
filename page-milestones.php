@@ -1,3 +1,8 @@
+Proin id felis ut dui posuere adipiscing sit amet et arcu. Nulla malesuada auctor nisi, a gravida felis blandit in. In convallis, dui vel ultrices ultricies, erat magna sollicitudin sem, at cursus ligula nibh et erat. Integer orci augue, sollicitudin non vestibulum sed, auctor a ligula. Morbi congue porta leo, eget posuere mauris vulputate vel. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+
+<img alt="" src="http://chayaczernowin.com/wp-content/themes/chaya/images/field-landscape.jpg" />
+
+
 
 <div class="milestone-list">
 	<div class="milestone">
@@ -101,7 +106,7 @@
 	</div>
 
 	<div class="milestone">
-		<h3 class="title"> Czernowin moves to La Jolla to Attend the University of Claifronia San Diego. Here she experiences free improvisation ( Mary Oliver, Ute Wassermann and KIVA) and here she meets her future husband composer Steven Kazuo Takasugi</h3>
+		<h3 class="title"> Czernowin moves to La Jolla to Attend the University of Claifronia San Diego. Here she experiences free improvisation ( Mary Oliver, Ute Wassermann and KIVA) and here she meets her future husband, composer Steven Kazuo Takasugi</h3>
 		<date>1987</date>
 	</div>
 
@@ -126,7 +131,7 @@
 	</div>
 
 	<div class="milestone">
-		<h3 class="title">Played in the progressive rock group "Etz" (tree) with Arnon Palty (bass) , Michael Meltzer (flute) and Nir Boras (keyboard and singer) as a vocalist songwriter and pianist and also in "Pandora's box" with Eldad Arnon (keyboard) , Yaki kop (percussion) and with Bassist Arnon Palty who became one of the best Jazz composers/players in Israel. </h3>
+		<h3 class="title">Played in the progressive rock group "Etz" (tree) with Arnon Palty (bass), Michael Meltzer (flute) and Nir Boras (keyboard and singer) as a vocalist songwriter and pianist and also in "Pandora's box" with Eldad Arnon (keyboard), Yaki kop (percussion) and with Bassist Arnon Palty who became one of the best Jazz composers/players in Israel. </h3>
 		<date>1975</date>
 	</div>
 	
