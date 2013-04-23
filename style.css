@@ -555,41 +555,6 @@ body.home .entry-title {
 }
 /* =Concerts and Presentations
 ----------------------------------------------- */
-.page-concerts-and-presentations {
-  background: url(images/contour-map-lg.png) top left no-repeat #ffffff;
-}
-.page-concerts-and-presentations #primary {
-  -webkit-box-shadow: 0 0 0 0;
-  -moz-box-shadow: 0 0 0 0;
-  box-shadow: 0 0 0 0;
-  background: none;
-}
-.page-concerts-and-presentations #masthead {
-  color: #444;
-}
-.page-concerts-and-presentations .site-title a {
-  color: #444;
-}
-.page-concerts-and-presentations .entry-title {
-  color: #444;
-}
-.page-concerts-and-presentations .main-navigation li a {
-  color: #444;
-}
-.page-concerts-and-presentations .entry-content {
-  width: 100%;
-}
-.page-concerts-and-presentations #content {
-  background: #fff;
-}
-.page-concerts-and-presentations .performance-list {
-  width: 68%;
-}
-.page-concerts-and-presentations aside {
-  margin-right: 50px;
-  margin-top: 1em;
-  width: 150px;
-}
 .year-group {
   border-bottom: 1px solid;
 }
