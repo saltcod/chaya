@@ -160,12 +160,7 @@ function backstretch(){
 			"http://chayaczernowin.com/wp-content/themes/chaya/images/trees.jpg",
 			{ fade: 0 });	
 
-	}  else if ( $('body').hasClass('page-concerts-and-presentations') ) {
-		$.backstretch(
-			"http://chayaczernowin.com/wp-content/themes/chaya/images/concerts-header.jpeg",
-			{ fade: 0 });	
-
-	
+	 
 	}  else if ( $('body').hasClass('page-works') ){
 		console.log('bio');
 		$.backstretch(
