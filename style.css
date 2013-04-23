@@ -556,6 +556,9 @@ body.home .entry-title {
 }
 /* =Concerts and Presentations
 ----------------------------------------------- */
+.page-concerts-and-presentations #primary {
+  background: url(images/contour-map-lg.png) top left no-repeat #ffffff;
+}
 .page-lately {
   background: url(images/trains.jpg) top left no-repeat #ffffff;
   background-position: -30px -65px;
@@ -575,7 +578,7 @@ body.home .entry-title {
   background-position: -28px -435px;
 }
 .page-concerts-and-presentations #primary {
-  background: #fff;
+  background: url(images/contour-map-lg.png) top left no-repeat #ffffff;
 }
 .page-concerts-and-presentations aside {
   margin-right: 50px;
