@@ -28,7 +28,7 @@ get_header(); ?>
 
                     <div class="performance-list">
                         <?php chaya_fetch_performances( 2013 ); ?>
-                        <?php get_template_part('content', 'performances');?>
+                        <?php  get_template_part('content', 'performances');?>
                     </div>
                 </div> <!-- .year-group -->
 

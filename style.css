@@ -772,13 +772,16 @@ body.page-works h2 {
   background: rgba(206, 165, 233, 0.29);
   color: #160e1f;
   margin: 25px 0;
-  padding: 35px 25px 15px;
+  padding: 35px 25px 5px;
   text-align: center;
 }
 .milestone date {
   font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
   font-weight: bold;
   font-size: .75em;
+}
+.milestone .title {
+  font-size: 1em;
 }
 /* =Single posts
 ----------------------------------------------- */
