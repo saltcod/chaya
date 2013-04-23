@@ -73,6 +73,36 @@ get_header(); ?>
 						
 
 
+
+					<div class="block group">
+						<div class="guest-professorships group">
+							<h2>Guest professorships and residencies</h2>
+ 
+ 							<?php
+							$args = array( 'pagename' => 'guest-professorships-and-residencies'); 
+
+							$the_query = new WP_Query( $args );
+
+	 
+							if ( $the_query->have_posts() ) :
+								while ( $the_query->have_posts() ) : $the_query->the_post();
+							get_template_part('content');
+							endwhile;
+							endif;
+
+							 
+							wp_reset_postdata();
+							?>
+						</div>
+
+ 
+						
+
+
+
+
+
+
 						<div class="awards">
 							<h2>Awards, residencies and fellowships</h2>
 

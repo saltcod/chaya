@@ -341,7 +341,8 @@ body.page-biography .center .entry-content {
   float: none;
 }
 .juries date,
-.teaching date {
+.teaching date,
+.guest-professorships date {
   font: 0.75em "Lucida Grande", Helvetica, Arial, sans-serif;
   font-weight: bold;
   margin-right: 10px;
@@ -552,6 +553,20 @@ body.home h3 span {
 }
 body.home .entry-title {
   display: none;
+}
+/* =Concerts and Presentations
+----------------------------------------------- */
+.page-lately {
+  background: url(images/trains.jpg) top left no-repeat #ffffff;
+  background-position: -30px -65px;
+}
+.page-lately #primary {
+  background: #fff;
+}
+.page-lately aside {
+  margin-right: 50px;
+  margin-top: 1em;
+  width: 150px;
 }
 /* =Concerts and Presentations
 ----------------------------------------------- */
