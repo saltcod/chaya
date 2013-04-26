@@ -141,6 +141,28 @@ if ( $('.works-filter-wrap').length !== 0 ){
 	});
 }
 
+// Scrollspy
+$('body.page-concerts-and-presentations').scrollspy();
+// Fixed-floating scrollspy menu 
+if ( $('.sort-by-year').length !== 0 ){
+	$(document).ready(function () {  
+		var top = $('.sort-by-year').offset().top -  30;
+		$(window).scroll(function (event) {
+		    // what the y position of the scroll is
+		    var y = $(this).scrollTop();
+
+		    // whether that's below the form
+		    if (y >= top) {
+		      // if so, ad the fixed class
+		      $('.sort-by-year').addClass('fixed');
+		  } else {
+		      // otherwise remove it
+		      $('.sort-by-year').removeClass('fixed');
+		  }
+		});
+	});
+}
+ 
 
 
 function backstretch(){

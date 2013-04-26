@@ -333,7 +333,6 @@ body.page-biography {
 
 
 
-
 .juries date,.teaching date, .guest-professorships date {
 	font: 0.75em "Lucida Grande", Helvetica, Arial, sans-serif;
 	font-weight: bold;
@@ -501,8 +500,8 @@ object {
 	.menu-sidebar-menu-container{
 		background: #333;
 		margin-top: 1em;
-			 
-		 
+
+
 		a { 
 			color: white; 
 			margin-bottom: 10px; 
@@ -572,14 +571,20 @@ object {
 ----------------------------------------------- */
 .page-concerts-and-presentations{
 	#primary {background: url(images/contour-map-lg.png) top left no-repeat #ffffff;}
-	
+
+	.fixed {
+		position: fixed;
+		top: 0;
+		width: 150px;
+	}
+
 }
 
 .page-lately {
 	background: url(images/trains.jpg) top left no-repeat #ffffff;
 	background-position: -30px -65px;
 	#primary {
- 		background: #fff;
+		background: #fff;
 	}
 
 	aside { 
@@ -603,7 +608,7 @@ object {
 	background: url(images/concerts-header.jpg) top left no-repeat #ffffff;
 	background-position: -28px -435px;
 	#primary {
- 		background: url(images/contour-map-lg.png) top left no-repeat #ffffff;
+		background: url(images/contour-map-lg.png) top left no-repeat #ffffff;
 	}
 
 	aside { 
@@ -611,47 +616,46 @@ object {
 		margin-top: 1em;
 		width: 150px;
 	}
+	.sort-by-year{
+		background: @purple;
+		padding: 10px;
+		margin-top: 50px;
+		h3 { font-size: 1em;border-bottom: 1px solid }
+	}
 
 } 
 
 .year-group {
-	border-bottom: 1px solid;
+	border-top: 1px solid;
+	margin-bottom: 50px;
+	padding-top: 25px;
+	&:first-child{ border: none; }
 }
 .year {
 	float: left;
 	width: 25%;
 	margin-top: 1em;
 	margin-left: 25px;
+	h2{ font-size: 2em; }
 }
 
 .performance-list{
 	float: left;
-}
+	width: 350px;
 
-.performance{
-	border-bottom: 1px solid #eee;
-	padding: 1em 0;
-	a { 
-		font-weight: normal;
-	}
-	.title {
-		float: left;
-		clear: both;
+	.composer { display: block; }
+	.title { 
+		display: block; 
 		font-size: 1.25em;
+		text-decoration: underline; 
 	}
-	.sub-title {
-		float: left;
-		clear: both;
+	date { 
+		display: block; 
+		margin-bottom: 25px;	
+		padding-bottom: 10px;
+		border-bottom: 1px solid #eee;
 	}
-	.details {
-		font-style: italic;
-		clear: both;
-		float: left;
-	}
-	.conductor {
-		float: left;
-		clear: both;
-	}
+
 }
 
 
@@ -664,13 +668,13 @@ object {
 ----------------------------------------------- */
 
 .discography{
-	 .disc{
-	 	border-bottom: 1px solid #ccc;
-	 	margin-top: 2em;
-	 }
-	 .thumbnail img{
-	 	max-width: 125px;
-	 }
+	.disc{
+		border-bottom: 1px solid #ccc;
+		margin-top: 2em;
+	}
+	.thumbnail img{
+		max-width: 125px;
+	}
 }
 
 
@@ -679,12 +683,12 @@ object {
 ----------------------------------------------- */
 
 .awards {
- 	li { margin-bottom: 20px; }
+	li { margin-bottom: 20px; }
 
 	.wrapper {
 		margin-bottom: 10px;
-  	}
- 	
+	}
+
 	.award:after  {
 		content: '';
 		font-size: 32px;
@@ -707,10 +711,10 @@ object {
 
 
 
- date{
-	font: .75em @sans;
-	font-weight: bold;
-}
+	date{
+		font: .75em @sans;
+		font-weight: bold;
+	}
 }
 
 

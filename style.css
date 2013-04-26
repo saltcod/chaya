@@ -559,6 +559,11 @@ body.home .entry-title {
 .page-concerts-and-presentations #primary {
   background: url(images/contour-map-lg.png) top left no-repeat #ffffff;
 }
+.page-concerts-and-presentations .fixed {
+  position: fixed;
+  top: 0;
+  width: 150px;
+}
 .page-lately {
   background: url(images/trains.jpg) top left no-repeat #ffffff;
   background-position: -30px -65px;
@@ -585,8 +590,22 @@ body.home .entry-title {
   margin-top: 1em;
   width: 150px;
 }
-.year-group {
+.page-concerts-and-presentations .sort-by-year {
+  background: rgba(206, 165, 233, 0.29);
+  padding: 10px;
+  margin-top: 50px;
+}
+.page-concerts-and-presentations .sort-by-year h3 {
+  font-size: 1em;
   border-bottom: 1px solid;
+}
+.year-group {
+  border-top: 1px solid;
+  margin-bottom: 50px;
+  padding-top: 25px;
+}
+.year-group:first-child {
+  border: none;
 }
 .year {
   float: left;
@@ -594,33 +613,26 @@ body.home .entry-title {
   margin-top: 1em;
   margin-left: 25px;
 }
+.year h2 {
+  font-size: 2em;
+}
 .performance-list {
   float: left;
+  width: 350px;
 }
-.performance {
-  border-bottom: 1px solid #eee;
-  padding: 1em 0;
+.performance-list .composer {
+  display: block;
 }
-.performance a {
-  font-weight: normal;
-}
-.performance .title {
-  float: left;
-  clear: both;
+.performance-list .title {
+  display: block;
   font-size: 1.25em;
+  text-decoration: underline;
 }
-.performance .sub-title {
-  float: left;
-  clear: both;
-}
-.performance .details {
-  font-style: italic;
-  clear: both;
-  float: left;
-}
-.performance .conductor {
-  float: left;
-  clear: both;
+.performance-list date {
+  display: block;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
 }
 #content {
   margin: 0 auto;
