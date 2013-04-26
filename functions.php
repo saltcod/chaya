@@ -88,38 +88,7 @@ add_action( 'wp_enqueue_scripts', 'waterstreet_scripts' );
  *   
  * @since 0.1
  */
-
-register_post_type(
-	'performances',
-	array(
-		'label' => 'Performances',
-		'description' => '',
-		'public' => true,
-		'menu_icon' => get_bloginfo( 'template_directory' ) . '/images/ticket.png',
-		'show_ui' => true,
-		'show_in_menu' => true,
-		'capability_type' => 'post',
-		'has_archive' => true,
-		'hierarchical' => true,
-		'rewrite' => array( 'slug' => '' ),
-		'query_var' => true,
-		'supports' => array( 'title', 'custom-fields'),
-		'labels' => array (
-			'name' => 'Performances',
-			'singular_name' => 'Performance',
-			'menu_name' => 'Performances',
-			'add_new' => 'Add Performance',
-			'add_new_item' => 'Add new performance',
-			'edit' => 'Edit',
-			'edit_item' => 'Edit Performance',
-			'new_item' => 'New Performance',
-			'view' => 'View Performance',
-			'view_item' => 'View Performance',
-			'search_items' => 'Search Performances',
-			'not_found' => 'No Performances Found',
-			'not_found_in_trash' => 'No Performances Found in Trash',
-			'parent' => 'Parent Performance',
-			), ) );
+ 
 
 register_post_type(
 	'work',
