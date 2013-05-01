@@ -77,6 +77,8 @@ function waterstreet_scripts() {
 	wp_enqueue_script( 'jquery.backstretch', get_template_directory_uri() . '/js/jquery.backstretch.min.js', array( 'jquery' ), '2.0.3' );
 
 	wp_enqueue_script( 'jquery.scrollspy', get_template_directory_uri() . '/js/jquery.scrollspy.js', array( 'jquery' ), '2.0', true );
+	
+	wp_enqueue_script( 'jquery.smoothscroll', get_template_directory_uri() . '/js/jquery.smooth-scroll.js', array( 'jquery' ), '2.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'waterstreet_scripts' );
 

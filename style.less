@@ -289,6 +289,21 @@ hgroup{
 ----------------------------------------------- */
 body.page-biography {
 
+	nav.biography{
+		background: lighten(@purple, 10%);
+		margin-bottom: 25px;
+		padding: 10px 25px 5px;
+		li{ float: left; margin-right: 30px; }
+		&.fixed {
+			position: fixed;
+			background: rgba(0,0,0,.75);
+			top: 25px;
+			width: auto;
+			color: white;
+			a { color: white; }
+		}
+	}
+
 	.featured-image {
 		margin-right: 50px;
 		img { max-width: 100%; }

@@ -302,6 +302,25 @@ hgroup {
 }
 /* =Template: Two thirds 
 ----------------------------------------------- */
+body.page-biography nav.biography {
+  background: rgba(228, 206, 243, 0.29);
+  margin-bottom: 25px;
+  padding: 10px 25px 5px;
+}
+body.page-biography nav.biography li {
+  float: left;
+  margin-right: 30px;
+}
+body.page-biography nav.biography.fixed {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.75);
+  top: 25px;
+  width: auto;
+  color: white;
+}
+body.page-biography nav.biography.fixed a {
+  color: white;
+}
 body.page-biography .featured-image {
   margin-right: 50px;
 }
