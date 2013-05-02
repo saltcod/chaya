@@ -341,6 +341,9 @@ body.page-biography blockquote {
   padding-top: 40px;
   margin: 1em 0;
 }
+body.page-biography blockquote p {
+  margin-bottom: 0;
+}
 body.page-biography .nav {
   margin-top: 65px;
   width: 235px;
