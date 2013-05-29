@@ -38,6 +38,7 @@ if ( $terms && ! is_wp_error( $terms ) ) :
 		<span class="details"><?php echo$cfs->get('work_details'); ?></span>
 		<span class="publisher"><?php echo$cfs->get('work_publisher'); ?></span>
 		<span class="work-type"><?php echo $work_type_name; ?> </span>
+		<span class="audio-link"><?php echo$cfs->get('audio_link'); ?> </span>
 		<?php edit_post_link( __( 'Edit', 'waterstreet' ), '<span class="edit-link">', '</span>' ); ?>
 		 
 	</div>
