@@ -38,12 +38,12 @@ if ( $terms && ! is_wp_error( $terms ) ) :
 		<span class="details"><?php echo$cfs->get('work_details'); ?></span>
 		<span class="publisher"><?php echo$cfs->get('work_publisher'); ?></span>
 		<span class="work-type"><?php echo $work_type_name; ?> </span>
-		<span class="audio-link"><?php echo$cfs->get('audio_link'); ?> </span>
+		<span class="audio-link"><?php echo$cfs->get('audio_link'); ?></span>
 		<?php edit_post_link( __( 'Edit', 'waterstreet' ), '<span class="edit-link">', '</span>' ); ?>
 		 
 	</div>
 
+<?php $shortcode=get_post_meta($post->ID,'your_custom_field',true); echo do_shortcode($shortcode); ?> 
   
 <?php endwhile; ?>
  
-
