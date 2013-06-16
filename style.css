@@ -213,6 +213,8 @@ hgroup {
 }
 .site-title {
   font-size: 1.5em;
+  font-weight: 200;
+  padding: 15px 5px 15px 0;
   float: left;
   font-size: 2em;
   font-weight: 200;
@@ -1018,6 +1020,8 @@ textarea {
   /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
 
   vertical-align: baseline;
+  /* Improves appearance and consistency in all browsers */
+
   *vertical-align: middle;
   /* Improves appearance and consistency in all browsers */
 
@@ -1153,10 +1157,10 @@ body.home footer#colophon {
   color: white;
   background: none;
 }
-body.home footer#colophon a {
+body.home footer#colophon  a {
   color: white;
 }
-body.home footer#colophon .wrap {
+body.home footer#colophon  .wrap {
   border-top: 1px solid #fff;
 }
 /* =Helpers
