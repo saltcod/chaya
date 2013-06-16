@@ -167,7 +167,7 @@ if ( $('.sort-by-year').length !== 0 ){
 
 
 // Smooth Scroll
-$('body.page-biography nav.biography a').smoothScroll({offset: -50});
+$('body.page-biography nav.biography a').smoothScroll({offset: -50, speed: 1000});
   
 
 function backstretch(){
