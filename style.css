@@ -740,6 +740,7 @@ body.page-works h2 {
   margin-bottom: 25px;
   border-bottom: 1px solid #ccc;
   padding-bottom: 10px;
+  width: 500px;
 }
 .works .title {
   float: left;
@@ -747,26 +748,19 @@ body.page-works h2 {
   font-size: 1.25em;
   font-weight: 500;
 }
+.works .separator {
+  margin: 0 10px;
+}
 .works .composer {
-  float: left;
   clear: both;
+  display: block;
 }
 .works .details {
   font-style: italic;
-  clear: both;
-  float: left;
-}
-.works .publisher {
-  float: left;
-  clear: both;
-}
-.works .release-year {
-  float: left;
-  clear: both;
+  word-wrap: break-word;
+  word-wrap: pre-wrap;
 }
 .works .work-type {
-  float: left;
-  clear: both;
   font-style: italic;
 }
 .works .work-type a {
