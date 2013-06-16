@@ -25,7 +25,7 @@ get_header(); ?>
           <div class="thumbnail col three"> <img src="<?php echo get_template_directory_uri();?>/images/disc-covers/shifting-gravity.jpg" alt=""></div>
 
           <div class="details col nine">
-           <p><strong>Shifting Gravity / Winter Songs III (2011)</strong></p>
+           <p><strong><a href="http://ie.7digital.com/artist/quatuor-diotima-ensemble-nikel-plus/release/chaya-czernowin-shifting-gravity-wintersongs-iii">Shifting Gravity / Winter Songs III (2011)</a></strong></p>
 
            <ul>
             <li>Anea Crystal</li>
@@ -38,6 +38,7 @@ get_header(); ?>
           </ul>
 
           <p>Ipke Starke<br>WER-67262<br></p>
+          <a href="https://play.google.com/store/music/album/Quatuor_Diotima_Ensemble_Nikel_Chaya_Czernowin_Shi?id=Bfvt3tzpv6wklw7i24ef4fnrevm">Listen</a>
         </div> <!-- .details -->
 
       </div> <!-- .disc -->
@@ -50,7 +51,7 @@ get_header(); ?>
         <div class="thumbnail col three"> <img src="<?php echo get_template_directory_uri();?>/images/disc-covers/maim.jpg" alt=""></div>
 
         <div class="details col nine">
-          <p><strong>MAIM [Water] (2010)</a> </strong></p>
+          <p><strong><a href="http://www.rhapsody.com/artist/experimentalstudio-des-swr/album/maim-water">MAIM [Water] (2010)</a> </strong></p>
 
           <p>Rico Gubler (saxophone, tubax) · John Mark Harris (piano,
             harpsichord) · Seth Josel (electric &amp; steel guitars) · Mary Oliver
@@ -75,7 +76,7 @@ get_header(); ?>
             <p><strong>Musica Viva Festival 2008 &nbsp;(2009)</strong></p>
 
             <ul>
-              <li>Pilgerfahrten</li>
+              <li><a href="http://www.rhapsody.com/artist/matthias-bundschuh/album/musica-viva-festival-2008-vol-4">Pilgerfahrten</a></li>
 
               <li><em>+ Karlheinz Stockhausen, Aribert Reimann, Jörg Widmann,
                 Matthias Pintscher, Iannis Xenakis, James Dillon, Beat Furrer,
@@ -144,7 +145,7 @@ get_header(); ?>
               <div class="thumbnail col three"> <img src="<?php echo get_template_directory_uri();?>/images/disc-covers/shu-hai.jpg" alt=""></div>
 
               <div class="details col nine">
-                <p><strong>Shu Hai Practices Javelin &nbsp;(2003)</strong></p>
+                <p><strong><a href="http://www.rhapsody.com/artist/chaya-czernowin/album/shu-hai-practices-the-javelin">Shu Hai Practices Javelin &nbsp;(2003)</a></strong></p>
 
                 <ul>
                   <li>Miniatures </li>
@@ -152,7 +153,7 @@ get_header(); ?>
                   <li>Shu Hai mitamen behatalat kidon </li> 
                 </ul>
 
-                <p>Ute Wassermann (voice) · Live electronics: Experimental Studio of Heinrich Strobel Stiftung SWR · André Richard (director) · Basel Sinfonietta · Johannes Kalitzke (conductor) · ELISION ensemble · Simon Hewett (conductor) · Trio: Deborah Kayser (soprano) · Erkki Veltheimalto (viola) · Geoffrey Morris (guitar) · Quartet: Paula Rae (bass-flute) · Brian Catchlove (bass-clarinet) · Timothy O'Dwyer (alto saxophone) · John Tooby (cello)<br> MODE RECORDS mode 117<br></p> </div> <!-- .details -->
+                <p>Ute Wassermann (voice) · Live electronics: Experimental Studio of Heinrich Strobel Stiftung SWR · André Richard (director) · Basel Sinfonietta · Johannes Kalitzke (conductor) · ELISION ensemble · Simon Hewett (conductor) · Trio: Deborah Kayser (soprano) · Erkki Veltheimalto (viola) · Geoffrey Morris (guitar) · Quartet: Paula Rae (bass-flute) · Brian Catchlove (bass-clarinet) · Timothy O'Dwyer (alto saxophone) · John Tooby (cello)<br> MODE RECORDS mode 117<br> <a href="https://itunes.apple.com/us/album/chaya-czernowin-shu-hai-practices/id159291332">Itunes</a></p> </div> <!-- .details -->
 
               </div> <!-- .disc -->
 
@@ -174,7 +175,7 @@ get_header(); ?>
                   <li>Ina</a> </li>
                 </ul>
 
-                <p>John Fonville (bass flute) · Susan Barrett (oboe) · Robert Zelickman (clarinet) · Ivan Raykoff (piano) · Steven Schick (percussion) · Jáños Négyesy (violin) · Pavïkki Nykter (viola) · Hugh Livingston (cello) · Bert Turetzky (double bass) · Harvey Sollberger (conductor) · Arditti String Quartet · Mayumi Miyata (u) · Takashi Saito (alto saxophone) · Keizo Misoiri )double bass) · Fumio Tamura (conductor) · Arun Bharali, Erik Ulman (violins) · Mary Oliver, Conrad Bruderer (violas) · Frank Cox (cello) · Ulfar Haraldsson (double bass) · Harvey Sollberger (conductor) · John Fonville (soloist and pre-recorded flutes)<br> MODE RECORDS mode 77<br></p> 
+                <p>John Fonville (bass flute) · Susan Barrett (oboe) · Robert Zelickman (clarinet) · Ivan Raykoff (piano) · Steven Schick (percussion) · Jáños Négyesy (violin) · Pavïkki Nykter (viola) · Hugh Livingston (cello) · Bert Turetzky (double bass) · Harvey Sollberger (conductor) · Arditti String Quartet · Mayumi Miyata (u) · Takashi Saito (alto saxophone) · Keizo Misoiri )double bass) · Fumio Tamura (conductor) · Arun Bharali, Erik Ulman (violins) · Mary Oliver, Conrad Bruderer (violas) · Frank Cox (cello) · Ulfar Haraldsson (double bass) · Harvey Sollberger (conductor) · John Fonville (soloist and pre-recorded flutes)<br> MODE RECORDS mode 77<br><a href="https://itunes.apple.com/us/album/czernowin-afatsim/id253759653">Itunes</a> / <a href="http://open.spotify.com/album/1G9gHnbEoubrHq03JUpk9a">Spotify</a>  </p> 
 
               </div> <!-- .details -->
 
@@ -210,7 +211,7 @@ get_header(); ?>
                 <p><strong><a href="http://www.amazon.com/Sylvie-Lacroix-Fruits-Hubler/dp/B0041F4G8M/ref=sr_1_8?s=music&ie=UTF8&qid=1366490692&sr=1-8&keywords=czernowin">Sylvie Lacroix: Fruits (2011)</a></strong></p>
                 TELO  ASIN: B004DIPLOA <br>
                 Ina --for live solo bass flute and six recorded flutes <br>
-                While Liquid Amber, for 3 flutes players (on Bass flute and piccolos) 
+                While Liquid Amber, for 3 flutes players (on Bass flute and piccolos). <a href="http://www.rhapsody.com/artist/various-artists/album/fruits">Listen</a> 
 
               </div><!-- .details -->
 
