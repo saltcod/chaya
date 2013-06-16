@@ -20,7 +20,7 @@ get_header(); ?>
 
             <aside class="listen col three">
                 <h2>Listen</h2>
-                <?php chaya_fetch_page('listen');?>
+                <?php chaya_fetch_page('full-works');?>
             </aside>
 
 
