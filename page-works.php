@@ -19,7 +19,7 @@ get_header(); ?>
         <div id="content" class="site-content" role="main">
 
             <aside class="listen col three">
-                <h2>Full Works</h2>
+                <h2>Listen (Youtube links)</h2>
                 <?php chaya_fetch_page('full-works');?>
             </aside>
 
