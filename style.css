@@ -735,6 +735,9 @@ body.page-works h2 {
   margin-left: 50px;
   margin-top: 10px;
 }
+.works #works-container {
+  width: 500px;
+}
 .works .work {
   float: left;
   margin-bottom: 25px;

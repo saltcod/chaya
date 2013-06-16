@@ -24,7 +24,8 @@ jQuery(function($) {
  		var $container = $('#works-container');
 
  		$container.isotope({
- 			itemSelector : '.work' 
+ 			itemSelector : '.work',
+ 			containerStyle: { overflow: 'visible', position: 'relative'}
 
  		});
 
