@@ -14,7 +14,7 @@
 <footer id="colophon" class="site-footer" role="contentinfo">
 	<div class="wrap group">
 		<div class="site-info">
-			<p><strong>Contact:</strong> Aliquam quis arcu at ipsum gravida sagittis. Nunc id tellus sed tellus pretium ullamcorper sit amet vel urna. </p>
+			<p><em><a href="mailto:chayawebsite7@gmail.com">Get in touch</a></em> </p>
 		</div><!-- .site-info -->
 		<?php wp_footer(); ?>
 	</div><!-- .wrap -->

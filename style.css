@@ -17,13 +17,13 @@ Tags:
  * http://github.com/daltonrooney/gridonkulous
  * MIT License: http://opensource.org/licenses/MIT
  */
-/* Change these variables */
-/* Any number of columns */
-/* in % */
-/* When do the columns kick in? By default, columns are 100% width. */
-/* You probably don't want to edit below this line */
-.row,
-.col {
+ /* Change these variables */
+ /* Any number of columns */
+ /* in % */
+ /* When do the columns kick in? By default, columns are 100% width. */
+ /* You probably don't want to edit below this line */
+ .row,
+ .col {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -69,12 +69,12 @@ Tags:
 
     More info at: http://lesselements.com
     -----------------------------------------------------*/
-* {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-/* Font Awesome icon font */
+    * {
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+    /* Font Awesome icon font */
 /* =Global
 ----------------------------------------------- */
 body,
@@ -271,6 +271,24 @@ hgroup {
   text-transform: uppercase;
   text-align: center;
 }
+
+body.page-lately .entry-title,
+body.page-lately .entry-meta{ 
+  display: none;
+  }
+body.page-lately #content{
+  margin-top: 50px;
+  }
+
+body.page-biography .entry-title { margin-bottom: 0; }
+.sub-title {
+  display: block;
+  text-align: center;
+  color: #FFF;
+  font-style: italic;
+}
+
+
 .page-break {
   position: relative;
   margin: 0 auto;
@@ -494,6 +512,7 @@ object {
   display: inline-block;
   color: #fff;
   border: none;
+  border-bottom: 1px solid transparent;
 }
 .main-navigation li a:hover {
   border-bottom: 1px solid;
@@ -544,7 +563,7 @@ object {
   width: 50%;
 }
 /* =Front page
- ----------------------------------------------- */
+----------------------------------------------- */
 body.home {
   background: #efefef;
 }
@@ -746,10 +765,8 @@ body.page-works h2 {
   width: 500px;
 }
 .works .title {
-  float: left;
-  clear: both;
-  font-size: 1.25em;
-  font-weight: 500;
+  font-weight: bold;
+  margin-right: 10px;
 }
 .works .separator {
   margin: 0 10px;
@@ -1207,7 +1224,7 @@ body.home footer#colophon  .wrap {
  * Here comes the grid! You can use semantic class names or numerical, whatever works for you.
  * All column declarations go inside a media query for mobile-first responsiveness. The default column width is 100%. 
  */
-@media only screen and (min-width: 600px) {
+ @media only screen and (min-width: 600px) {
   .primary {
     width: 64.66666666666666%;
     -moz-column-width: 8;
@@ -1562,7 +1579,7 @@ This is for devices like the Galaxy Note or something that's
 larger than an iPhone but smaller than a tablet. 
 */
 @media only screen and (min-width: 481px) {
-  
+
 }
 /*
 TABLET & SMALLER LAPTOPS
@@ -1604,11 +1621,11 @@ TABLET & SMALLER LAPTOPS
 DESKTOP — 1000PX AND ABOVE
 */
 @media only screen and (min-width: 1000px) {
-  
+
 }
 /*
 RETINA (2x RESOLUTION DEVICES)
 */
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
-  
+
 }

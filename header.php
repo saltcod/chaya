@@ -54,35 +54,38 @@
 </head>
 
 <body <?php body_class(); ?>>
- 
-
-<div id="page" class="hfeed site">
-	<?php do_action( 'before' ); ?>
-	
-
-	<div id="main" class="site-main group">
-
-		 
-		<div class="wrap group">
-			<header id="masthead" class="site-header group" role="banner">
-				<hgroup>
-					<h1 class="site-title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-
-					<nav role="navigation" class="site-navigation main-navigation group">
-						<h1 class="assistive-text"><?php _e( 'Menu', 'waterstreet' ); ?></h1>
-						<div class="assistive-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'waterstreet' ); ?>"><?php _e( 'Skip to content', 'waterstreet' ); ?></a></div>
-
-						<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-					</nav><!-- .site-navigation .main-navigation -->
-				</hgroup>
-
-				<?php if( ! is_home() ): ?>
-
-				<h1 class="entry-title"><?php the_title();?></h1>
 
 
-			<?php endif; ?>
+	<div id="page" class="hfeed site">
+		<?php do_action( 'before' ); ?>
 
+
+		<div id="main" class="site-main group">
+
+
+			<div class="wrap group">
+				<header id="masthead" class="site-header group" role="banner">
+					<hgroup>
+						<h1 class="site-title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+
+						<nav role="navigation" class="site-navigation main-navigation group">
+							<h1 class="assistive-text"><?php _e( 'Menu', 'waterstreet' ); ?></h1>
+							<div class="assistive-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'waterstreet' ); ?>"><?php _e( 'Skip to content', 'waterstreet' ); ?></a></div>
+
+							<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+						</nav><!-- .site-navigation .main-navigation -->
+					</hgroup>
+
+					<?php if( ! is_home() ): ?>
+
+					<h1 class="entry-title"><?php the_title();?></h1> 
+					
+				<?php if( is_page('biography')): ?> 
+					<span class="sub-title">What is mastered is the process of exploration <br> <em>—Roger Reynolds</em></span>
+				<?php endif; ?>
+				<?php endif; ?>
+				
+			
 
 		</header><!-- #masthead .site-header -->
 	</div>		

@@ -27,6 +27,7 @@ get_header(); ?>
 
             <section class="col eight">
                 <h2>List of Works</h2>
+<p><em>Many of the scores can be viewed on Schott website by clicking on the work's name.</em></p>
                 <aside id="works-filter" class="col three group">
                    <h3 class="inline">Category:</h3>
 
@@ -67,5 +68,4 @@ get_header(); ?>
 </div><!-- #primary .content-area -->
 
 <?php get_footer(); ?>
-
 
