@@ -15,6 +15,8 @@
 get_header(); ?>
 
 <section id="primary" class="content-area">
+    <div class="photo-credit">Alexandra Gardner, Marianthi Papalexandri-Alexandri</div>
+
 	<div class="wrap group">
 		<div id="content" class="site-content" role="main">
 

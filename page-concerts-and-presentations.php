@@ -14,14 +14,17 @@
 
 get_header(); ?>
 
+
+
 <section id="primary" class="content-area">
+    <div class="photo-credit">Musica nova Helsinki, Maarit Kytöharju</div>
     <div class="wrap group">
         <div id="content" class="site-content ten group" role="main">
 
             <aside class="col twelve">
                 <div class="sort-by-year col twelve">
-                 <h3 class="view-by-year">View by year</h3>
-                 <nav class="horizontal">
+                   <h3 class="view-by-year">View by year</h3>
+                   <nav class="horizontal">
                     <ul>
                         <li><a href="#2013">2013</a></li>
                         <li><a href="#2012">2012</a></li>
@@ -52,7 +55,7 @@ get_header(); ?>
 
 
     </div><!-- .wrap -->
-    </div><!-- #content .site-content -->
+</div><!-- #content .site-content -->
 </section><!-- #primary .content-area -->
 
 <?php get_footer(); ?>

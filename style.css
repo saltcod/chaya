@@ -275,10 +275,10 @@ hgroup {
 body.page-lately .entry-title,
 body.page-lately .entry-meta{ 
   display: none;
-  }
+}
 body.page-lately #content{
   margin-top: 50px;
-  }
+}
 
 body.page-biography .entry-title { margin-bottom: 0; }
 .sub-title {
@@ -517,6 +517,26 @@ object {
 .main-navigation li a:hover {
   border-bottom: 1px solid;
 }
+
+.photo-credit {
+    position: absolute;
+    top: -30px;
+    left: 20px;
+    color: white;
+    font-style: italic;
+    font-size: 12px;
+    text-align: center;
+ }
+.rotate {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
+
+
 /* Small menu */
 .menu-toggle {
   cursor: pointer;
@@ -1159,7 +1179,7 @@ footer#colophon {
   width: 100%;
 }
 footer#colophon a {
-   border-bottom: 1px solid;
+ border-bottom: 1px solid;
 }
 footer#colophon .wrap {
   border-top: 1px solid #ccc;
