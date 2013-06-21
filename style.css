@@ -1158,7 +1158,7 @@ footer#colophon {
   width: 100%;
 }
 footer#colophon a {
-  color: white;
+   border-bottom: 1px solid;
 }
 footer#colophon .wrap {
   border-top: 1px solid #ccc;
