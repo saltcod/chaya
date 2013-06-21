@@ -652,22 +652,19 @@ body.home .entry-title {
   float: left;
   width: 25%;
   margin-top: 1em;
-  margin-left: 25px;
 }
 .year h2 {
   font-size: 2em;
 }
 .performance-list {
   float: left;
-  width: 350px;
 }
 .performance-list .composer {
   display: block;
 }
 .performance-list .title {
-  display: block;
-  font-size: 1.25em;
   text-decoration: underline;
+  font-weight: bold;
 }
 .performance-list date {
   display: block;
